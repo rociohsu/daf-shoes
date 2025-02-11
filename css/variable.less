@@ -1,0 +1,62 @@
+
+/* color */
+@color-white: #FFFFFF;
+@color-default: #000000;
+@color-gray1: #888888;
+@color-gray2: #C4C4C4;
+@color-border: #E5E5E5;
+@color-bg: #F6F5F4;
+@color-cis: #CF93CC;
+@color-cis-bg: #F2EAF2;
+@color-red: #8E1013;
+
+/* font family */
+.font-family() {
+    font-family: 'DM Sans', 'Noto Sans TC', 'Microsoft JhengHei', '黑體', sans-serif, serif;
+    letter-spacing: 0.5px; -webkit-text-size-adjust: none; 
+}
+
+html {
+    --fXXXL: 48px;
+    --fXXL:  32px;
+    --fXL:   24px;
+    --fL:    18px;
+    --fM:    16px;
+    --fS:    14px;
+    --fXS:   12px;
+}
+
+html:lang(en) { // English
+    --fXXXL: 48px;
+    --fXXL:  32px;
+    --fXL:   24px;
+    --fL:    18px;
+    --fM:    16px;
+    --fS:    14px;
+    --fXS:   12px;
+}
+
+html:lang(zh-Hant) { // Chinese
+    --fXXXL: 48px;
+    --fXXL:  32px;
+    --fXL:   24px;
+    --fL:    18px;
+    --fM:    16px;
+    --fS:    14px;
+    --fXS:   12px; 
+}
+
+@font-XXXL: var(--fXXXL);
+@font-XXL:  var(--fXXL);
+@font-XL:   var(--fXL);
+@font-L:    var(--fL);
+@font-M:    var(--fM);
+@font-S:    var(--fS);
+@font-XS:   var(--fXS);
+
+/* padding box */
+.padding-box() { 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+}
