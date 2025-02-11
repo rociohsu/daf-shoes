@@ -13,9 +13,11 @@
 
 <link rel="shortcut icon" type="image/png" href="https://static.daf-shoes.com/_Art/logo/2019-logo2.png">
 <link rel="stylesheet" href="css/component.css">
+<link rel="stylesheet" href="css/product.css">
 
 <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="js/component.js"></script>
+<script type="text/javascript" src="js/product.js"></script>
 </head>
 
 <body>
@@ -251,167 +253,206 @@
 </div><!-- END .header -->
 
 <!-- 內容開始 -->
-<link rel="stylesheet" href="https://static.daf-shoes.com/_Art/landingpage/swiper-bundle.min.css" />
-<style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap');
+<div class="container product">
+    <div class="container__left"><div class="container__left__wrap">
+        <div class="pt-category">
+            <div class="pt-category__group">
+                <div class="pt-category__title">新品上市</div>
+                <div class="pt-category__menu">
+                    <a href="product-category.html">本週新上架</a>
+                    <a href="product-category.html">人氣TOP.50</a>
+                    <a href="product-category.html">2025美靴新品</a>
+                    <a href="product-category.html">現貨不用等</a>
+                    <a href="product-category.html">舒華代言主打</a>
+                </div>
+            </div>
 
-.daf-container { color: #000000; font-size: 14px; font-weight: normal; letter-spacing: 0.5px;
-    font-family: 'DM Sans', 'Microsoft JhengHei', '黑體', sans-serif, serif; background: #FFFFFF; }
-.daf-container * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-.daf-container section:not(.mainkv) { position: relative; width: 100%; margin: 0 auto; padding: 10dvh 5%; }
-.daf-container img { display: block; width: 100%; height: auto; }
-.daf-container a { color: #000000; text-decoration: none !important; }
-.daf-container a:hover { text-decoration: none !important; }
-.daf-container a > .pic, .daf-container a.pic { display: block; overflow: hidden; }
-.daf-container a > .pic img, .daf-container a.pic > img { transition: 0.3s; }
-.daf-container a:hover > .pic img, .daf-container a.pic:hover > img { transform: scale(1.02); }
-.daf-container .mobile { display: none; }
-.daf-container h2 { margin: 0 auto 25px auto; font-family: "DM Serif Display", serif; font-size: 36px; font-weight: normal; text-align: center; }
-.daf-container h3 { margin: 20px auto 5px auto; font-size: 24px; font-weight: normal; text-align: center; line-height: 120%; }
-.daf-container h4 { margin: 15px auto 5px auto; font-size: 14px; font-weight: normal; line-height: 120%; }
-.daf-container a.shopnow { display: block; width: fit-content; margin: 0 auto; font-family: "Rokkitt", serif; font-family: 18px; }
-.daf-container a.shopnow:hover { text-decoration: underline !important; }
+            <div class="pt-category__group">
+                <div class="pt-category__title">特價活動</div>
+                <div class="pt-category__menu">
+                    <a href="product-event.html">情人節美包1+1=$1688
+                    <a href="product-event.html">MIT國民鞋780up</a>
+                    <a href="product-event.html">換季出清$499起</a>
+                </div>
+            </div>
 
-.mainkv { position: relative; width: 100%; z-index: 0; }
-.mainkv .mainkv-list { width: 100%; }
-.mainkv .mainkv-list .swiper-slide { display: block; overflow: hidden; }
-.mainkv .swiper-button-prev, .swiper-button-next { display: none; }
-.mainkv .swiper-pagination { bottom: 15px; }
-.mainkv .swiper-pagination-bullet { width: 10px; height: 10px; margin: 0 6px !important; background: #FFFFFF; }
+            <div class="pt-category__group">
+                <div class="pt-category__title">本月話題</div>
+                <div class="pt-category__menu">
+                    <a href="product-category.html">4D光腿神器</a>
+                    <a href="product-category.html">第三代美腿瘦瘦靴</a>
+                    <a href="product-category.html">踩雲感氣墊靴</a>
+                    <a href="product-category.html">輕量鞋系列</a>
+                    <a href="product-category.html">機能芭蕾鞋</a>
+                    <a href="product-category.html">銀色專區</a>
+                    <a href="product-category.html">大尺碼專區</a>
+                    <a href="product-category.html">肉肉女孩推薦</a>
+                    <a href="product-category.html">雨靴專區</a>
+                    <a href="product-category.html">包包專區</a>
+                </div>
+            </div>
 
-.featured { padding-top: 0 !important; }
-.clt-list { width: 100%; max-width: 1140px; margin: 0 auto; display: flex; flex-flow: wrap; justify-content: space-between; }
-.clt-list > div { width: 32.5%; }
-.clt-list > div .pic { position: relative; }
-.clt-list > div .pic::after { display: block; position: absolute; content: ""; width: 4dvw; height: 4dvw; right: 0; bottom: 0; 
-    background: url("https://static.daf-shoes.com/_Art/index/2025/250120/arrow.svg") no-repeat right bottom; background-size: contain; }
+            <div class="pt-category__group">
+                <div class="pt-category__title">Shoes</div>
+                <div class="pt-category__menu">
+                    <a href="product-category.html">機能風芭蕾鞋</a>
+                    <a href="product-category.html">瑪莉珍鞋</a>
+                    <a href="product-category.html">樂福鞋、紳士鞋</a>
+                    <a href="product-category.html">牛津鞋、德比鞋</a>
+                    <a href="product-category.html">休閒鞋、德訓鞋</a>
+                    <a href="product-category.html">平底鞋、娃娃鞋</a>
+                    <a href="product-category.html">莫卡辛、豆豆鞋</a>
+                    <a href="product-category.html">穆勒鞋</a>
+                    <a href="product-category.html">跟鞋</a>
+                    <a href="product-category.html">涼鞋、拖鞋</a>
+                    <a href="product-category.html">運動鞋、老爹鞋</a>
+                    <a href="product-category.html">全系列女鞋</a>
+                </div>
+            </div>
 
-@media (max-width: 820px) {
-    .daf-container { font-size: 12px; -webkit-text-size-adjust: none; }
-    .daf-container section:not(.mainkv) { padding: 5dvh 5%; }
-    .daf-container .pc { display: none; }
-    .daf-container .mobile { display: block; }
-    .daf-container h2 { margin: 0 auto 15px auto; font-size: 24px; }
-    .daf-container h3 { margin: 15px auto 5px auto; font-size: 16px; }
-    .daf-container h4 { margin: 10px auto 5px auto; font-size: 12px; }
-    .daf-container a.shopnow { font-family: 12px; }
+            <div class="pt-category__group">
+                <div class="pt-category__title">Boots</div>
+                <div class="pt-category__menu">
+                    <a href="product-category.html">短靴、中筒靴</a>
+                    <a href="product-category.html">長靴、膝下靴</a>
+                    <a href="product-category.html">膝上靴、過膝靴</a>
+                    <a href="product-category.html">雨靴</a>
+                    <a href="product-category.html">雪靴</a>
+                    <a href="product-category.html">全系列靴子</a>
+                </div>
+            </div>
 
-    .clt-list > div { width: 48.5%; }
-    .clt-list > div .pic::after { width: 10dvw; height: 10dvw; }
-    .clt-list > div:first-child { width: 80%; margin: 0 auto 25px auto; }
-}
-</style>
+            <div class="pt-category__group">
+                <div class="pt-category__title">Bags</div>
+                <div class="pt-category__menu">
+                    <a href="product-category.html">肩背包</a>
+                    <a href="product-category.html">斜背包、側背包</a>
+                    <a href="product-category.html">迷你包、小廢包</a>
+                    <a href="product-category.html">手提包</a>
+                    <a href="product-category.html">後背包</a>
+                    <a href="product-category.html">全系列包包</a>
+                </div>
+            </div>
 
+            <div class="pt-category__group">
+                <div class="pt-category__title">Accessories</div>
+                <div class="pt-category__menu">
+                    <a href="product-category.html">光腿神器裸膚絲襪</a>
+                </div>
+            </div>
+
+            <div class="pt-category__group">
+                <div class="pt-category__title">跟高</div>
+                <div class="pt-category__menu">
+                    <a href="product-category.html">平底 2.5cm以下</a>
+                    <a href="product-category.html">低跟 2.5-4.5cm</a>
+                    <a href="product-category.html">中跟 4.5-6.5cm</a>
+                    <a href="product-category.html">高跟 6.5cm以上</a>
+                </div>
+            </div>
+        </div><!-- END .pt-category -->
+
+        <div class="filter-title">
+            篩選 <button type="reset" class="btn-basic-border">重設</button>
+        </div>
+
+        <div class="tags-group">
+            <div class="tags-list__title">鞋款</div>
+            <div class="tags-list">
+                <a class="selected" href="#">機能風芭蕾鞋</a>
+                <a href="#">瑪莉珍鞋</a>
+                <a href="#">樂福鞋、紳士鞋</a>
+                <a href="#">牛津鞋、德比鞋</a>
+                <a href="#">休閒鞋、德訓鞋</a>
+                <a href="#">平底鞋、娃娃鞋</a>
+                <a href="#">莫卡辛、豆豆鞋</a>
+                <a href="#">穆勒鞋</a>
+                <a href="#">跟鞋</a>
+                <a href="#">涼鞋、拖鞋</a>
+                <a href="#">運動鞋、老爹鞋</a>
+                <a href="#">短靴、中筒靴</a>
+                <a href="#">長靴、膝下靴</a>
+                <a href="#">膝上靴、過膝靴</a>
+                <a href="#">雨靴</a>
+                <a href="#">雪靴</a>
+                <a href="#">肩背包</a>
+                <a href="#">斜背包、側背包</a>
+                <a href="#">迷你包、小廢包</a>
+                <a href="#">手提包</a>
+                <a href="#">後背包</a>
+                <a href="#">光腿神器裸膚絲襪</a>
+            </div>
+        </div>
+
+        <div class="tags-group">
+            <div class="tags-list__title">尺寸</div>
+            <div class="tags-list">
+                <a href="#">33</a>
+                <a href="#">34</a>
+                <a href="#">35</a>
+                <a href="#">36</a>
+                <a href="#">37</a>
+                <a class="selected" href="#">38</a>
+                <a href="#">39</a>
+                <a href="#">40</a>
+                <a href="#">41</a>
+                <a href="#">42</a>
+                <a href="#">43</a>
+                <a href="#">44</a>
+            </div>
+        </div>
+
+        <div class="tags-group">
+            <div class="tags-list__title">跟高</div>
+            <div class="tags-list">
+                <a class="selected" href="#">平底 2.5cm以下</a>
+                <a href="#">低跟 2.5-4.5cm</a>
+                <a href="#">中跟 4.5-6.5cm</a>
+                <a href="#">高跟 6.5cm以上</a>
+            </div>
+        </div>
+        
+        <div class="tags-group">
+            <div class="tags-list__title">色系</div>
+            <div class="tags-list">
+                <a href="#">黑色系</a>
+                <a href="#">白色系</a>
+                <a href="#">灰色系</a>
+                <a href="#">裸色系</a>
+                <a href="#">大地色系</a>
+                <a class="selected" href="#">粉色系</a>
+                <a href="#">紅色系</a>
+                <a href="#">黃橘色系</a>
+                <a href="#">綠色系</a>
+                <a href="#">藍紫色系</a>
+                <a href="#">金屬色系</a>
+                <a href="#">動物紋</a>
+                <a href="#">其他</a>
+            </div>
+        </div>
+    </div></div><!-- END .container__left__wrap .container-left -->
+
+    <div class="container__main"><div class="container__main__wrap">
+        <div class="banner"><img src="images/bn-category.jpg"></div>
+
+        <div class="title-bar">
+            <h1>舒適輕量鞋</h1>
+
+            <div class="pc">排序
+                <select class="select-basic">
+                    <option value="1" selected>新上市</option>
+                    <option value="5">依銷量</option>
+                    <option value="2">價格低到高</option>
+                    <option value="3">價格高到低</option>
+                </select>
+            </div>
+
+            <button type="button" class="btn-basic-border filter-btn mobile">篩選排序<i class="icon-arrow-right"></i></button>
+        </div>
+
+
+    </div></div><!-- END .container__main__wrap .container__main -->
 </div>
-<div class="daf-container">
-
-    <section class="mainkv">
-        <div class="swiper-container mainkv-list">
-			<div class="swiper-wrapper">
-				<a class="swiper-slide" href="product-category.html">
-                    <div class="pc"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/mainkv1.jpg" alt=""></div>
-                    <div class="mobile"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/mainkv1-m.jpg" alt=""></div>
-                </a>
-
-                <a class="swiper-slide" href="product-event.html">
-                    <div class="pc"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/mainkv2.jpg" alt=""></div>
-                    <div class="mobile"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/mainkv2-m.jpg" alt=""></div>
-                </a>
-
-                <a class="swiper-slide" href="product-category.html">
-                    <div class="pc"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/mainkv3.jpg" alt=""></div>
-                    <div class="mobile"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/mainkv3-m.jpg" alt=""></div>
-                </a>
-			</div>
-			<div class="swiper-button-next"></div>
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-pagination"></div>
-		</div>
-    </section>
-
-    <section class="collection">
-        <h2>New & Bestsellers</h2>
-
-        <div class="clt-list">
-            <div>
-                <a href="product-detail.html">
-                    <div class="pic"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/nb1.jpg" alt=""></div>
-                </a>
-                <h3>全新升級！踩雲感氣墊</h3>
-                <a class="shopnow" href="product-category.html">SHOP NOW</a>
-            </div>
-
-            <div>
-                <a href="product-detail.html">
-                    <div class="pic"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/nb2.jpg" alt=""></div>
-                </a>
-                <h3>人氣熱銷款</h3>
-                <a class="shopnow" href="product-category.html">SHOP NOW</a>
-            </div>
-
-            <div>
-                <a href="product-detail.html">
-                    <div class="pic"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/nb3.jpg" alt=""></div>
-                </a>
-                <h3>本週最新上架</h3>
-                <a class="shopnow" href="product-category.html">SHOP NOW</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="collection featured">
-        <h2>Discover Featured</h2>
-
-        <div class="clt-list">
-            <div>
-                <a href="product-detail.html">
-                    <div class="pic"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/df1.jpg" alt=""></div>
-                </a>
-                <h3>開工必備．經典樂福鞋系列</h3>
-                <a class="shopnow" href="product-category.html">SHOP NOW</a>
-            </div>
-
-            <div>
-                <a href="product-detail.html">
-                    <div class="pic"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/df2.jpg" alt=""></div>
-                </a>
-                <h3>美腿瘦瘦靴3.0</h3>
-                <a class="shopnow" href="product-category.html">SHOP NOW</a>
-            </div>
-
-            <div>
-                <a href="hproduct-detail.html">
-                    <div class="pic"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/df3.jpg" alt=""></div>
-                </a>
-                <h3>4D光腿神器保暖絲襪</h3>
-                <a class="shopnow" href="product-category.html">SHOP NOW</a>
-            </div>
-        </div>
-    </section>
-</div><!-- END .daf-container -->
-
-<script src="https://www.daf-shoes.com/web/js/jquery.flexslider-min.js"></script>
-<script src="https://static.daf-shoes.com/_Art/landingpage/swiper-bundle.min.js"></script>
-<script>
-var swiper = new Swiper('.mainkv-list', {
-	autoHeight: true,
-	spaceBetween: 0,
-    allowTouchMove: true,
-    loop: true,
-	autoplay: {
-	  delay: 2500,
-	  disableOnInteraction: false,
-	},
-	navigation: {
-	  nextEl: ".swiper-button-next",
-	  prevEl: ".swiper-button-prev",
-	},
-	pagination: {
-	  el: ".swiper-pagination",
-      clickable: true,
-	},
-});
-</script>
 <!-- 內容結束 -->
 
 <div class="footer">
@@ -479,10 +520,10 @@ var swiper = new Swiper('.mainkv-list', {
 
     <div class="search-page__container">
         <form action="product-search-result.html">
-        <div class="search-bar">
-            <input type="text" class="search-bar__keyword" placeholder="Search..">
-            <button type="submit" class="search-bar__btn"><i class="icon-search"></i></button>
-        </div>
+            <div class="search-bar">
+                <input type="text" class="search-bar__keyword" placeholder="Search..">
+                <button type="submit" class="search-bar__btn"><i class="icon-search"></i></button>
+            </div>
         </form>
 
         <div class="tags-group">
@@ -597,6 +638,104 @@ var swiper = new Swiper('.mainkv-list', {
         </div>
     </div><!-- END .search-page__container -->
 </div><!-- END .search-page -->
+
+<div class="filter-page">
+    <button type="button" class="btn-close"><i class="icon-close"></i></button>
+
+    <div class="search-page__container">
+        <div class="search-title">篩選項目</div>
+
+        <div class="tags-group">
+            <div class="tags-list__title">一般</div>
+            <div class="tags-list">
+                <a href="#">新上市</a>
+                <a href="#">依銷量</a>
+                <a href="#">價錢低到高</a>
+                <a href="#">價錢高到低</a>
+            </div>
+        </div>
+            
+        <div class="tags-group">
+            <div class="tags-list__title">鞋款</div>
+            <div class="tags-list">
+                <a class="selected" href="#">機能風芭蕾鞋</a>
+                <a href="#">瑪莉珍鞋</a>
+                <a href="#">樂福鞋、紳士鞋</a>
+                <a href="#">牛津鞋、德比鞋</a>
+                <a href="#">休閒鞋、德訓鞋</a>
+                <a href="#">平底鞋、娃娃鞋</a>
+                <a href="#">莫卡辛、豆豆鞋</a>
+                <a href="#">穆勒鞋</a>
+                <a href="#">跟鞋</a>
+                <a href="#">涼鞋、拖鞋</a>
+                <a href="#">運動鞋、老爹鞋</a>
+                <a href="#">短靴、中筒靴</a>
+                <a href="#">長靴、膝下靴</a>
+                <a href="#">膝上靴、過膝靴</a>
+                <a href="#">雨靴</a>
+                <a href="#">雪靴</a>
+                <a href="#">肩背包</a>
+                <a href="#">斜背包、側背包</a>
+                <a href="#">迷你包、小廢包</a>
+                <a href="#">手提包</a>
+                <a href="#">後背包</a>
+                <a href="#">光腿神器裸膚絲襪</a>
+            </div>
+        </div>
+
+        <div class="tags-group">
+            <div class="tags-list__title">尺寸</div>
+            <div class="tags-list">
+                <a href="#">33</a>
+                <a href="#">34</a>
+                <a href="#">35</a>
+                <a href="#">36</a>
+                <a href="#">37</a>
+                <a class="selected" href="#">38</a>
+                <a href="#">39</a>
+                <a href="#">40</a>
+                <a href="#">41</a>
+                <a href="#">42</a>
+                <a href="#">43</a>
+                <a href="#">44</a>
+            </div>
+        </div>
+
+        <div class="tags-group">
+            <div class="tags-list__title">跟高</div>
+            <div class="tags-list">
+                <a class="selected" href="#">平底 2.5cm以下</a>
+                <a href="#">低跟 2.5-4.5cm</a>
+                <a href="#">中跟 4.5-6.5cm</a>
+                <a href="#">高跟 6.5cm以上</a>
+            </div>
+        </div>
+        
+        <div class="tags-group">
+            <div class="tags-list__title">色系</div>
+            <div class="tags-list">
+                <a href="#">黑色系</a>
+                <a href="#">白色系</a>
+                <a href="#">灰色系</a>
+                <a href="#">裸色系</a>
+                <a href="#">大地色系</a>
+                <a class="selected" href="#">粉色系</a>
+                <a href="#">紅色系</a>
+                <a href="#">黃橘色系</a>
+                <a href="#">綠色系</a>
+                <a href="#">藍紫色系</a>
+                <a href="#">金屬色系</a>
+                <a href="#">動物紋</a>
+                <a href="#">其他</a>
+            </div>
+        </div>
+        
+        <div class="search-page__bottom">
+            <button type="reset" class="btn-basic-border">重設</button>
+            <button type="button" class="btn-basic">確認</button>
+        </div>
+    </div><!-- END .search-page__container -->
+</div><!-- END .filter-page -->
 
 </body>
 </html>
