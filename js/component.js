@@ -1,5 +1,14 @@
 $(function(){
     console.log(window.innerWidth); //瀏覽器寬度
+
+    //網頁滾動高度超過1000才顯示top-btn至頂按鈕
+    $(window).scroll(function(){
+        if($(window).scrollTop() > 1000){
+            $('.top-btn').stop(false, true).fadeIn(300);
+        }else{
+            $('.top-btn').stop(false, true).fadeOut(300);
+        }
+    });
     
     if(window.innerWidth > 820) {
         //header 全部商品.hover 展開下拉選單

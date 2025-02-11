@@ -3,12 +3,19 @@
 @import url("variable");
 
 /* 大框架 */
+html { scroll-behavior: smooth; }
+:root { scroll-padding-top: 100px; }
 body { .padding-box(); .font-family(); font-size: @font-S; overflow-x: hidden; }
 body.no-scroll { overflow: hidden; }
 body * { .padding-box(); }
 a { color: @color-default; text-decoration: none; }
 a:hover { text-decoration: underline; }
 img { width: 100%; height: auto; }
+.top-btn { display: none; position: fixed; width: 40px; height: 40px; right: 0; bottom: 20px; 
+    background: @color-white; border-radius: 99em; box-shadow: 0 0 5px 0 @color-gray2; z-index: 2; 
+    .icon-top-btn { display: block; width: 40px; height: 40px; 
+        background: url(../images/icons/top-btn.svg) no-repeat center; background-size: 50%; }
+}
 .select-basic { min-width: 120px; height: 36px; padding: 5px 10px; 
     background: @color-white url(../images/icons/arrow-down.svg) no-repeat calc(100% - 10px) center; background-size: 14px; 
     border: 1px solid @color-border; 
@@ -217,7 +224,7 @@ img { width: 100%; height: auto; }
         > a { display: flex; flex-flow: nowrap; align-items: center; color: @color-white; 
             > button, > input[type=button], > input[type=submit] { padding: 3px 15px; margin-right: 8px;
                 color: @color-white; background: @color-black; 
-                border: 2px solid @color-border; border-radius: 10px; }
+                border: 1px solid @color-border; border-radius: 10px; }
         }
         .btn-close .icon-close { background-size: 80%; }
     }
@@ -225,7 +232,7 @@ img { width: 100%; height: auto; }
     .header { height: 90px; padding: 0; border-bottom: none;
         grid-template-columns: repeat(2, 80px calc(100% - 80px)); z-index: 1;
 
-        .header__menu { width: 100%; height: 41px; padding: 0 15px; grid-column: 1 / 3; grid-row: 2 / 3; gap: 5px 18px;
+        .header__menu { width: 100%; height: 42px; padding: 0 15px; grid-column: 1 / 3; grid-row: 2 / 3; gap: 5px 18px;
             flex-flow: nowrap; align-items: center; white-space: nowrap; border-top: 1px solid @color-border; overflow: auto; 
             > a { font-size: @font-M; }
         }
