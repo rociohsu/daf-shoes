@@ -15,18 +15,28 @@
 <link rel="stylesheet" href="css/component.css">
 
 <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="js/component.js"></script>
 </head>
 
 <body>
+<div class="download-app">
+    <a target="_blank" href="https://apps.apple.com/tw/app/d-af-%E7%94%A8%E5%BF%83%E6%89%93%E9%80%A0%E8%88%92%E9%81%A9%E5%A5%BD%E7%A9%BF%E6%B5%81%E8%A1%8C%E5%A5%B3%E9%9E%8B/id1483729703"><button>下載</button> 下載APP，購物更流暢！</a>
+    <button type="button" class="btn-close"><i class="icon-close"></i></button>
+</div>
+
+<a class="top-bar" style="color: #FFFFFF; background: #CF93CC;">
+    情人節結帳輸入：Love2025，滿1314現折$99 
+</a>
+
 <div class="header">
     <div class="header__menu">
-        <a href="#">全部商品</a>
-        <a href="#">新品</a>
-        <a href="#">暢銷</a>
-        <a href="#">鞋款</a>
-        <a href="#">包款</a>
-        <a href="#">穿搭</a>
-        <a href="#" style="color: #CF93CC;">SALE</a>
+        <a class="pt-all" href="product-category.html">全部商品</a><!-- 全部商品由系統固定抓, 不抓後台設定選單 -->
+        <a href="product-category.html">新品</a>
+        <a href="product-category.html">暢銷</a>
+        <a href="product-category.html">鞋款</a>
+        <a href="product-category.html">包款</a>
+        <a href="https://www.daf-shoes.com/product/pageSet/3329">穿搭</a>
+        <a href="product-event.html" style="color: #CF93CC;">SALE</a>
     </div>
 
     <div class="header__logo">
@@ -34,12 +44,206 @@
     </div>
 
     <div class="header__syslink">
-        <button type="button"><i class="icon-search"></i></button>
-        <a href="member.html"><i class="icon-member"></i></a>
+        <button type="button" class="header__syslink__search"><i class="icon-search"></i></button>
+        <a class="header__syslink__member" href="member.html"><i class="icon-member"></i></a>
         <a class="header__syslink__cart" href="checkout.html"><i class="icon-cart"></i><span class="header__syslink__cart-total">10</span></a>
-        <button class="mobile" type="button"><i class="icon-menu"></i></button>
+        <button class="header__syslink__menu mobile" type="button"><i class="icon-menu"></i></button>
     </div>
-</div>
+
+    <!-- 會員icon.hover 展開會員下拉選單 -->
+    <div class="member-hover-menu">
+        <a href="member.html">會員資料</a>
+        <a href="order.html">訂單查詢 / 申請退貨</a>
+        <a href="d-coin.html">D幣</a>
+        <a href="point.html">購物金</a>
+        <a href="coupon.html">折價券</a>
+        <a href="wish-list.html">願望清單</a>
+        <a href="https://www.daf-shoes.com/product/pageSet/205">常見問題Q&A</a>
+        <button type="button" class="btn-basic-border">登出</button>
+    </div>
+
+    <!-- 購物車icon.hover 展開購物車下拉選單 -->
+    <div class="cart-hover-menu">
+        <div class="cart-hover-menu__list">
+            <div class="pt-item">
+                <a class="pt-item__pic" href="product-detail.html"><img src="https://static.daf-shoes.com/ea/1e/ea1e2e60c3e6f8cd06b59de8d30af47b.webp"></a>
+
+                <div class="pt-item__info">
+                    <div class="pt-item__info__pre-order">預購出貨日 2023-07-04</div>
+                    <div class="pt-item__info__name">
+                        <span class="name">貴婦下午茶．草編拼接馬銜釦平底拖鞋</span> 
+                        <span class="color">時尚黑</span> / 
+                        <span class="size">38</span>
+                    </div>
+                    <div class="pt-item__info__price">
+                        <span class="deal">NT$ 1380</span>
+                        <span class="original">NT$ 1980</span>
+                    </div>
+                    <a class="pt-item__info__promotions" href="product-event.html"><i class="icon-checked"></i>A+B自由選，1+1=$1388</a>
+                    <!-- 未符合
+                    <a class="pt-item__info__promotions non-compliant" href="product-event.html"><i class="icon-no-checked"></i>A+B自由選，1+1=$1388</a> -->
+                    <div class="pt-item__info__notice">此商品無提供退貨服務</div>
+                </div>
+            </div>
+
+            <div class="pt-item">
+                <a class="pt-item__pic" href="product-detail.html"><img src="https://static.daf-shoes.com/ea/1e/ea1e2e60c3e6f8cd06b59de8d30af47b.webp"></a>
+
+                <div class="pt-item__info">
+                    <div class="pt-item__info__pre-order">預購出貨日 2023-07-04</div>
+                    <div class="pt-item__info__name">
+                        <span class="name">貴婦下午茶．草編拼接馬銜釦平底拖鞋</span> 
+                        <span class="color">時尚黑</span> / 
+                        <span class="size">38</span>
+                    </div>
+                    <div class="pt-item__info__price">
+                        <span class="deal">NT$ 1380</span>
+                        <span class="original">NT$ 1980</span>
+                    </div>
+                    <a class="pt-item__info__promotions non-compliant" href="product-event.html"><i class="icon-no-checked"></i>A+B自由選，1+1=$1388</a>
+                    <div class="pt-item__info__notice">此商品無提供退貨服務</div>
+                </div>
+            </div>
+
+            <div class="pt-item">
+                <a class="pt-item__pic" href="product-detail.html"><img src="https://static.daf-shoes.com/ea/1e/ea1e2e60c3e6f8cd06b59de8d30af47b.webp"></a>
+
+                <div class="pt-item__info">
+                    <div class="pt-item__info__pre-order">預購出貨日 2023-07-04</div>
+                    <div class="pt-item__info__name">
+                        <span class="name">貴婦下午茶．草編拼接馬銜釦平底拖鞋</span> 
+                        <span class="color">時尚黑</span> / 
+                        <span class="size">38</span>
+                    </div>
+                    <div class="pt-item__info__price">
+                        <span class="deal">NT$ 1380</span>
+                        <span class="original">NT$ 1980</span>
+                    </div>
+                    <a class="pt-item__info__promotions" href="product-event.html"><i class="icon-checked"></i>A+B自由選，1+1=$1388</a>
+                    <div class="pt-item__info__notice">此商品無提供退貨服務</div>
+                </div>
+            </div>
+        </div>
+        <a class="btn-basic" href="checkout.html">立刻結帳</a>
+    </div>
+
+    <!-- 全部商品.hover 展開商品分類 -->
+    <div class="pt-category header__hover-menu">
+        <button type="button" class="btn-close mobile"><i class="icon-close"></i></button>
+
+        <div class="header__hover-menu__container">
+            <div class="pt-category__group">
+                <div class="pt-category__title">新品上市</div>
+                <div class="pt-category__menu">
+                    <a href="product-category.html">本週新上架</a>
+                    <a href="product-category.html">人氣TOP.50</a>
+                    <a href="product-category.html">2025美靴新品</a>
+                    <a href="product-category.html">現貨不用等</a>
+                    <a href="product-category.html">舒華代言主打</a>
+                </div>
+            </div>
+
+            <div class="pt-category__group">
+                <div class="pt-category__title">特價活動</div>
+                <div class="pt-category__menu">
+                    <a href="product-event.html">情人節美包1+1=$1688
+                    <a href="product-event.html">MIT國民鞋780up</a>
+                    <a href="product-event.html">換季出清$499起</a>
+                </div>
+            </div>
+
+            <div class="pt-category__group">
+                <div class="pt-category__title">本月話題</div>
+                <div class="pt-category__menu">
+                    <a href="product-category.html">4D光腿神器</a>
+                    <a href="product-category.html">第三代美腿瘦瘦靴</a>
+                    <a href="product-category.html">踩雲感氣墊靴</a>
+                    <a href="product-category.html">輕量鞋系列</a>
+                    <a href="product-category.html">機能芭蕾鞋</a>
+                    <a href="product-category.html">銀色專區</a>
+                    <a href="product-category.html">大尺碼專區</a>
+                    <a href="product-category.html">肉肉女孩推薦</a>
+                    <a href="product-category.html">雨靴專區</a>
+                    <a href="product-category.html">包包專區</a>
+                </div>
+            </div>
+
+            <div class="pt-category__group">
+                <div class="pt-category__title">Shoes</div>
+                <div class="pt-category__menu">
+                    <a href="product-category.html">機能風芭蕾鞋</a>
+                    <a href="product-category.html">瑪莉珍鞋</a>
+                    <a href="product-category.html">樂福鞋、紳士鞋</a>
+                    <a href="product-category.html">牛津鞋、德比鞋</a>
+                    <a href="product-category.html">休閒鞋、德訓鞋</a>
+                    <a href="product-category.html">平底鞋、娃娃鞋</a>
+                    <a href="product-category.html">莫卡辛、豆豆鞋</a>
+                    <a href="product-category.html">穆勒鞋</a>
+                    <a href="product-category.html">跟鞋</a>
+                    <a href="product-category.html">涼鞋、拖鞋</a>
+                    <a href="product-category.html">運動鞋、老爹鞋</a>
+                    <a href="product-category.html">全系列女鞋</a>
+                </div>
+            </div>
+
+            <div class="pt-category__group">
+                <div class="pt-category__title">Boots</div>
+                <div class="pt-category__menu">
+                    <a href="product-category.html">短靴、中筒靴</a>
+                    <a href="product-category.html">長靴、膝下靴</a>
+                    <a href="product-category.html">膝上靴、過膝靴</a>
+                    <a href="product-category.html">雨靴</a>
+                    <a href="product-category.html">雪靴</a>
+                    <a href="product-category.html">全系列靴子</a>
+                </div>
+            </div>
+
+            <div class="pt-category__group">
+                <div class="pt-category__title">Bags</div>
+                <div class="pt-category__menu">
+                    <a href="product-category.html">肩背包</a>
+                    <a href="product-category.html">斜背包、側背包</a>
+                    <a href="product-category.html">迷你包、小廢包</a>
+                    <a href="product-category.html">手提包</a>
+                    <a href="product-category.html">後背包</a>
+                    <a href="product-category.html">全系列包包</a>
+                </div>
+            </div>
+
+            <div class="pt-category__group">
+                <div class="pt-category__title">Accessories</div>
+                <div class="pt-category__menu">
+                    <a href="product-category.html">光腿神器裸膚絲襪</a>
+                </div>
+            </div>
+
+            <div class="pt-category__group">
+                <div class="pt-category__title">跟高</div>
+                <div class="pt-category__menu">
+                    <a href="product-category.html">平底 2.5cm以下</a>
+                    <a href="product-category.html">低跟 2.5-4.5cm</a>
+                    <a href="product-category.html">中跟 4.5-6.5cm</a>
+                    <a href="product-category.html">高跟 6.5cm以上</a>
+                </div>
+            </div>
+
+            <div class="pt-category__group mobile"><!-- 這區只有手機版才顯示 -->
+                <div class="pt-category__title">D+AF資訊</div>
+                <div class="pt-category__menu">
+                    <a href="https://www.daf-shoes.com/product/pageSet/493">關於D+AF</a>
+                    <a href="https://www.daf-shoes.com/product/pageSet/2774">Blog</a>
+                    <a href="https://www.daf-shoes.com/product/pageSet/1717">Events</a>
+                    <a href="https://www.daf-shoes.com/product/pageSet/208">購物須知</a>
+                    <a href="https://www.daf-shoes.com/index/service">客服資訊</a>
+                    <a href="https://www.daf-shoes.com/product/pageSet/2743">門市資訊</a>
+                    <a href="https://www.daf-shoes.com/product/pageSet/2796">虛擬逛店</a>
+                    <a href="https://www.daf-shoes.com/product/pageSet/2906">異業合作</a>
+                    <a target="_blank" href="https://apps.apple.com/tw/app/d-af-%E7%94%A8%E5%BF%83%E6%89%93%E9%80%A0%E8%88%92%E9%81%A9%E5%A5%BD%E7%A9%BF%E6%B5%81%E8%A1%8C%E5%A5%B3%E9%9E%8B/id1483729703">下載APP</a>
+                </div>
+            </div>
+        </div><!-- END .header__hover-menu__container -->
+    </div><!-- END .header__hover-menu -->
+</div><!-- END .header -->
 
 <!-- 內容開始 -->
 <link rel="stylesheet" href="https://static.daf-shoes.com/_Art/landingpage/swiper-bundle.min.css" />
@@ -241,7 +445,7 @@ var swiper = new Swiper('.mainkv-list', {
             <div>客服信箱 <a href="mailto:service@daf-shoes.com">service@daf-shoes.com</a></div>
             <div>10:00-12:00 13:00-18:00<br>(例假日及國定假日公休)</div> 
         </div>
-    </div>
+    </div><!-- END .footer__menu -->
     
     <div class="footer__menu right">
         <select class="select-basic">
@@ -260,10 +464,132 @@ var swiper = new Swiper('.mainkv-list', {
             <option value="SGD">S$</option>
             <option value="CNY">RMB¥</option>
         </select>
-    </div>
+    </div><!-- END .footer__menu.right -->
 
     <div class="footer__copyright">© D+AF. 2024 晨希時尚股份有限公司｜統一編號 27921248</div>
-</div>
+</div><!-- END .footer -->
+
+<div class="search-page">
+    <button type="button" class="btn-close"><i class="icon-close"></i></button>
+
+    <div class="search-page__container">
+        <div class="search-bar">
+            <input type="text" class="search-bar__keyword" placeholder="Search..">
+            <button type="button" class="search-bar__btn"><i class="icon-search"></i></button>
+        </div>
+
+        <div class="tags-group">
+            <div class="tags-list">
+                <a href="product-category.html">舒華代言款</a>
+                <a href="product-category.html">光腿神器</a>
+            </div>
+        </div>
+
+        <div class="tags-group">
+            <div class="tags-list__title">熱門搜尋</div>
+            <div class="tags-list">
+                <a href="product-category.html">4D光腿神器</a>
+                <a href="product-category.html">踩雲感氣墊靴</a>
+                <a href="product-category.html">走春美鞋</a>
+                <a href="product-category.html">美腿瘦瘦靴</a>
+                <a href="product-category.html">韓風運動鞋</a>
+                <a href="product-category.html">機能芭蕾鞋</a>
+                <a href="product-category.html">出國旅遊</a>
+                <a href="product-category.html">時髦包包</a>
+                <a href="product-category.html">舒華</a>
+                <a href="product-category.html">OL好感穿搭</a>
+                <a href="product-category.html">美靴精選</a>
+                <a href="product-category.html">輕量鞋</a>
+                <a href="product-category.html">過膝靴</a>
+                <a href="product-category.html">大尺碼</a>
+                <a href="product-category.html">MIT</a>
+                <a href="product-category.html">馬銜釦</a>
+                <a href="product-category.html">雪靴</a>
+                <a href="product-category.html">雨靴</a>
+            </div>
+        </div>
+            
+        <div class="tags-group">
+            <div class="tags-list__title">鞋款</div>
+            <div class="tags-list">
+                <a class="selected" href="#">機能風芭蕾鞋</a>
+                <a href="#">瑪莉珍鞋</a>
+                <a href="#">樂福鞋、紳士鞋</a>
+                <a href="#">牛津鞋、德比鞋</a>
+                <a href="#">休閒鞋、德訓鞋</a>
+                <a href="#">平底鞋、娃娃鞋</a>
+                <a href="#">莫卡辛、豆豆鞋</a>
+                <a href="#">穆勒鞋</a>
+                <a href="#">跟鞋</a>
+                <a href="#">涼鞋、拖鞋</a>
+                <a href="#">運動鞋、老爹鞋</a>
+                <a href="#">短靴、中筒靴</a>
+                <a href="#">長靴、膝下靴</a>
+                <a href="#">膝上靴、過膝靴</a>
+                <a href="#">雨靴</a>
+                <a href="#">雪靴</a>
+                <a href="#">肩背包</a>
+                <a href="#">斜背包、側背包</a>
+                <a href="#">迷你包、小廢包</a>
+                <a href="#">手提包</a>
+                <a href="#">後背包</a>
+                <a href="#">光腿神器裸膚絲襪</a>
+            </div>
+        </div>
+
+        <div class="tags-group">
+            <div class="tags-list__title">尺寸</div>
+            <div class="tags-list">
+                <a href="#">33</a>
+                <a href="#">34</a>
+                <a href="#">35</a>
+                <a href="#">36</a>
+                <a href="#">37</a>
+                <a class="selected" href="#">38</a>
+                <a href="#">39</a>
+                <a href="#">40</a>
+                <a href="#">41</a>
+                <a href="#">42</a>
+                <a href="#">43</a>
+                <a href="#">44</a>
+            </div>
+        </div>
+
+        <div class="tags-group">
+            <div class="tags-list__title">跟高</div>
+            <div class="tags-list">
+                <a class="selected" href="#">平底 2.5cm以下</a>
+                <a href="#">低跟 2.5-4.5cm</a>
+                <a href="#">中跟 4.5-6.5cm</a>
+                <a href="#">高跟 6.5cm以上</a>
+            </div>
+        </div>
+        
+        <div class="tags-group">
+            <div class="tags-list__title">色系</div>
+            <div class="tags-list">
+                <a href="#">黑色系</a>
+                <a href="#">白色系</a>
+                <a href="#">灰色系</a>
+                <a href="#">裸色系</a>
+                <a href="#">大地色系</a>
+                <a class="selected" href="#">粉色系</a>
+                <a href="#">紅色系</a>
+                <a href="#">黃橘色系</a>
+                <a href="#">綠色系</a>
+                <a href="#">藍紫色系</a>
+                <a href="#">金屬色系</a>
+                <a href="#">動物紋</a>
+                <a href="#">其他</a>
+            </div>
+        </div>
+        
+        <div class="search-page__bottom">
+            <button type="reset" class="btn-basic-border">重設</button>
+            <button type="button" class="btn-basic">確認</button>
+        </div>
+    </div><!-- END .search-page__container -->
+</div><!-- END .search-page -->
 
 </body>
 </html>
