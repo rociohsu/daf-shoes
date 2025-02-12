@@ -2,11 +2,23 @@ $(function(){
     console.log(window.innerWidth); //瀏覽器寬度
 
     if(window.innerWidth > 820) {
-        //商品列表頁左側選單開合
+        //電腦版 商品列表頁左側選單開合
         $('.container.product .pt-category__title').click(function(){
             $(this).toggleClass('open');
             $(this).next('.pt-category__menu').stop(false, true).slideToggle(300);
         });
+
+        //電腦版 商品列表頁 hover商品換圖
+        $('.pt-list .pt-item__pic').hover(
+            function() {
+                imgUrl1 = $(this).children('img').attr('src');
+                imgUrl2 = $(this).attr('rel');
+                
+                $(this).children('img').attr('src',imgUrl2);
+            }, function() {
+                $(this).children('img').attr('src',imgUrl1);
+            }
+        );
     }else{
         //手機版 打開篩選頁  
         $('.filter-btn').click(function(){
@@ -19,4 +31,15 @@ $(function(){
         });
     }
 
+    //電腦版 手機版 打開選擇尺寸跳窗
+    $('.pt-item .add-btn').click(function(){
+        $('.header').addClass('no-sticky');
+        $('.size-select').stop(false, true).fadeOut(0);
+        $(this).closest('.pt-item').find('.size-select').stop(false, true).fadeIn(300);
+    });
+
+    $('.size-select__bg, .size-select .btn-close').click(function(){
+        $('.header').removeClass('no-sticky');
+        $(this).closest('.size-select').stop(false, true).fadeOut(300);
+    });
 });
