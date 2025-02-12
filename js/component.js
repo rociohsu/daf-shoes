@@ -85,4 +85,37 @@ $(function(){
         $('.search-page').stop(false, true).animate({right:'-100dvw'}).fadeOut(0);
     });
 
+    //電腦版&手機版 popup彈窗開關
+    /* open popup */
+    $('a.popup').click(function(){
+        $('body').addClass('no-scroll');
+        var id = $(this).attr('rel');
+        $('#'+id).show();
+    });
+
+    /* close popup */
+    $('.popup-theme .overlay-bg, .popup-theme .btn-close').click(function() {
+        $('body').removeClass('no-scroll');
+        $(this).closest('.popup-theme').hide();
+    });
+
+    //電腦版 手機版 打開選擇尺寸跳窗
+    $('.pt-item .add-btn').click(function(){
+        $('.header').addClass('no-sticky');
+        $('.size-select').stop(false, true).fadeOut(0);
+        $(this).closest('.pt-item').find('.size-select').stop(false, true).fadeIn(300);
+    });
+
+    $('.size-select__bg, .size-select .btn-close').click(function(){
+        $('.header').removeClass('no-sticky');
+        $(this).closest('.size-select').stop(false, true).fadeOut(300);
+    });
+
+    //加入購物車成功彈窗 自動消失
+    $('.size-select__option > a').click(function(){
+        var id = $(this).attr('rel');
+        $('#'+id).stop(false, true).fadeIn(300).delay(1000).fadeOut(300);
+        $('.size-select').stop(false, true).fadeOut(0);
+    });
+
 });

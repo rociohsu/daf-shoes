@@ -91,3 +91,12 @@ html:lang(zh-Hant) { // Chinese
         width: 4px; height: 4px;
     }
 }
+
+/*webkit瀏覽器專用*/
+* ::-webkit-input-placeholder { color: @color-gray1; }
+/*Firefox 4-18瀏覽器專用*/
+* input::-moz-placeholder  { color: @color-gray1; }
+/*Firefox 19+瀏覽器專用*/
+* input::-moz-placeholder { color: @color-gray1; }
+/*IE10瀏覽器專用*/
+*:-ms-input-placeholder { color: @color-gray1; }
