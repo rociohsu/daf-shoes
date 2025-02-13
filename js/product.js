@@ -30,4 +30,5 @@ $(function(){
             $('.filter-page').stop(false, true).animate({right:'-100dvw'}).fadeOut(0);
         });
     }
+    
 });
