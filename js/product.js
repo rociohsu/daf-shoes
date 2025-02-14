@@ -19,6 +19,9 @@ $(function(){
                 $(this).children('img').attr('src',imgUrl1);
             }
         );
+
+        //電腦版 商品詳情頁 商品圖放大鏡功能
+        var $easyzoom = $('.easyzoom').easyZoom();
     }else{
         //手機版 打開篩選頁  
         $('.filter-btn').click(function(){
@@ -28,6 +31,25 @@ $(function(){
         $('.filter-page .btn-close').click(function(){
             $('body').removeClass('no-scroll');
             $('.filter-page').stop(false, true).animate({right:'-100dvw'}).fadeOut(0);
+        });
+
+        //手機板 把商品輪播往上放至header下
+        $('.photo-products').appendTo( $('.container.product-detail') );
+
+        //手機版 商品圖輪播
+        var swiper = new Swiper('.photo-products', {
+            autoHeight: true,
+            spaceBetween: 0,
+            allowTouchMove: true,
+            loop: true,
+            autoplay: {
+              delay: 2500,
+              disableOnInteraction: false,
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
         });
     }
     
