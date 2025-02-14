@@ -52,5 +52,20 @@ $(function(){
             },
         });
     }
-    
+
+    //加入購物車成功彈窗 自動消失
+    $('.add-to-cart').click(function(){
+        $('.header').removeClass('no-sticky');
+        var id = $(this).attr('rel');
+        $('#'+id).stop(false, true).fadeIn(300).delay(1000).fadeOut(300);
+    });
+
+    //商品詳情頁 切換tab
+    $('.pt-content__tab a:not(.popup)').click(function(){
+        var id = $(this).attr('rel');
+        $('.pt-content__tab a').removeClass('current');
+        $(this).addClass('current');
+        $('.pt-content__pane > div').removeClass('current');
+        $('#'+id).addClass('current');
+    });
 });

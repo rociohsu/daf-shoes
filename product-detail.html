@@ -18,9 +18,9 @@
 <link rel="stylesheet" href="css/product.css">
 
 <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
-<script src="js/jquery.flexslider-min.js"></script><!-- 輪播用 -->
-<script src="js/swiper-bundle.min.js"></script><!-- 輪播用 -->
-<script src="js/easyzoom.js"></script><!-- 圖片放大鏡用 -->
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script><!-- 輪播用 -->
+<script type="text/javascript" src="js/swiper-bundle.min.js"></script><!-- 輪播用 -->
+<script type="text/javascript" src="js/easyzoom.js"></script><!-- 圖片放大鏡用 -->
 <script type="text/javascript" src="js/component.js"></script>
 <script type="text/javascript" src="js/product.js"></script>
 </head>
@@ -282,7 +282,7 @@
         <div class="pt-info">
             <div class="pt-info__state">
                 <span>現貨</span>
-                <span class="pre-order">預購</span>
+                <!-- <span class="pre-order">預購</span> -->
             </div>
             <button class="whishlist-btn"><i class="icon-heart"></i></button>
             <h1>低調貴族．小錢幣扭結方頭樂福鞋</h1>
@@ -300,10 +300,10 @@
                     <div class="pt-item__info__notice">此商品無提供退貨服務</div> -->
             </div>
             <div class="color-select__option">
-                <a><i style="background-color: #000000;"></i></a>
-                <a><i style="background-color: #fef0dc;"></i></a>
-                <a><i><img src="https://static.daf-shoes.com/aa/6d/aa6d956209a6a99e56c593735c447614.jpeg" alt="漆皮黑"></i></a>
-                <a class="color--selected"><i style="background-color: #5c6f57"></i></a>
+                <a href="product-detail.html"><i style="background-color: #000000;"></i></a>
+                <a href="product-detail.html"><i style="background-color: #fef0dc;"></i></a>
+                <a href="product-detail.html"><i><img src="https://static.daf-shoes.com/aa/6d/aa6d956209a6a99e56c593735c447614.jpeg" alt="漆皮黑"></i></a>
+                <a class="color--selected" href="product-detail.html"><i style="background-color: #5c6f57"></i></a>
             </div>
             <div class="color-select__text">時尚黑</div>
             <div class="size-select__option">
@@ -323,9 +323,72 @@
         </div><!-- END .pt-info -->
 
         <div class="pt-btns">
-            <a class="btn-basic" href="checkout.html">加入購物車</a>
-            <!-- <button class="btn-basic preparing">即將開賣 2024-05-01 18:00</button> -->
+            <button type="button" class="btn-basic add-to-cart" rel="add-success">加入購物車</button>
+            <!-- <button type="button" class="btn-basic preparing">即將開賣 2024-05-01 18:00</button> -->
         </div>
+
+        <div class="pt-content">
+            <div class="pt-content__tab">
+                <a class="current" rel="pt-info">商品資訊</a>
+                <a rel="store-stock">門市庫存</a>
+                <a class="popup" rel="size-chart">尺寸對照表/試穿心得</a>
+            </div>
+
+            <div class="pt-content__pane">
+                <div class="current" id="pt-info">
+                    版型：鞋版正常
+                    鞋面：合成皮革<br>
+                    內裡：合成皮革<br>
+                    鞋底：橡膠鞋底<br>
+                    跟高：跟高約4.5公分<br>
+                    產地：中國<br>
+                    重量：一雙37號約880g(不含鞋盒&填充物)
+                </div>
+
+                <div id="store-stock">
+                    <div class="store-stock__table">
+                        <div>南西旗艦</div>
+                        <div class="yes">O</div>
+            
+                        <div>西門</div>
+                        <div class="no">X</div>
+            
+                        <div>信義</div>
+                        <div class="yes">O</div>
+            
+                        <div>敦南</div>
+                        <div class="yes">O</div>
+            
+                        <div>板橋大遠百</div>
+                        <div class="yes">O</div>
+            
+                        <div>MITSUI OUTLET PARK林口</div>
+                        <div class="no">X</div>
+            
+                        <div>桃園大江</div>
+                        <div class="no">X</div>
+            
+                        <div>華泰名品城outlet</div>
+                        <div class="no">X</div>
+            
+                        <div>一中旗艦</div>
+                        <div class="yes">O</div>
+            
+                        <div>LaLaport台中</div>
+                        <div class="yes">O</div>
+            
+                        <div>文心秀泰</div>
+                        <div class="yes">O</div>
+            
+                        <div>漢神巨蛋</div>
+                        <div class="no">X</div>
+            
+                        <div>台南FOCUS</div>
+                        <div class="no">X</div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- END .pt-content -->
     </div></div><!-- END .container__main__wrap .container__main -->
 </div>
 
