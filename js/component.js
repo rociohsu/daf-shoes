@@ -87,6 +87,9 @@ $(function(){
 
     //電腦版 手機版 打開選擇尺寸跳窗
     $('.pt-item .add-btn').click(function(){
+        if(window.innerWidth < 821) {
+            $('body').addClass('no-scroll');
+        }
         $('.header').addClass('no-sticky');
         $('.size-select').stop(false, true).fadeOut(0);
         $('.top-btn').stop(false, true).fadeOut(0);
@@ -94,6 +97,7 @@ $(function(){
     });
 
     $('.size-select__bg, .size-select .btn-close').click(function(){
+        $('body').removeClass('no-scroll');
         $('.header').removeClass('no-sticky');
         $(this).closest('.size-select').stop(false, true).fadeOut(300);
     });
@@ -114,6 +118,7 @@ $(function(){
 
     //加入購物車成功彈窗 自動消失
     $('.size-select__option > a:not(.state--sold-out)').click(function(){
+        $('body').removeClass('no-scroll');
         $('.header').removeClass('no-sticky');
         var id = $(this).attr('rel');
         $('#'+id).stop(false, true).fadeIn(300).delay(1000).fadeOut(300);

@@ -23,12 +23,12 @@ input, button, select, textarea { .font-family(); font-size: @font-S; color: @co
     color: @color-default; border: 1px solid @color-border; 
 }
 .btn-basic { display: inline-flex; flex-flow: nowrap; justify-content: center; align-items: center; 
-    width: 100%; max-width: 400px; height: 45px; padding: 10px 15px; transition: 0.3s;
+    width: fit-content; height: 45px; padding: 10px 15px; transition: 0.3s;
     color: @color-white; font-size: @font-M; text-align: center;
     background: @color-default; border: 1px solid @color-default; }
 .btn-basic:hover { background: @color-black; text-decoration: none; }
 .btn-basic-border { display: inline-flex; flex-flow: nowrap; justify-content: center; align-items: center; 
-    width: 100%; max-width: 400px; height: 45px; padding: 10px 15px; transition: 0.3s;
+    width: fit-content; height: 45px; padding: 10px 15px; transition: 0.3s;
     color: @color-default; font-size: @font-M; text-align: center; 
     background: @color-white; border: 1px solid @color-default; }
 .btn-basic-border:hover { background: @color-bg; text-decoration: none; }
@@ -112,7 +112,7 @@ input, button, select, textarea { .font-family(); font-size: @font-S; color: @co
 
         > a { display: block; padding: 10px; border-top: 1px solid @color-border; }
         > a:first-child { padding-top: 0; border-top: none; }
-        .btn-basic-border { height: 40px; margin-top: 10px; font-size: @font-S; }
+        .btn-basic-border { width: 100%; height: 40px; margin-top: 10px; font-size: @font-S; }
     }
 
     .cart-hover-menu { position: absolute; display: none;
@@ -123,7 +123,7 @@ input, button, select, textarea { .font-family(); font-size: @font-S; color: @co
             .pt-item { border-top: 1px solid @color-border; align-items: center; }
             .pt-item:first-child { padding-top: 0; border-top: none; }
         }
-        .btn-basic { margin-top: 10px; }
+        .btn-basic { width: 100%; margin-top: 10px; }
     }   
 }
 
@@ -297,7 +297,7 @@ input, button, select, textarea { .font-family(); font-size: @font-S; color: @co
             margin-top: 30px;
             display: flex; flex-flow: nowrap; justify-content: center; align-items: center; 
             background: @color-white; 
-        
+            .btn-basic, .btn-basic-border { width: 100%; }
         }
     }
 }
@@ -364,7 +364,7 @@ input, button, select, textarea { .font-family(); font-size: @font-S; color: @co
 
             .btn-close { position: absolute; top: 15px; right: 10px; }
             .popup-title { display: flex; flex-flow: wrap; align-items: center; justify-content: center;
-                font-size: @font-L; text-align: center; }
+                font-size: @font-L; font-weight: 500; text-align: center; }
         }
     }
 }
@@ -373,8 +373,9 @@ input, button, select, textarea { .font-family(); font-size: @font-S; color: @co
 .add-success { 
     .popup-container { max-width: fit-content; 
         .popup-content { padding: 15px 30px; border-radius: 99em; 
-            .popup-title .icon-checked { display: inline-block; width: 24px; height: 24px; margin-right: 8px;
-                background: url(../images/icons/checked-circle-b.svg) no-repeat center; background-size: 100%;
+            .popup-title { font-weight: normal;
+                .icon-checked { display: inline-block; width: 24px; height: 24px; margin-right: 8px;
+                background: url(../images/icons/checked-circle-b.svg) no-repeat center; background-size: 100%; }
             }
         }
     }
