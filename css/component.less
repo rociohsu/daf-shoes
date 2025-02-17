@@ -18,6 +18,14 @@ input, button, select, textarea { .font-family(); font-size: @font-S; color: @co
     .icon-top-btn { display: block; width: 40px; height: 40px; 
         background: url(../images/icons/top-btn.svg) no-repeat center; background-size: 50%; }
 }
+.checkbox-basic {
+    input[type="checkbox"] { display: none; }
+    input[type="checkbox"] + label { display: flex; flex-flow: wrap; align-items: center;
+        i { display: inline-block; width: 20px; height: 20px; margin-right: 8px;
+        background: @color-white url(../images/icons/no-checked.svg) no-repeat center; background-size: 100%;  }
+    }
+    input[type="checkbox"]:checked + label i { background-image: url(../images/icons/checked.svg); }
+}
 .select-basic { min-width: 120px; height: 36px; padding: 5px 10px; 
     background: @color-white url(../images/icons/arrow-down.svg) no-repeat calc(100% - 10px) center; background-size: 14px; 
     color: @color-default; border: 1px solid @color-border; 

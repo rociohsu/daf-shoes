@@ -1,7 +1,7 @@
 @import url("variable");
 
 /* 購物車結帳頁 */
-.checkout { padding-top: 80px; gap: 0;
+.checkout { padding-top: 80px; gap: 20px;
     > h2 { position: absolute; width: 100%; top: 30px; left: 0; 
         font-size: @font-XL; font-weight: normal; text-align: center; }
     .title-bar { height: 60px; padding: 10px 0; 
@@ -42,13 +42,78 @@
         }
     }
     .container__main { width: 100%; 
+        .pay-group { padding: 20px 0; border-bottom: 1px solid @color-border; 
+            .pay-group__title { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center;
+                > * { display: flex; flex-flow: nowrap; align-items: center;
+                    .icon-arrow-down { display: inline-block; width: 20px; height: 20px; margin: 2px 0 0 5px;
+                        background: url(../images/icons/arrow-down.svg) no-repeat center; background-size: 60%; }
+                }
+                .discount-desc { color: @color-red; text-decoration: underline; }
+            }
+            .pay-group__select { display: flex; flex-flow: nowrap; align-items: center;
+                padding: 10px 15px; font-size: @font-M; border: 1px solid @color-default;
+                background: url(../images/icons/arrow-down.svg) no-repeat calc(100% - 20px) center; background-size: 20px;
+                cursor: pointer; transition: 0.3s;
+                .icon-delivery { display: inline-block; width: 24px; height: 24px; margin-right: 8px;
+                    background: url(../images/icons/delivery.svg) no-repeat center; background-size: 100%; }
+            }
+            .pay-group__select:hover { text-decoration: none; background-color: @color-bg; }
+            .pay-group__count { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; gap: 8px; margin-top: 10px;
+                .pay-group__count__point { color: @color-red; }
+                .pay-group__count__desc { color: @color-gray1; }
+            }
+        }
+        .pay-group.d-coin .pay-group__count, .pay-group.online-cash .pay-group__count { margin-top: 0; }
 
+        .pay-group__discount-list { display: grid; grid-template-columns: repeat(5, 1fr); grid-gap: 10px; margin-top: 10px;
+            > a { display: inline-flex; flex-flow: nowrap; justify-content: center; align-items: center; 
+                width: 100%; height: 40px; padding: 8px 15px; transition: 0.3s;
+                color: @color-default; font-size: @font-M; text-align: center; 
+                background: @color-white; border: 1px solid @color-default; }
+            > a:hover { background: @color-bg; text-decoration: none; }
+            .selected, .selected:hover { color: @color-white; background: @color-default; border-color: @color-default; }
+            .disabled, .disabled:hover { color: @color-gray2; background: @color-bg; border-color: @color-bg; cursor: text; }
+        }
+
+        .total-count { display: flex; flex-flow: column; gap: 8px; padding-top: 20px; border-top: 1px solid @color-border;
+            > div{ display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
+                .total-count__final { color: @color-red; font-size: @font-M;
+                    > b { font-size: @font-XXL; font-weight: 600; }
+                }
+                .total-count__spec { color: @color-gray1; }
+            }
+        }
+
+        .foreign-currency { border-bottom: none;
+            .pay-group__title.foreign-currency__btn { justify-content: flex-end; 
+                > a { display: inline-flex; flex-flow: nowrap; justify-content: flex-end; align-items: center; 
+                    width: 250px; padding: 3px 30px 5px 0; text-align: right; 
+                    background: @color-white url(../images/icons/arrow-down.svg) no-repeat calc(100% - 5px) center; background-size: 14px; 
+                    > span { width: 80px; }
+                }
+                > a:hover { text-decoration: none; }
+                .open { background-image: url(../images/icons/arrow-up.svg); }
+            }
+
+            .pay-group__pane { display: none; width: 250px; margin-left: calc(100% - 250px); padding-right: 30px; 
+                > div { display: flex; flex-flow: nowrap; justify-content: flex-end; align-items: center; 
+                    height: fit-content; margin-bottom: 3px; text-align: right; 
+                    > span { width: 80px; }
+                }
+            }
+        }
+
+        .payment-important { color: @color-gray0; line-height: 160%;
+            .payment-important__notice { color: @color-red; font-size: @font-M; font-weight: bold; }
+        }
+
+        .btn-basic.confirm { width: 100%; height: 60px; margin-top: 20px; font-size: @font-L; }
     }
 }
 
 /* 小螢幕 */
 @media (max-width: 1024px) {
-    .checkout { flex-flow: column; }
+    .checkout { flex-flow: column; gap: 0; }
 }
 
 /* 手機版 */
@@ -65,7 +130,7 @@
             }
         }
         .container__main { width: 100%; 
-
+            .pay-group__discount-list { grid-template-columns: repeat(3, 1fr); }
         }
     }
 }
