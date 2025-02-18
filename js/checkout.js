@@ -13,3 +13,9 @@ $(function(){
         $(this).parent('.foreign-currency__btn ').next('.pay-group__pane').stop(false, true).slideToggle(300);
     });
 });
+
+//關閉popup彈窗
+function nextPayment(){
+    $('.popup-theme').stop(false, true).fadeOut(300);
+    $('#payment-option').stop(false, true).fadeIn(300);
+}

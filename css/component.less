@@ -13,7 +13,9 @@ a:hover { text-decoration: underline; }
 img { display: block; width: 100%; height: auto; }
 input:-webkit-autofill { box-shadow: 0 0 0px 1000px @color-white inset !important; }
 input, button, select, textarea { .font-family(); font-size: @font-S; color: @color-default; }
-.input-basic { display: block; width: 100%; height: 40px; padding: 10px 0; border-bottom: 1px solid @color-border; }
+textarea { min-height: 80px; padding: 10px; border: 1px solid @color-border; }
+textarea:hover, textarea:focus { border: 1px solid @color-border; }
+.input-basic { display: block; width: 100%; height: 40px; padding: 10px; border-bottom: 1px solid @color-border; }
 .checkbox-basic {
     input[type="checkbox"] { display: none; }
     input[type="checkbox"] + label { width: 100%; display: flex; flex-flow: nowrap; align-items: flex-start;
@@ -453,3 +455,29 @@ input, button, select, textarea { .font-family(); font-size: @font-S; color: @co
     width: 20px; height: 10px; left: calc(35% - 10px); background-repeat: no-repeat; background-size: 100%; }
 .coupon-item::before { top: -1px; background-image: url(../images/icons/circle-border.svg); background-position: center bottom; }
 .coupon-item::after { bottom: -1px; background-image: url(../images/icons/circle-border.svg); background-position: center top; }
+
+/* form表單類 */
+.form-table { display: flex; flex-flow: column; gap: 15px; padding: 25px 0;
+    .select-basic { border-top: none; border-left: none; border-right: none; }
+    .form-table__title { font-size: @font-M; font-weight: 500; 
+        .required { color: @color-red; }
+    }
+    .form-table__row > * { width: 100%; }
+    .form-table__row.phone { display: flex; flex-flow: nowrap; justify-content: space-between; 
+        > * { height: 40px; }
+        .select-basic { width: 30%; }
+    }
+    .form-table__row.address { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px 0;
+        > * { height: 40px; }
+        .select-basic { width: 100%; }
+        .input-basic.detail-add { grid-column: 1 / 3; grid-row: 2 / 3; }
+    }
+    .form-table__link { color: @color-gray1; 
+        > a { text-decoration: underline; }
+    }
+}
+.error-msg { display: flex; flex-flow: wrap; margin-top: -5px; color: @color-red; 
+    .icon-exclamation-mark { display: inline-block; width: 20px; height: 20px; margin-right: 5px; 
+        background: url(../images/icons/exclamation-mark.svg) no-repeat center top; background-size: 100%; }
+    > span { width: calc(100% - 25px); }
+}

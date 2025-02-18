@@ -244,6 +244,12 @@
             <a class="btn-basic-border" href="wishlist.html">收藏清單</a>
         </div>
 
+        <div class="cart-nothing"><!-- 無購物清單時顯示 -->
+            <i class="icon-cart-null"></i>
+            <p>目前尚無購物清單，快來一起shoping吧！</p>
+            <a class="btn-basic" href="product-category.html">繼續逛逛</a>
+        </div>
+
         <div class="pt-item">
             <a class="pt-item__pic" href="product-detail.html"><img src="images/pt1.jpg"></a>
 
@@ -478,7 +484,7 @@
             *兌換單成立後無法修改內容及配送資訊。
         </div>
 
-        <a class="btn-basic confirm" href="checkout2.html">下一步</a>
+        <a class="btn-basic next-step" href="checkout2.html">下一步</a>
     </div></div><!-- END .container__main__wrap .container__main -->
 </div>
 <!-- 內容結束 -->
@@ -732,7 +738,7 @@
             <div class="coupon-list">
                 <div class="radio-basic">
                     <input type="radio" id="coupon1" name="coupon">
-                    <label for="coupon1"><i class="icon-radio"></i>
+                    <label for="coupon1" onclick="closePopup();"><i class="icon-radio"></i>
                         <div class="coupon-item">
                             <div class="coupon-item__price">NT$<b>100</b></div>
                             <div class="coupon-item__content">
@@ -749,7 +755,7 @@
 
                 <div class="radio-basic">
                     <input type="radio" id="coupon2" name="coupon">
-                    <label for="coupon2"><i class="icon-radio"></i>
+                    <label for="coupon2" onclick="closePopup();"><i class="icon-radio"></i>
                         <div class="coupon-item">
                             <div class="coupon-item__price">NT$<b>50</b></div>
                             <div class="coupon-item__content">
@@ -765,7 +771,7 @@
 
                 <div class="radio-basic">
                     <input type="radio" id="coupon3" name="coupon" disabled>
-                    <label for="coupon3"><i class="icon-radio"></i>
+                    <label for="coupon3" onclick="closePopup();"><i class="icon-radio"></i>
                         <div class="coupon-item non-compliant"><!-- 折價券有效, 但未符合條件 -->
                             <div class="coupon-item__price">NT$<b>100</b></div>
                             <div class="coupon-item__content">
@@ -795,23 +801,23 @@
 
             <div class="popup-title">配送方式</div>
 
-            <div class="delivery-list">
+            <div class="popup-list">
                 <div class="radio-basic">
                     <input type="radio" id="delivery1" name="delivery" checked>
-                    <label for="delivery1"><i class="icon-radio"></i>
-                        <div class="delivery-group">
-                            <div class="delivery-group__name">台灣本島宅配</div>
-                            <div class="delivery-group__desc">使用黑貓宅急便寄送。</div>
+                    <label for="delivery1" onclick="nextPayment();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">台灣本島宅配</div>
+                            <div class="popup-group__desc">使用黑貓宅急便寄送。</div>
                         </div>
                     </label>
                 </div>
 
                 <div class="radio-basic">
-                    <input type="radio" id="delivery2" name="delivery" checked>
-                    <label for="delivery2"><i class="icon-radio"></i>
-                        <div class="delivery-group">
-                            <div class="delivery-group__name">台灣超商取貨</div>
-                            <div class="delivery-group__desc">若為純取件，取貨時請攜帶身份證明文件。</div>
+                    <input type="radio" id="delivery2" name="delivery">
+                    <label for="delivery2" onclick="nextPayment();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">台灣超商取貨</div>
+                            <div class="popup-group__desc">若為純取件，取貨時請攜帶身份證明文件。</div>
                         </div>
                     </label>
                 </div>
@@ -819,41 +825,137 @@
                 <hr />
 
                 <div class="radio-basic">
-                    <input type="radio" id="delivery3" name="delivery" checked>
-                    <label for="delivery3"><i class="icon-radio"></i>
-                        <div class="delivery-group">
-                            <div class="delivery-group__name">海外超商取貨</div>
-                            <div class="delivery-group__desc">目前僅提供香港寄送。 </div>
+                    <input type="radio" id="delivery3" name="delivery">
+                    <label for="delivery3" onclick="nextPayment();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">香港超商取貨</div>
+                            <div class="popup-group__desc">目前僅提供香港寄送。</div>
+                        </div>
+                    </label>
+                </div>
+
+                <hr />
+
+                <div class="popup-list__title">海外快遞</div>
+                <div class="popup-list__title-s">注意：若海外配送地區地址為偏遠地區或住宅區，在配送時送貨人員會與您額外收取附加費用(附加費用不列入運費計算)</div>
+                
+                <div class="radio-basic">
+                    <input type="radio" id="delivery4" name="delivery">
+                    <label for="delivery4" onclick="nextPayment();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">香港</div>
                         </div>
                     </label>
                 </div>
 
                 <div class="radio-basic">
-                    <input type="radio" id="delivery4" name="delivery" checked>
-                    <label for="delivery4"><i class="icon-radio"></i>
-                        <div class="delivery-group">
-                            <div class="delivery-group__name">海外快遞</div>
-                            <div class="delivery-group__desc">注意：若海外配送地區地址為偏遠地區或住宅區，在配送時送貨人員會與您額外收取附加費用(附加費用不列入運費計算)</div>
-                            <div class="delivery-group__countries">
-                                <a class="checked">香港</a>
-                                <a>澳門</a>
-                                <a>東馬</a>
-                                <a>西馬</a>
-                                <a>新加坡</a>
-                                <a>泰國</a>
-                                <a>美國</a>
-                                <a>日本</a>
-                                <a>澳洲</a>
-                                <a>中國</a>
-                                <a>加拿大</a>
-                                <a>紐西蘭</a>
-                                <a>韓國</a>
-                            </div>
+                    <input type="radio" id="delivery5" name="delivery">
+                    <label for="delivery5" onclick="nextPayment();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">澳門</div>
                         </div>
                     </label>
                 </div>
-                
-            </div><!-- END .delivery-list -->
+
+                <div class="radio-basic">
+                    <input type="radio" id="delivery6" name="delivery">
+                    <label for="delivery6" onclick="nextPayment();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">東馬</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="radio-basic">
+                    <input type="radio" id="delivery7" name="delivery">
+                    <label for="delivery7" onclick="nextPayment();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">西馬</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="radio-basic">
+                    <input type="radio" id="delivery8" name="delivery">
+                    <label for="delivery8" onclick="nextPayment();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">新加坡</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="radio-basic">
+                    <input type="radio" id="delivery9" name="delivery">
+                    <label for="delivery9" onclick="nextPayment();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">泰國</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="radio-basic">
+                    <input type="radio" id="delivery10" name="delivery">
+                    <label for="delivery10" onclick="nextPayment();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">美國</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="radio-basic">
+                    <input type="radio" id="delivery11" name="delivery">
+                    <label for="delivery11" onclick="nextPayment();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">日本</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="radio-basic">
+                    <input type="radio" id="delivery12" name="delivery">
+                    <label for="delivery12" onclick="nextPayment();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">澳洲</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="radio-basic">
+                    <input type="radio" id="delivery13" name="delivery">
+                    <label for="delivery13" onclick="nextPayment();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">中國</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="radio-basic">
+                    <input type="radio" id="delivery14" name="delivery">
+                    <label for="delivery14" onclick="nextPayment();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">加拿大</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="radio-basic">
+                    <input type="radio" id="delivery15" name="delivery">
+                    <label for="delivery15" onclick="nextPayment();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">紐西蘭</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="radio-basic">
+                    <input type="radio" id="delivery16" name="delivery">
+                    <label for="delivery16" onclick="nextPayment();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">韓國</div>
+                        </div>
+                    </label>
+                </div>
+            </div><!-- END .popup-list -->
         </div><!-- END .popup-content -->
     </div><!-- END .popup-container -->
 </div><!-- END .popup-theme -->
@@ -871,7 +973,7 @@
             <div class="popup-list">
                 <div class="radio-basic">
                     <input type="radio" id="payment1" name="payment" checked>
-                    <label for="payment1"><i class="icon-radio"></i>
+                    <label for="payment1" onclick="closePopup();"><i class="icon-radio"></i>
                         <div class="popup-group">
                             <div class="popup-group__name">線上刷卡</div>
                             <div class="popup-group__desc">VISA、Master Card、JCB</div>
@@ -880,8 +982,8 @@
                 </div>
 
                 <div class="radio-basic">
-                    <input type="radio" id="payment2" name="payment" checked>
-                    <label for="payment2"><i class="icon-radio"></i>
+                    <input type="radio" id="payment2" name="payment">
+                    <label for="payment2" onclick="closePopup();"><i class="icon-radio"></i>
                         <div class="popup-group">
                             <div class="popup-group__name">ATM轉帳</div>
                             <div class="popup-group__desc">請於下單後3日內至ATM進轉帳，逾期系統將取消交易。</div>
@@ -890,8 +992,8 @@
                 </div>
 
                 <div class="radio-basic">
-                    <input type="radio" id="payment3" name="payment" checked>
-                    <label for="payment3"><i class="icon-radio"></i>
+                    <input type="radio" id="payment3" name="payment">
+                    <label for="payment3" onclick="closePopup();"><i class="icon-radio"></i>
                         <div class="popup-group">
                             <div class="popup-group__name">7-11取貨付款</div>
                         </div>
@@ -899,8 +1001,8 @@
                 </div>
 
                 <div class="radio-basic">
-                    <input type="radio" id="payment4" name="payment" checked>
-                    <label for="payment4"><i class="icon-radio"></i>
+                    <input type="radio" id="payment4" name="payment">
+                    <label for="payment4" onclick="closePopup();"><i class="icon-radio"></i>
                         <div class="popup-group">
                             <div class="popup-group__name">LinePay</div>
                         </div>
@@ -908,8 +1010,8 @@
                 </div>
 
                 <div class="radio-basic">
-                    <input type="radio" id="payment5" name="payment" checked>
-                    <label for="payment5"><i class="icon-radio"></i>
+                    <input type="radio" id="payment5" name="payment">
+                    <label for="payment5" onclick="closePopup();"><i class="icon-radio"></i>
                         <div class="popup-group">
                             <div class="popup-group__name">街口支付</div>
                         </div>
@@ -917,8 +1019,8 @@
                 </div>
 
                 <div class="radio-basic">
-                    <input type="radio" id="payment6" name="payment" checked>
-                    <label for="payment6"><i class="icon-radio"></i>
+                    <input type="radio" id="payment6" name="payment">
+                    <label for="payment6" onclick="closePopup();"><i class="icon-radio"></i>
                         <div class="popup-group">
                             <div class="popup-group__name">PayPal</div>
                         </div>
