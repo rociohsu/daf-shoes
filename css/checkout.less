@@ -164,14 +164,15 @@
 /* 填寫客戶資訊 */
 .form-table { 
     .choose-btn { display: inline-flex; flex-flow: nowrap; align-items: center; 
-        font-size: @font-M; text-decoration: underline; 
+        font-size: @font-S; text-decoration: underline; 
         > i { margin-right: 5px; }
     }
-    .icon-search, .icon-add { display: inline-block; width: 24px; height: 24px; 
+    .icon-search, .icon-add { display: inline-block; width: 20px; height: 20px; 
         background-position: center; background-size: 80%; background-repeat: no-repeat; }
     .icon-search { background-image: url(../images/icons/search.svg); }
     .icon-add { background-image: url(../images/icons/add.svg); }
-    .btn-basic-border { padding: 5px 10px; height: 36px; font-size: @font-M; }
+    .btn-basic-border { padding: 5px 10px; height: 36px; font-size: @font-S; }
+    .form-table__link .change-store { font-size: @font-M; }
 }
 
 /* 小螢幕 */
@@ -195,7 +196,7 @@
                 .pt-item__right { grid-column: 3 / 4; grid-row: 1 / 3; }
             }
         }
-        .container__main { width: 100%; 
+        .container__main { width: 100%;
             .pay-group__discount-list { grid-template-columns: repeat(3, 1fr); }
         }
 
