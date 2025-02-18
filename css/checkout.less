@@ -10,14 +10,14 @@
         .btn-basic-border { height: 36px; }
     }
     .container__left { width: 100%;
-        .pt-item { display: grid; grid-template-columns: 100px calc(100% - 290px) 60px 100px; grid-gap: 3px 10px; margin: 10px 0;
+        .pt-item { display: grid; grid-template-columns: 100px calc(100% - 330px) 100px 100px; grid-gap: 3px 10px; margin: 10px 0;
             .pt-item__pic { width: 100%; display: flex; align-items: center; }
             .pt-item__info { width: 100%; display: flex; flex-flow: column; justify-content: center; 
                 .pt-item__info__gift { color: @color-cis; }
                 .pt-item__info__name > * { display: block; }
             }
-            .select-size { width: 60px; display: flex; align-items: center;
-                .select-basic { min-width: 60px; height: 32px; padding: 0 0 0 10px; border: none; border-bottom: 1px solid @color-default; }
+            .select-size { width: 100px; display: flex; align-items: center; line-height: 100%;
+                .select-basic { min-width: 60px; height: 32px; padding: 0 0 0 10px; margin-left: 5px; }
             }
             .pt-item__right { display: grid; align-content: space-between;
                 .pt-item__info__price { text-align: right;
@@ -59,8 +59,10 @@
             }
             .pay-group__select:hover { text-decoration: none; background-color: @color-bg; }
             .pay-group__count { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; gap: 8px; margin-top: 10px;
+                .checkbox-basic { width: 100%; }
                 .pay-group__count__point { color: @color-red; }
                 .pay-group__count__desc { color: @color-gray1; }
+                .pay-group__count__price { white-space: nowrap; }
             }
         }
         .pay-group.d-coin .pay-group__count, .pay-group.online-cash .pay-group__count { margin-top: 0; }
@@ -111,6 +113,51 @@
     }
 }
 
+/* 折扣碼 */
+.popup-theme.discount-code { 
+    .input-basic { text-align: center; }
+    .btn-basic { width: 100%; margin-top: 10px; }
+}
+
+/* 折價券 */
+.popup-theme.discount-coupon {
+    .coupon-list { width: fit-content; margin: 20px auto; display: flex; flex-flow: column; gap: 15px; 
+        label { display: flex; flex-flow: nowrap; align-items: center; gap: 10px; }
+        input[type="radio"]:checked + label .coupon-item { background: @color-cis-bg; }
+    }
+}
+
+/* 配送方式 */
+.popup-theme.delivery-option {
+    .delivery-list { margin: 20px auto; display: flex; flex-flow: column;
+        label { padding: 15px 0; display: flex; flex-flow: nowrap; align-items: flex-start; gap: 10px; 
+            .icon-radio { margin-top: 15px; }
+        }
+        .delivery-group { width: calc(100% - 20px);
+            .delivery-group__name { font-size: @font-L; }
+            .delivery-group__desc { color: @color-gray1; }
+            .delivery-group__countries { display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 10px; margin-top: 15px;
+                > a { display: block; padding: 8px 15px; 
+                    font-size: @font-M; text-align: center; border: 1px solid @color-default; transition: 0.3s; }
+                > a:not(.checked):hover { text-decoration: none; background: @color-bg; }
+                .checked { color: @color-white; text-decoration: none; background: @color-default; border-color: @color-default; }
+            }
+        }
+        hr { width: 100%; border-top: 1px solid @color-border; }
+    }
+}
+
+/* 付款方式/常用取貨門市/常用地址/常用信用卡 */
+.popup-list { margin: 20px auto; display: flex; flex-flow: column;
+    .radio-basic { border-bottom: 1px solid @color-border; }
+    .radio-basic:last-child { border-bottom: none; }
+    label { padding: 15px 0; display: flex; align-items: center !important; gap: 10px; }
+    .popup-group { width: calc(100% - 20px);
+        .popup-group__name { font-size: @font-L; }
+        .popup-group__desc { color: @color-gray1; }
+    }
+}
+
 /* 小螢幕 */
 @media (max-width: 1024px) {
     .checkout { flex-flow: column; gap: 0; }
@@ -120,13 +167,15 @@
 @media (max-width: 820px) {
     .checkout { padding: 50px 15px;
         > h2 { top: 20px; font-size: @font-L; }
-        .title-bar .btn-basic-border { height: 32px; font-size: @font-M; }
+        .title-bar { font-size: @font-M;
+            .btn-basic-border { height: 30px; padding: 5px 10px; font-size: @font-S; }
+        }
         .container__left {
-            .pt-item { grid-template-columns: 70px calc(100% - 180px) 90px; 
-                .pt-item__pic { align-items: flex-start; }
+            .pt-item { grid-template-columns: 70px calc(100% - 180px) 90px; grid-gap: 10px;
+                .pt-item__pic { align-items: flex-start; grid-column: 1 / 2; grid-row: 1 / 3; }
                 .pt-item__info { justify-content: flex-start; }
-                .select-size { grid-column: 2 / 3; grid-row: 3 / 4; }
-                .pt-item__right { grid-column: 3 / 4; grid-row: 1 / 4; }
+                .select-size { grid-column: 2 / 3; grid-row: 2 / 3; }
+                .pt-item__right { grid-column: 3 / 4; grid-row: 1 / 3; }
             }
         }
         .container__main { width: 100%; 
