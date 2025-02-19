@@ -13,11 +13,11 @@
 
 <link rel="shortcut icon" type="image/png" href="https://static.daf-shoes.com/_Art/logo/2019-logo2.png">
 <link rel="stylesheet" href="css/component.css">
-<link rel="stylesheet" href="css/checkout.css">
+<link rel="stylesheet" href="css/member.css">
 
 <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="js/component.js"></script>
-<script type="text/javascript" src="js/checkout.js"></script>
+<script type="text/javascript" src="js/member.js"></script>
 </head>
 
 <body>
@@ -41,7 +41,7 @@
     <div class="header__syslink">
         <button type="button" class="header__syslink__search"><i class="icon-search"></i></button>
         
-        <!-- 登入時連到會員中心, 未登入時連到登入頁 -->
+        <!-- 登入時連到會員中心member.html, 未登入時連到登入頁login.html -->
         <a class="header__syslink__member" href="member.html"><i class="icon-member"></i></a>
 
         <a class="header__syslink__cart" href="checkout.html"><i class="icon-cart"></i><span class="header__syslink__cart-total">10</span></a>
@@ -236,48 +236,102 @@
 </div><!-- END .header -->
 
 <!-- 內容開始 -->
-<div class="container checkout finished">
-    <div class="container-wrap"><!-- 訂購成功 -->
-        <div class="container__title">STEP. 3/3 完成訂購</div>
-        <div><i class="icon-success"></i></div>
-        <div class="order-id">訂單編號：PO386090001534</div>
-        <div>此次交易金額 <span class="finish-total">NT$ <b>6425</b></span></div>
-
-        <div class="atm-info">
-            <div class="atm-info__title">ATM轉帳付款</div>
-            <div class="atm-info__content">
-                親愛的 先生/小姐 您好，D+AF已經收到您的訂單，請務必於
-                <time>2024-05-24 23:59:59</time>
-                前，至自動提款機(ATM)，進行轉帳(跨行轉帳手續費用，由客戶自行負擔)，逾期D+AF將自動取消此筆交易。
+<div class="container member-login">
+    <div class="container-wrap">
+        <div class="container-wrap__column">
+            <div class="login-way__tab">
+                <a class="current" rel="by-mobile">手機號碼註冊</a>
+                <a  rel="by-email">E-mail註冊</a>
             </div>
-            <div class="atm-info__bank">
-                匯款銀行：玉山商業銀行<br>
-                銀行代碼：808<br>
-                銀行帳號：<b>92600052408909</b>
+
+            <div class="login-way__pane">
+                <div class="current" id="by-mobile">
+                    <div class="form-table">
+                        <div class="form-table__row">
+                            <input type="text" class="input-basic" placeholder="姓名" value="">
+                        </div>
+
+                        <div class="form-table__row option">
+                            <div class="radio-basic">
+                                <input type="radio" id="gender1" name="gender">
+                                <label for="gender1"><i class="icon-check"></i><span>先生</span></label>
+                            </div>
+                            <div class="radio-basic">
+                                <input type="radio" id="gender2" name="gender">
+                                <label for="gender2"><i class="icon-check"></i><span>小姐</span></label>
+                            </div>
+                        </div>
+
+                        <div class="form-table__row phone">
+                            <select class="select-basic">
+                                <option selected>886台灣</option>
+                            </select>
+                            <input type="tel" class="input-basic" placeholder="手機號碼" value="">
+                        </div>
+
+                        <div class="form-table__row">
+                            <input type="email" class="input-basic" placeholder="E-mail" value="">
+                        </div>
+
+                        <div class="form-table__row">
+                            <input type="password" class="input-basic" placeholder="會員密碼(6-15位英數字)" value="">
+                        </div>
+
+                        <div class="form-table__row">
+                            <input type="password" class="input-basic" placeholder="再次輸入密碼" value="">
+                        </div>
+
+                        <div class="form-table__row birthday">
+                            <select class="select-basic">
+                                <option>出生年</option>
+                            </select>
+
+                            <select class="select-basic">
+                                <option>月</option>
+                            </select>
+                            
+                            <select class="select-basic">
+                                <option>日</option>
+                            </select>
+                        </div>
+
+                        <div class="form-table__row address">
+                            <select class="select-basic">
+                                <option selected>新北市</option>
+                            </select>
+            
+                            <select class="select-basic">
+                                <option selected>中和區</option>
+                            </select>
+            
+                            <input type="text" class="input-basic detail-add" placeholder="詳細地址" value="建康路162號2樓">
+                        </div>
+                    </div><!-- END .form-table -->
+                </div><!-- END #by-mobile -->
+
+                <div id="by-email">
+                    <div class="form-table">
+                        
+                    </div><!-- END .form-table -->
+                </div><!-- END #by-email -->
+
+                <a class="btn-basic-border" href="member.html">加入會員</a>
+            </div><!-- END .login-way__pane -->
+
+        </div><!-- END .container-wrap__column -->
+
+        <div class="container-wrap__column other">
+            <div class="container__title-s">快速加入會員</div>
+            <div class="fast-login">
+                <a class="fast-login__fb" href="#"><i class="icon-fb"></i><span>FACEBOOK登入</span></a>
+                <a class="fast-login__line" href="#"><i class="icon-line"></i><span>LINE登入</span></a>
             </div>
-        </div>
 
-        <div class="notice-txt">訂單已成立(如使用信用卡付款，已確定刷卡成功)；可至會員中心查詢訂單狀態。<br>
-            <span class="notice-txt__spec">活動期間物流出貨繁忙期，將於5~7個工作天出貨配送。</span>
-        </div>
-
-        <div>
-            <a class="btn-basic-border" href="product-category.html">繼續購物</a>
-            <a class="btn-basic" href="order.html">查看訂單</a>
+            <div class="container__title-s">已有帳號？</div>
+            <a class="btn-basic register-btn" href="login.html">登入會員</a>
         </div>
     </div><!-- END .container-wrap -->
-
-    <div class="container-wrap"><!-- 訂購失敗 -->
-        <div class="container__title">STEP. 3/3 訂購失敗</div>
-        <div><i class="icon-fail"></i></div>
-        <div class="notice-txt">訂單未成立，可重新結帳或詢問客服。</div>
-
-        <div>
-            <a class="btn-basic-border" href="product-category.html">繼續購物</a>
-            <a class="btn-basic" href="checkout.html">重新結帳</a>
-        </div>
-    </div><!-- END .container-wrap -->
-</div>
+</div><!-- END .container -->
 <!-- 內容結束 -->
 
 <div class="footer">
