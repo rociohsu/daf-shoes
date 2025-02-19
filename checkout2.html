@@ -239,7 +239,7 @@
 <div class="container checkout">
     <h2>STEP. 2/3 填寫客戶資訊</h2>
     <div class="container__left"><div class="container__left__wrap">
-        <div  class="title-bar">
+        <div  class="title-bar step2">
             <span>Customer Information</span>
         </div>
 
@@ -597,6 +597,158 @@
         </div>
     </div><!-- END .search-page__container -->
 </div><!-- END .search-page -->
+
+<!-- 國內常用地址popup -->
+<div class="popup-theme" id="internal-add">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content">
+            <button type="button" class="btn-close"><i class="icon-close"></i></button>
+
+            <div class="popup-title">選擇國內常用地址</div>
+
+            <div class="popup-list">
+                <div class="radio-basic">
+                    <input type="radio" id="internal-add1" name="internal-add" checked>
+                    <label for="internal-add1" onclick="closePopup();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">235 新北市中和區建康路176號2樓</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="radio-basic">
+                    <input type="radio" id="internal-add2" name="internal-add">
+                    <label for="internal-add2" onclick="closePopup();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">235 新北市中和區建康路176號2樓</div>
+                        </div>
+                    </label>
+                </div>
+                
+            </div><!-- END .popup-list -->
+        </div><!-- END .popup-content -->
+    </div><!-- END .popup-container -->
+</div><!-- END .popup-theme -->
+
+<!-- 海外常用地址popup -->
+<div class="popup-theme" id="oversea-add">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content">
+            <button type="button" class="btn-close"><i class="icon-close"></i></button>
+
+            <div class="popup-title">選擇海外常用地址</div>
+
+            <div class="popup-list">
+                <div class="radio-basic">
+                    <input type="radio" id="oversea-add1" name="oversea-add" checked>
+                    <label for="oversea-add1" onclick="closePopup();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">2F., No. 176, Daren St., Zhonghe Dist., New 
+                                Taipei City 235 , Taiwan (R.O.C.)</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="radio-basic">
+                    <input type="radio" id="oversea-add2" name="oversea-add">
+                    <label for="oversea-add2" onclick="closePopup();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">2F., No. 176, Daren St., Zhonghe Dist., New 
+                                Taipei City 235 , Taiwan (R.O.C.)</div>
+                        </div>
+                    </label>
+                </div>
+                
+            </div><!-- END .popup-list -->
+        </div><!-- END .popup-content -->
+    </div><!-- END .popup-container -->
+</div><!-- END .popup-theme -->
+
+<!-- 常用取貨門市popup -->
+<div class="popup-theme" id="commonly-used-store">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content">
+            <button type="button" class="btn-close"><i class="icon-close"></i></button>
+
+            <div class="popup-title">選擇常用取貨門市</div>
+
+            <div class="popup-list">
+                <div class="radio-basic">
+                    <input type="radio" id="commonly-used-store1" name="commonly-used-store" checked>
+                    <label for="commonly-used-store1" onclick="closePopup();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">新保福門市</div>
+                            <div class="popup-group__desc">新北市永和區保安路220號</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="radio-basic">
+                    <input type="radio" id="commonly-used-store2" name="commonly-used-store">
+                    <label for="commonly-used-store2" onclick="closePopup();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name">新永愛門市</div>
+                            <div class="popup-group__desc">新北市永和仁愛路157號</div>
+                        </div>
+                    </label>
+                </div>
+                
+            </div><!-- END .popup-list -->
+        </div><!-- END .popup-content -->
+    </div><!-- END .popup-container -->
+</div><!-- END .popup-theme -->
+
+<!-- 常用信用卡popup -->
+<div class="popup-theme" id="credit-card">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content">
+            <button type="button" class="btn-close"><i class="icon-close"></i></button>
+
+            <div class="popup-title">選擇常用信用卡</div>
+
+            <div class="popup-list">
+                <div class="radio-basic">
+                    <input type="radio" id="credit-card1" name="credit-card" checked>
+                    <label for="credit-card1" onclick="closePopup();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name"><img src="images/mastercard.jpg" alt="mastercard">Cathay Bank</div>
+                            <div class="popup-group__desc">**** **** **** 1234</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="radio-basic">
+                    <input type="radio" id="credit-card2" name="credit-card">
+                    <label for="credit-card2" onclick="closePopup();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name"><img src="images/visa.jpg" alt="VISA">Cathay Bank</div>
+                            <div class="popup-group__desc">**** **** **** 1234</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="radio-basic">
+                    <input type="radio" id="credit-card3" name="credit-card">
+                    <label for="credit-card3" onclick="closePopup();"><i class="icon-radio"></i>
+                        <div class="popup-group">
+                            <div class="popup-group__name"><img src="images/jcb.jpg" alt="JCB">Cathay Bank</div>
+                            <div class="popup-group__desc">**** **** **** 1234</div>
+                        </div>
+                    </label>
+                </div>
+                
+            </div><!-- END .popup-list -->
+        </div><!-- END .popup-content -->
+    </div><!-- END .popup-container -->
+</div><!-- END .popup-theme -->
 
 </body>
 </html>
