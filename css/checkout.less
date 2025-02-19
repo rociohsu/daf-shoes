@@ -1,7 +1,7 @@
 @import url("variable");
 
 /* 購物車結帳頁 */
-.checkout { padding-top: 80px; gap: 20px;
+.checkout { padding-top: 70px; gap: 20px;
     > h2 { position: absolute; width: 100%; top: 30px; left: 0; 
         font-size: @font-XL; font-weight: normal; text-align: center; }
     .title-bar { height: 60px; padding: 10px 0; 
@@ -177,6 +177,35 @@
     .form-table__link .change-store { font-size: @font-M; }
 }
 
+/* 完成訂購頁面 */
+.checkout.finished { display: block; background: @color-bg;
+    .container-wrap { width: 100%; max-width: 640px; margin: 0 auto;
+        display: flex; flex-flow: column; gap: 5px; text-align: center;
+
+        > h2 { font-size: @font-XL; font-weight: normal; text-align: center; }
+        .icon-success { display: block; width: 80px; height: 80px; margin: 20px auto;
+        background: url(../images/icons/success-circle-p.svg) no-repeat center; background-size: 100%; }
+        .icon-fail { display: block; width: 80px; height: 80px; margin: 20px auto;
+            background: url(../images/icons/fail-circle-p.svg) no-repeat center; background-size: 100%; }
+
+        .order-id { font-size: @font-XL; font-weight: 500; }
+        .finish-total {
+            > b { font-size: @font-XL; font-weight: 500; }
+        }
+        .atm-info { padding: 20px 30px; margin-top: 20px; text-align: left; background: @color-white;
+            .atm-info__title { padding-bottom: 10px; margin-bottom: 10px; 
+                font-size: @font-L; font-weight: 500; border-bottom: 1px solid @color-border; }
+            .atm-info__content time { color: @color-red; font-weight: 500; }
+            .atm-info__bank { margin-top: 15px; line-height: 200%; 
+                > b { color: @color-red; font-weight: 500; }
+            }
+        }
+        .notice-txt { padding: 20px 0;
+            .notice-txt__spec { color: @color-red; }
+        }
+    }
+}
+
 /* 小螢幕 */
 @media (max-width: 1024px) {
     .checkout { flex-flow: column; gap: 0; }
@@ -185,7 +214,7 @@
 /* 手機版 */
 @media (max-width: 820px) {
     .checkout { padding: 50px 15px;
-        > h2 { top: 20px; font-size: @font-L; }
+        > h2 { top: 25px; font-size: @font-L; }
         .title-bar { font-size: @font-M;
             .btn-basic-border { height: 30px; padding: 5px 10px; font-size: @font-S; }
         }
