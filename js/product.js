@@ -58,7 +58,7 @@ $(function(){
         var id = $(this).attr('rel');
         $('.pt-content__tab a').removeClass('current');
         $(this).addClass('current');
-        $('.pt-content__pane > div').removeClass('current');
+        $('.pt-content__pane .pt-content__pane__content').removeClass('current');
         $('#'+id).addClass('current');
     });
 });

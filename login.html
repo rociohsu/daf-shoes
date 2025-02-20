@@ -237,6 +237,8 @@
 
 <!-- 內容開始 -->
 <div class="container member-login">
+    <div class="container__title">Login</div>
+    
     <div class="container-wrap">
         <div class="container-wrap__column">
             <div class="login-way__tab">
@@ -245,7 +247,7 @@
             </div>
 
             <div class="login-way__pane">
-                <div class="current" id="by-mobile">
+                <div class="login-way__pane__content current" id="by-mobile">
                     <div class="form-table">
                         <div class="form-table__row phone">
                             <select class="select-basic">
@@ -256,7 +258,7 @@
 
                         <div class="form-table__row password">
                             <input type="password" class="input-basic" placeholder="會員密碼" value="">
-                            <a class="forgot-password popup">忘記密碼？</a>
+                            <a class="forgot-password popup" rel="forgot-password">忘記密碼？</a>
                         </div>
 
                         <div class="form-table__row verify">
@@ -268,7 +270,7 @@
                     </div><!-- END .form-table -->
                 </div><!-- END #by-mobile -->
 
-                <div id="by-email">
+                <div class="login-way__pane__content" id="by-email">
                     <div class="form-table">
                         <div class="form-table__row">
                             <input type="email" class="input-basic" placeholder="E-mail" value="">
@@ -276,7 +278,7 @@
 
                         <div class="form-table__row password">
                             <input type="password" class="input-basic" placeholder="會員密碼" value="">
-                            <a class="forgot-password popup">忘記密碼？</a>
+                            <a class="forgot-password popup" rel="forgot-password">忘記密碼？</a>
                         </div>
 
                         <div class="form-table__row verify">
@@ -287,7 +289,7 @@
                     </div><!-- END .form-table -->
                 </div><!-- END #by-email -->
 
-                <a class="btn-basic-border" href="member.html">登入會員</a>
+                <a class="btn-basic" href="member.html">登入</a>
             </div><!-- END .login-way__pane -->
 
         </div><!-- END .container-wrap__column -->
@@ -300,7 +302,7 @@
             </div>
 
             <div class="container__title-s">沒有帳號？</div>
-            <a class="btn-basic register-btn" href="register.html">加入會員</a>
+            <a class="btn-basic-border" href="register.html">加入會員</a>
         </div>
     </div><!-- END .container-wrap -->
 </div><!-- END .container -->
@@ -489,6 +491,47 @@
         </div>
     </div><!-- END .search-page__container -->
 </div><!-- END .search-page -->
+
+<!-- 忘記密碼popup -->
+<div class="popup-theme forgot-password" id="forgot-password">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content">
+            <button type="button" class="btn-close"><i class="icon-close"></i></button>
+
+            <div class="popup-title">Forgot Password</div>
+
+            <div class="login-way__tab">
+                <a class="current" rel="by-mobile2">手機號碼登入</a>
+                <a rel="by-email2">E-mail登入</a>
+            </div>
+
+            <div class="login-way__pane">
+                <div class="login-way__pane__content current" id="by-mobile2">
+                    <div class="form-table">
+                        <div class="form-table__row phone">
+                            <select class="select-basic">
+                                <option selected>886台灣</option>
+                            </select>
+                            <input type="tel" class="input-basic" placeholder="手機號碼" value="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="login-way__pane__content" id="by-email2">
+                    <div class="form-table">
+                        <div class="form-table__row">
+                            <input type="email" class="input-basic" placeholder="E-mail" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn-basic" onclick="closePopup();">確認送出</button>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

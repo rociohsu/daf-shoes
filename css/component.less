@@ -19,28 +19,30 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
 .checkbox-basic {
     input[type="checkbox"] { display: none; }
     input[type="checkbox"] + label { width: 100%; display: flex; flex-flow: nowrap; align-items: flex-start;
-        > i { display: inline-block; width: 20px; height: 20px; margin-right: 8px;
-        background: @color-white url(../images/icons/no-checked.svg) no-repeat center; background-size: 100%;  }
+        > i { display: inline-block; width: 20px; height: 20px; margin-right: 8px; 
+            border: 1px solid @color-default; border-radius: 5px; }
         > span { width: calc(100% - 28px); }
         a { text-decoration: underline; }
         .other-note { margin-top: 8px; color: @color-gray1; font-size: @font-XS; }
     }
-    input[type="checkbox"]:checked + label i { background-image: url(../images/icons/checked.svg); }
+    input[type="checkbox"]:checked + label i { background: url(../images/icons/checked.svg) no-repeat 2px center; 
+        background-size: 80%; }
     input[type="checkbox"]:disabled + label i { opacity: 0.5; cursor: text; }
 }
 .radio-basic {
     input[type="radio"] { display: none; }
     input[type="radio"] + label { width: 100%; display: flex; flex-flow: nowrap; align-items: flex-start;
         > i { display: inline-block; width: 20px; height: 20px; margin-right: 8px;
-        background: @color-white url(../images/icons/radio-border.svg) no-repeat center; background-size: 100%;  }
+            border: 1px solid @color-default; border-radius: 99em; }
         > span { width: calc(100% - 28px); }
         a { text-decoration: underline; }
         .other-note { margin-top: 8px; color: @color-gray1; font-size: @font-XS; }
     }
-    input[type="radio"]:checked + label i { background-image: url(../images/icons/radio.svg); }
+    input[type="radio"]:checked + label i { background: url(../images/icons/radio.svg) no-repeat center; 
+        background-size: 65%; }
     input[type="radio"]:disabled + label i { opacity: 0.5; cursor: text; }
 }
-.select-basic { min-width: 120px; height: 36px; padding: 5px 10px; 
+.select-basic { min-width: 110px; height: 36px; padding: 5px 10px; 
     background: @color-white url(../images/icons/arrow-down.svg) no-repeat calc(100% - 10px) center; background-size: 14px; 
     color: @color-default; border: 1px solid @color-border; 
 }
@@ -238,7 +240,7 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
 /* 商品相關元件 */
 .pt-category { 
     .pt-category__group { 
-        .pt-category__title { font-size: @font-S; font-weight: bold; }
+        .pt-category__title { font-size: @font-S; font-weight: 500; }
         .pt-category__menu { margin-top: 10px; 
             > a { display: block; width: fit-content; margin: 3px 0; padding: 5px 0; }
         }
@@ -257,10 +259,11 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
         .pt-item__info__notice { color: @color-red; }
         .pt-item__info__promotions { display: inline-flex; align-items: center;
             color: @color-red; text-decoration: underline; 
-            > i { display: inline-block; width: 16px; height: 16px; margin-right: 5px;
-                background-repeat: no-repeat; background-position: center; background-size: 100%; }
-            .icon-checked { background-image: url(../images/icons/checked-circle.svg); }
-            .icon-no-checked { background-image: url(../images/icons/no-checked-circle.svg); }
+            > i { display: inline-block; width: 18px; height: 18px; margin-right: 5px;
+                background-repeat: no-repeat; background-position: center; background-size: 65%; border-radius: 99em; }
+            .icon-checked { background-image: url(../images/icons/checked-r.svg); border: 1px solid @color-red; }
+            .icon-no-checked { background-image: url(../images/icons/close.svg); border: 1px solid @color-gray1;    
+                background-size: 50%; }
         }
         .pt-item__info__promotions.non-compliant { color: @color-gray2; }
     }
@@ -410,7 +413,8 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
         .popup-content { padding: 15px 30px; border-radius: 99em; 
             .popup-title { font-weight: normal;
                 .icon-checked { display: inline-block; width: 24px; height: 24px; margin-right: 8px;
-                background: url(../images/icons/checked-circle-b.svg) no-repeat center; background-size: 100%; }
+                background: url(../images/icons/checked-p.svg) no-repeat center; background-size: 65%; 
+                border: 1px solid @color-cis; border-radius: 99em; }
             }
         }
     }
@@ -468,7 +472,11 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
     .form-table__title { font-size: @font-M; font-weight: 500; 
         .required { color: @color-red; }
     }
-    .form-table__row > * { width: 100%; }
+    .form-table__row { 
+        > * { width: 100%; }
+        .btn-basic { width: fit-content !important; height: 30px !important; padding: 5px !important; 
+            font-size: @font-XS; white-space: nowrap; border-radius: 5px; }
+    }
     .form-table__row.phone, .form-table__row.credit-card, .form-table__row.birthday { display: flex; flex-flow: nowrap; 
         justify-content: space-between; align-items: center; gap: 7px;
         > * { height: 40px; }

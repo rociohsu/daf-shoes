@@ -11,7 +11,7 @@
 
     .pt-category { 
         .pt-category__group { 
-            .pt-category__title { padding: 10px 0; font-size: @font-M; font-weight: normal; border-bottom: 1px solid @color-border; 
+            .pt-category__title { padding: 10px 0; font-weight: 300; border-bottom: 1px solid @color-border; 
                 background: @color-white url(../images/icons/arrow-down.svg) no-repeat calc(100% - 10px) center; background-size: 14px;
                 cursor: pointer; 
             }
@@ -137,13 +137,8 @@
             .original { color: @color-gray2; text-decoration: line-through; }
         }
         .pt-info__link { width: calc(60% - 10px);
-            .pt-info__link__promotions { display: inline-flex; align-items: center;
-                color: @color-red; font-size: @font-M; text-decoration: underline;
-                > i { display: inline-block; width: 16px; height: 16px; margin-right: 5px;
-                    background-repeat: no-repeat; background-position: center; background-size: 100%; }
-                .icon-checked { background-image: url(../images/icons/checked-circle.svg); }
-            }
-            .pt-info__notice { color: @color-red; }
+            a { color: @color-red; text-decoration: underline; }
+            .pt-info__notice { color: @color-red; font-size: @font-XS; }
         }
         .color-select__option { width: calc(100% - 140px); display: flex; flex-flow: wrap; gap: 8px;
             > a { display: inline-block; width: 32px; height: 32px; padding: 4px; 
@@ -174,7 +169,7 @@
             .current {  font-weight: bold; text-decoration: none; }
         }
         .pt-content__pane {
-            > div { display: none; padding: 20px 0; line-height: 160%; }
+            .pt-content__pane__content { display: none; padding: 20px 0; line-height: 160%; }
             .current { display: block; }
         }
 
