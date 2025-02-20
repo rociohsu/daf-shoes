@@ -13,6 +13,7 @@ a:hover { text-decoration: underline; }
 img { display: block; width: 100%; height: auto; }
 input:-webkit-autofill { box-shadow: 0 0 0px 1000px @color-white inset !important; }
 input, button, select, textarea { .font-family(); font-size: @font-S; color: @color-default; }
+button, input { padding: 0; }
 textarea { min-height: 80px; padding: 10px; border: 1px solid @color-border; }
 textarea:hover, textarea:focus { border: 1px solid @color-border; }
 .input-basic { display: block; width: 100%; height: 40px; padding: 10px; border-bottom: 1px solid @color-border; }
@@ -318,7 +319,7 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
         .search-bar { 
             display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
             .search-bar__keyword { width: 100%; height: 40px; font-size: @font-XL; border-bottom: 1px solid @color-gray1; }
-            .search-bar__btn { width: 40px; background: none;
+            .search-bar__btn { width: 40px; padding: 0; background: none;
                 .icon-search { display: inline-block; width: 40px; height: 40px; 
                     background: url(../images/icons/search.svg) no-repeat center; background-size: 60%; }
             }
