@@ -22,20 +22,20 @@
     }
 
     .title-bar { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; padding-top: 20px;
-        h1 { font-size: @font-XL; font-weight: normal; 
+        h1 { font-size: @font-L; font-weight: 300; 
             .keywords { color: @color-cis; }
         }
         .select-basic { margin-left: 5px; }
         .filter-btn { white-space: nowrap; }
     }
 
-    .pt-list { display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 2% 5%; padding: 2% 5%;
+    .pt-list { display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 30px; padding: 2% 4%;
         .pt-item { flex-flow: column;
             .pt-item__pic { position: relative; width: 100%; margin-right: 0; 
                 .pre-order-txt { position: absolute; width: 100%; bottom: 0; left: 0; padding: 8px 10px;
                     color: @color-cis; text-align: center; background: @color-cis-bg; }
                 .sold-out { position: absolute; width: 100%; height: 100%; top: 0; right: 0; bottom: 0; left: 0;
-                    display: flex; justify-content: center; align-items: center; background: rgba(255, 255, 255, 0.5);
+                    display: flex; justify-content: center; align-items: center; background: rgba(255, 255, 255, 0.7);
 
                     > span { display: block; width: 66px; height: 66px; display: flex; justify-content: center; align-items: center; 
                         text-align: center; line-height: 100%; background: @color-cis-bg; border-radius: 99em; }
@@ -51,7 +51,7 @@
                 .add-btn { position: absolute; width: 30px; height: 30px; right: 0; bottom: 0; padding: 0; background: none; 
                     display: flex; justify-content: center; align-items: center;
                     .icon-add { display: inline-block; width: 30px; height: 30px;
-                        background: url(../images/icons/add.svg) no-repeat center; background-size: 100%; }
+                        background: url(../images/icons/add.svg) no-repeat center; background-size: 75%; }
                 }
             }
         }
@@ -69,7 +69,7 @@
         .container__left { display: none; }
 
         .title-bar { padding: 10px 15px 0 15px; 
-            h1 { font-size: @font-L; }                
+            h1 { font-size: @font-M; }                
             .filter-btn { display: flex !important; width: 120px; height: 36px; padding: 5px 10px; 
                 border-color: @color-border;
                 .icon-arrow-right { display: inline-block; width: 10px; height: 20px; margin-left: 5px;
@@ -129,8 +129,8 @@
             .icon-heart { display: inline-block; width: 30px; height: 30px; 
             background: url(../images/icons/heart-border.svg) no-repeat center center; background-size: 100%; }
         }
-        h1 { width: calc(100% - 100px) !important; font-size: @font-L; font-weight: normal; }
-        .pt-info__sid { width: 90px; color: @color-gray1; font-size: @font-XS; }
+        h1 { width: calc(100% - 90px) !important; font-size: @font-L; font-weight: 300; }
+        .pt-info__sid { width: 80px; color: @color-gray1; font-size: @font-XS; }
         .pt-info__price { width: 40%; 
             > * { white-space: nowrap; }
             .deal { margin-right: 5px; color: @color-cis; font-size: @font-L; }
@@ -216,7 +216,7 @@
         }
 
         .container__main { width: 100%; padding: 25px 15px; 
-            h1 { font-size: @font-L; line-height: 120%; }
+            h1 { font-size: @font-M; line-height: 120%; }
             .size-select__option { width: 100%;  }
             .size-select__suggestion { width: 100%; text-align: left !important; }
             .pt-btns { position: fixed; right: 0; bottom: 0; left: 0; margin: 0; }
