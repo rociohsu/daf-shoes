@@ -200,11 +200,11 @@
     .product-detail { flex-flow: column-reverse;
         .photo-products { width: 100%;
             .swiper-wrapper .swiper-slide { display: block; overflow: hidden; }
-            .swiper-pagination { bottom: 20px; }
+            .swiper-pagination { bottom: 10px; }
             .swiper-button-prev, .swiper-button-next { display: none; }
-            .swiper-pagination-bullet { width: 10px; height: 10px; margin: 0 6px !important; 
-                background: none; border: 1px solid @color-gray1; opacity: 1; }
-            .swiper-pagination-bullet-active { background: @color-cis; border-color: @color-cis; }
+            .swiper-pagination-bullet { width: 8px; height: 8px; margin: 0 5px !important; 
+                background: @color-gray2; border: 1px solid @color-gray2; opacity: 1; transition: 0.3s; }
+            .swiper-pagination-bullet-active { width: 20px; border-radius: 4px; }
         }
 
         .container__left { width: 100%;
