@@ -32,7 +32,7 @@
         errorDuration: 2500,
 
         // Attribute to retrieve the zoom image URL from.
-        linkAttribute: 'href',
+        linkAttribute: 'rel',
 
         // Prevent clicks on the zoom image link.
         preventClicks: true,
