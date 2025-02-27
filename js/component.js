@@ -3,7 +3,7 @@ $(function(){
 
     //網頁滾動高度超過1000才顯示top-btn至頂按鈕
     $(window).scroll(function(){
-        if($(window).scrollTop() > 1000){
+        if($(window).scrollTop() > 300){
             $('.top-btn').stop(false, true).fadeIn(300);
         }else{
             $('.top-btn').stop(false, true).fadeOut(300);
@@ -88,6 +88,7 @@ $(function(){
     //電腦版 手機版 打開選擇尺寸跳窗
     $('.pt-item .add-btn').click(function(){
         $('.header').addClass('no-sticky');
+        $('body').addClass('no-scroll');
         $('.size-select').stop(false, true).fadeOut(0);
         $('.top-btn').stop(false, true).fadeOut(0);
         $(this).closest('.pt-item').find('.size-select').stop(false, true).fadeIn(300);
@@ -95,6 +96,7 @@ $(function(){
 
     $('.size-select__bg, .size-select .btn-close').click(function(){
         $('.header').removeClass('no-sticky');
+        $('body').removeClass('no-scroll');
         $(this).closest('.size-select').stop(false, true).fadeOut(300);
     });
 

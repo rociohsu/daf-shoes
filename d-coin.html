@@ -20,7 +20,7 @@
 <script type="text/javascript" src="js/member.js"></script>
 </head>
 
-<body>
+<body class="mobile-header-none"><!-- 會員中心除了首頁, 其他頁面都要加"mobile-header-none"手機不顯示header -->
 <a class="top-btn" href="#"><i class="icon-top-btn"></i></a>
 
 <div class="header">
@@ -236,188 +236,115 @@
 </div><!-- END .header -->
 
 <!-- 內容開始 -->
-<div class="container member-login">
-    <div class="container__title">New Customer</div>
-
+<div class="container member">
     <div class="container-wrap">
-        <div class="container-wrap__column">
-            <div class="login-way__tab">
-                <a class="current" rel="by-mobile">手機號碼註冊</a>
-                <a  rel="by-email">E-mail註冊</a>
+        <div class="member__menu">
+            <div class="member__menu__list">
+                <a href="order.html">訂單查詢 / 申請退貨</a>
+                <a href="edit-account.html">修改會員資料</a>
+                <a class="pc" href="cash.html">保留金</a>
+                <a class="pc" href="d-coin.html">D幣</a>
+                <a class="pc" href="point.html">購物金</a>
+                <a class="pc" href="coupon.html">折價券</a>
+                <a href="address.html">常用收件資訊</a>
+                <a href="credit-card.html">信用卡管理</a>
+                <a href="wish-list.html">願望清單</a>
+            </div>
+        </div><!-- END .member__menu -->
+        
+        <div class="member__main">
+            <div class="container__title">
+                <a class="back-btn" href="member.html" title="會員中心"><i class="icon-arrow-left"></i></a>
+                <span>D幣</span>
             </div>
 
-            <div class="login-way__pane">
-                <div class="login-way__pane__content current" id="by-mobile">
-                    <div class="form-table">
-                        <div class="form-table__row">
-                            <input type="text" class="input-basic" placeholder="姓名" value="">
-                        </div>
-
-                        <div class="form-table__row option">
-                            <div class="radio-basic">
-                                <input type="radio" id="gender-a1" name="gender-a">
-                                <label for="gender-a1"><i class="icon-check"></i><span>先生</span></label>
-                            </div>
-                            <div class="radio-basic">
-                                <input type="radio" id="gender-a2" name="gender-a">
-                                <label for="gender-a2"><i class="icon-check"></i><span>小姐</span></label>
-                            </div>
-                        </div>
-
-                        <div class="form-table__row phone">
-                            <select class="select-basic">
-                                <option selected>886台灣</option>
-                            </select>
-                            <input type="tel" class="input-basic" placeholder="手機號碼" value="">
-                            <a class="btn-basic state--unverified popup" rel="verify-confirm">發送驗證碼</a>
-                        </div>
-
-                        <div class="form-table__row phone">
-                            <select class="select-basic">
-                                <option selected>886台灣</option>
-                            </select>
-                            <input type="tel" class="input-basic" placeholder="手機號碼" value="">
-                            <div class="btn-basic state--verified" disabled><i class="icon-check"></i>已驗證</div>
-                        </div>
-
-                        <div class="form-table__row">
-                            <input type="email" class="input-basic" placeholder="E-mail" value="">
-                        </div>
-
-                        <div class="form-table__row">
-                            <input type="password" class="input-basic" placeholder="會員密碼(6-15位英數字)" value="">
-                        </div>
-
-                        <div class="form-table__row">
-                            <input type="password" class="input-basic" placeholder="再次輸入密碼" value="">
-                        </div>
-
-                        <div class="form-table__row birthday">
-                            <select class="select-basic">
-                                <option>出生年</option>
-                            </select>
-
-                            <select class="select-basic">
-                                <option>月</option>
-                            </select>
-                            
-                            <select class="select-basic">
-                                <option>日</option>
-                            </select>
-                        </div>
-
-                        <div class="form-table__row address">
-                            <select class="select-basic">
-                                <option>縣/市</option>
-                            </select>
-            
-                            <select class="select-basic">
-                                <option>鄉鎮市區</option>
-                            </select>
-            
-                            <input type="text" class="input-basic detail-add" placeholder="詳細地址" value="">
-                        </div>
-                    </div><!-- END .form-table -->
-                </div><!-- END #by-mobile -->
-
-                <div class="login-way__pane__content" id="by-email">
-                    <div class="form-table">
-                        <div class="form-table__row">
-                            <input type="text" class="input-basic" placeholder="姓名" value="">
-                        </div>
-
-                        <div class="form-table__row option">
-                            <div class="radio-basic">
-                                <input type="radio" id="gender-b1" name="gender-b">
-                                <label for="gender-b1"><i class="icon-check"></i><span>先生</span></label>
-                            </div>
-                            <div class="radio-basic">
-                                <input type="radio" id="gender-b2" name="gender-b">
-                                <label for="gender-b2"><i class="icon-check"></i><span>小姐</span></label>
-                            </div>
-                        </div>
-
-                        <div class="form-table__row">
-                            <input type="email" class="input-basic" placeholder="E-mail" value="">
-                        </div>
-
-                        <div class="form-table__row">
-                            <input type="password" class="input-basic" placeholder="會員密碼(6-15位英數字)" value="">
-                        </div>
-
-                        <div class="form-table__row">
-                            <input type="password" class="input-basic" placeholder="再次輸入密碼" value="">
-                        </div>
-
-                        <div class="form-table__row phone">
-                            <select class="select-basic">
-                                <option selected>886台灣</option>
-                            </select>
-                            <input type="tel" class="input-basic" placeholder="手機號碼" value="">
-                        </div>
-
-                        <div class="form-table__row birthday">
-                            <select class="select-basic">
-                                <option>出生年</option>
-                            </select>
-
-                            <select class="select-basic">
-                                <option>月</option>
-                            </select>
-                            
-                            <select class="select-basic">
-                                <option>日</option>
-                            </select>
-                        </div>
-
-                        <div class="form-table__row address">
-                            <select class="select-basic">
-                                <option>縣/市</option>
-                            </select>
-            
-                            <select class="select-basic">
-                                <option>鄉鎮市區</option>
-                            </select>
-            
-                            <input type="text" class="input-basic detail-add" placeholder="詳細地址" value="">
-                        </div>
-                    </div><!-- END .form-table -->
-                </div><!-- END #by-email -->
-
-                <div class="container__title-s">會員及購物同意條款</div>
-                <div class="form-table__row agree-list">
-                    <div class="checkbox-basic">
-                        <input type="checkbox" id="agree-edm" checked>
-                        <label for="agree-edm"><i class="icon-check"></i><span>訂閱D+AF電子報</span></label>
+            <div class="title-bar">
+                <div class="title-bar__main">
+                    <div>
+                        <span>可使用D幣 
+                            <b class="title-bar__ipt">5000 點</b> / 
+                            <b class="title-bar__ipt">NT$ 50</b>
+                        </span><br>
+                        <span>即將到期D幣 
+                            <b class="title-bar__ipt">3000 點</b> / 
+                            <b class="title-bar__ipt">NT$ 30</b>
+                        </span>
                     </div>
+                    <a class="btn-basic-border" href="https://www.daf-shoes.com/product/pageSet/2724">D幣說明</a>
                 </div>
 
-                <div class="form-table__row agree-list">
-                    <div class="checkbox-basic">
-                        <input type="checkbox" id="agree-term">
-                        <label for="agree-term"><i class="icon-check"></i>
-                            <span>我已仔細閱讀並明瞭
-                                <p class="other-note">「<a target="_blank" href="https://www.daf-shoes.com/product/pageSet/1081">網站使用條款</a>」、「<a target="_blank" href="https://www.daf-shoes.com/product/pageSet/1081">隱私權政策</a>」、「<a target="_blank" href="https://www.daf-shoes.com/product/pageSet/1081">免責聲明</a>」，等所載內容及其意義，茲同意該等條款規定，並願遵守網站現今、嗣後規範的各種規則。</p>
-                            </span>
-                        </label>
-                    </div>
-                </div>
-
-                <a class="btn-basic" href="register-finish.html">確認送出</a>
-            </div><!-- END .login-way__pane -->
-
-        </div><!-- END .container-wrap__column -->
-
-        <div class="container-wrap__column other">
-            <div class="container__title-s">快速加入會員</div>
-            <div class="fast-login">
-                <a class="fast-login__fb" href="#"><i class="icon-fb"></i><span>FACEBOOK登入</span></a>
-                <a class="fast-login__line" href="#"><i class="icon-line"></i><span>LINE登入</span></a>
+                <select class="select-basic">
+                    <option selected>全部</option>
+                    <option>最近一個月</option>
+                    <option>最近三個月</option>
+                    <option>最近半年</option>
+                </select>
             </div>
+            
+            <table class="table-basic table-d-coin">
+                <thead>
+                    <tr class="pc"><!-- 大網顯示 -->
+                        <th>項目</th>
+                        <th>生效日期</th>
+                        <th>到期日期</th>
+                        <th>使用日期</th>
+                        <th>點數</th>
+                    </tr>
+                
+                    <tr class="mobile"><!-- 小網顯示 -->
+                        <th>項目</th>
+                        <th>使用日期</th>
+                        <th>點數</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td class="subject">已過期(更新資料送D幣-驗證手機)</td>
+                        <td class="date-start"><span class="mobile">生效日期:</span>2023-10-02 14:44:58</td>
+                        <td class="date-end"><span class="mobile">到期日期:</span>2023-11-01 14:44:58</td>
+                        <td class="date-used"></td>
+                        <td class="d-coin">- 3000</td>
+                    </tr>
+                    <tr>
+                        <td class="subject">更新資料送D幣-驗證email</td>
+                        <td class="date-start"><span class="mobile">生效日期:</span>2023-10-02 14:44:58</td>
+                        <td class="date-end"><span class="mobile">到期日期:</span>2023-11-01 14:44:58</td>
+                        <td class="date-used"></td>
+                        <td class="d-coin">+ 3000</td>
+                    </tr>
+                    <tr>
+                        <td class="subject">消費折抵: <a class="order-id" href="order-detail.html">160411000152</a></td>
+                        <td class="date-start"></td>
+                        <td class="date-end"></td>
+                        <td class="date-used">2023-11-01</td>
+                        <td class="d-coin">- 3000</td>
+                    </tr>
+                    <tr>
+                        <td class="subject">雙11大撒幣</td>
+                        <td class="date-start"><span class="mobile">生效日期:</span>2023-10-02 14:44:58</td>
+                        <td class="date-end"><span class="mobile">到期日期:</span>2023-11-01 14:44:58</td>
+                        <td class="date-used"></td>
+                        <td class="point invalid">+ 5000 <div class="notice">尚未生效</div></td>
+                    </tr>
+                </tbody>
+            </table>
 
-            <div class="container__title-s">已有帳號？</div>
-            <a class="btn-basic-border" href="login.html">登入會員</a>
-        </div>
+            <div class="pager"><!-- 頁碼 -->
+                <a><i class="icon-arrow-left-start"></i></a>
+                <a><i class="icon-arrow-left"></i></a>
+                <a class="current">1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <span>...</span>
+                <a>10</a>
+                <a><i class="icon-arrow-right"></i></a>
+                <a><i class="icon-arrow-right-end"></i></a>
+            </div>
+        </div><!-- END .member__main -->
+
     </div><!-- END .container-wrap -->
 </div><!-- END .container -->
 <!-- 內容結束 -->
@@ -605,25 +532,6 @@
         </div>
     </div><!-- END .search-page__container -->
 </div><!-- END .search-page -->
-
-<!-- 手機號碼驗證popup -->
-<div class="popup-theme verify-confirm" id="verify-confirm">
-    <div class="popup-container">
-        <div class="overlay-bg"></div>
-
-        <div class="popup-content">
-            <button type="button" class="btn-close"><i class="icon-close"></i></button>
-
-            <div class="popup-title">手機號碼驗證</div>
-
-            <div class="popup-detail">
-                <input type="text" class="input-basic" placeholder="請輸入簡訊驗證碼">
-                <time>還剩下 281 秒</time>
-                <button type="button" class="btn-basic" onclick="closePopup();">確認送出</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 </body>
 </html>

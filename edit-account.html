@@ -20,7 +20,7 @@
 <script type="text/javascript" src="js/member.js"></script>
 </head>
 
-<body>
+<body class="mobile-header-none"><!-- 會員中心除了首頁, 其他頁面都要加"mobile-header-none"手機不顯示header -->
 <a class="top-btn" href="#"><i class="icon-top-btn"></i></a>
 
 <div class="header">
@@ -236,188 +236,132 @@
 </div><!-- END .header -->
 
 <!-- 內容開始 -->
-<div class="container member-login">
-    <div class="container__title">New Customer</div>
-
+<div class="container member">
     <div class="container-wrap">
-        <div class="container-wrap__column">
-            <div class="login-way__tab">
-                <a class="current" rel="by-mobile">手機號碼註冊</a>
-                <a  rel="by-email">E-mail註冊</a>
+        <div class="member__menu">
+            <div class="member__menu__list">
+                <a href="order.html">訂單查詢 / 申請退貨</a>
+                <a href="edit-account.html">修改會員資料</a>
+                <a class="pc" href="cash.html">保留金</a>
+                <a class="pc" href="d-coin.html">D幣</a>
+                <a class="pc" href="point.html">購物金</a>
+                <a class="pc" href="coupon.html">折價券</a>
+                <a href="address.html">常用收件資訊</a>
+                <a href="credit-card.html">信用卡管理</a>
+                <a href="wish-list.html">願望清單</a>
+            </div>
+        </div><!-- END .member__menu -->
+        
+        <div class="member__main member-login">
+            <div class="container__title">
+                <a class="back-btn" href="member.html" title="會員中心"><i class="icon-arrow-left"></i></a>
+                <span>修改會員資料</span>
             </div>
 
-            <div class="login-way__pane">
-                <div class="login-way__pane__content current" id="by-mobile">
-                    <div class="form-table">
-                        <div class="form-table__row">
-                            <input type="text" class="input-basic" placeholder="姓名" value="">
-                        </div>
+            <div class="form-table">
+                <div class="form-table__row">
+                    <input type="text" class="input-basic" placeholder="姓名" value="王小美">
+                </div>
 
-                        <div class="form-table__row option">
-                            <div class="radio-basic">
-                                <input type="radio" id="gender-a1" name="gender-a">
-                                <label for="gender-a1"><i class="icon-check"></i><span>先生</span></label>
-                            </div>
-                            <div class="radio-basic">
-                                <input type="radio" id="gender-a2" name="gender-a">
-                                <label for="gender-a2"><i class="icon-check"></i><span>小姐</span></label>
-                            </div>
-                        </div>
+                <div class="form-table__row option">
+                    <div class="radio-basic">
+                        <input type="radio" id="gender-a1" name="gender-a">
+                        <label for="gender-a1"><i class="icon-check"></i><span>先生</span></label>
+                    </div>
+                    <div class="radio-basic">
+                        <input type="radio" id="gender-a2" name="gender-a" checked>
+                        <label for="gender-a2"><i class="icon-check"></i><span>小姐</span></label>
+                    </div>
+                </div>
 
-                        <div class="form-table__row phone">
-                            <select class="select-basic">
-                                <option selected>886台灣</option>
-                            </select>
-                            <input type="tel" class="input-basic" placeholder="手機號碼" value="">
-                            <a class="btn-basic state--unverified popup" rel="verify-confirm">發送驗證碼</a>
-                        </div>
+                <div class="form-table__row phone">
+                    <select class="select-basic">
+                        <option selected>886台灣</option>
+                    </select>
+                    <input type="tel" class="input-basic" placeholder="手機號碼" value="0910234567">
+                    <a class="btn-basic state--unverified popup" rel="verify-confirm">驗證手機號碼拿D幣</a>
+                </div>
 
-                        <div class="form-table__row phone">
-                            <select class="select-basic">
-                                <option selected>886台灣</option>
-                            </select>
-                            <input type="tel" class="input-basic" placeholder="手機號碼" value="">
-                            <div class="btn-basic state--verified" disabled><i class="icon-check"></i>已驗證</div>
-                        </div>
+                <div class="form-table__row phone">
+                    <select class="select-basic">
+                        <option selected>886台灣</option>
+                    </select>
+                    <input type="tel" class="input-basic" placeholder="手機號碼" value="0910234567">
+                    <div class="btn-basic state--verified" disabled><i class="icon-check"></i>已驗證</div>
+                </div>
 
-                        <div class="form-table__row">
-                            <input type="email" class="input-basic" placeholder="E-mail" value="">
-                        </div>
+                <div class="form-table__row">
+                    <input type="email" class="input-basic" placeholder="E-mail" value="beauty@gmail.com">
+                </div>
 
-                        <div class="form-table__row">
-                            <input type="password" class="input-basic" placeholder="會員密碼(6-15位英數字)" value="">
-                        </div>
+                <div class="form-table__row birthday">
+                    <select class="select-basic" disabled>
+                        <option>出生年</option>
+                        <option selected>1998</option>
+                    </select>
 
-                        <div class="form-table__row">
-                            <input type="password" class="input-basic" placeholder="再次輸入密碼" value="">
-                        </div>
+                    <select class="select-basic" disabled>
+                        <option>月</option>
+                        <option selected>10</option>
+                    </select>
+                    
+                    <select class="select-basic" disabled>
+                        <option>日</option>
+                        <option selected>14</option>
+                    </select>
+                </div>
+                <div class="note">*生日已修改過</div>
 
-                        <div class="form-table__row birthday">
-                            <select class="select-basic">
-                                <option>出生年</option>
-                            </select>
+                <div class="form-table__row address">
+                    <select class="select-basic">
+                        <option>縣/市</option>
+                        <option selected>新北市</option>
+                    </select>
+    
+                    <select class="select-basic">
+                        <option>鄉鎮市區</option>
+                        <option selected>中和區</option>
+                    </select>
+    
+                    <input type="text" class="input-basic detail-add" placeholder="詳細地址" value="建康路162號2樓">
+                </div>
 
-                            <select class="select-basic">
-                                <option>月</option>
-                            </select>
-                            
-                            <select class="select-basic">
-                                <option>日</option>
-                            </select>
-                        </div>
+                <div class="form-table__row carrier">
+                    <span>手機載具</span>
+                    <input type="text" class="input-basic" placeholder="請輸入手機載具" value="/GRE56YA">
+                </div>
 
-                        <div class="form-table__row address">
-                            <select class="select-basic">
-                                <option>縣/市</option>
-                            </select>
-            
-                            <select class="select-basic">
-                                <option>鄉鎮市區</option>
-                            </select>
-            
-                            <input type="text" class="input-basic detail-add" placeholder="詳細地址" value="">
-                        </div>
-                    </div><!-- END .form-table -->
-                </div><!-- END #by-mobile -->
+                <div class="form-table__row shoes-size">
+                    <span>我的鞋碼</span>
+                    <input type="text" class="input-basic" placeholder="鞋碼" value="39">
+                    <a class="btn-basic-border popup" rel="size-suggestion">適合我的尺寸</a>
+                </div>
 
-                <div class="login-way__pane__content" id="by-email">
-                    <div class="form-table">
-                        <div class="form-table__row">
-                            <input type="text" class="input-basic" placeholder="姓名" value="">
-                        </div>
+                <div class="container__title-s">修改會員密碼</div>
 
-                        <div class="form-table__row option">
-                            <div class="radio-basic">
-                                <input type="radio" id="gender-b1" name="gender-b">
-                                <label for="gender-b1"><i class="icon-check"></i><span>先生</span></label>
-                            </div>
-                            <div class="radio-basic">
-                                <input type="radio" id="gender-b2" name="gender-b">
-                                <label for="gender-b2"><i class="icon-check"></i><span>小姐</span></label>
-                            </div>
-                        </div>
+                <div class="form-table__row">
+                    <input type="password" class="input-basic" placeholder="輸入舊密碼" value="">
+                </div>
 
-                        <div class="form-table__row">
-                            <input type="email" class="input-basic" placeholder="E-mail" value="">
-                        </div>
+                <div class="form-table__row">
+                    <input type="password" class="input-basic" placeholder="設定新密碼(6-15位英數字)" value="">
+                </div>
 
-                        <div class="form-table__row">
-                            <input type="password" class="input-basic" placeholder="會員密碼(6-15位英數字)" value="">
-                        </div>
+                <div class="form-table__row">
+                    <input type="password" class="input-basic" placeholder="再次輸入新密碼" value="">
+                </div>
 
-                        <div class="form-table__row">
-                            <input type="password" class="input-basic" placeholder="再次輸入密碼" value="">
-                        </div>
-
-                        <div class="form-table__row phone">
-                            <select class="select-basic">
-                                <option selected>886台灣</option>
-                            </select>
-                            <input type="tel" class="input-basic" placeholder="手機號碼" value="">
-                        </div>
-
-                        <div class="form-table__row birthday">
-                            <select class="select-basic">
-                                <option>出生年</option>
-                            </select>
-
-                            <select class="select-basic">
-                                <option>月</option>
-                            </select>
-                            
-                            <select class="select-basic">
-                                <option>日</option>
-                            </select>
-                        </div>
-
-                        <div class="form-table__row address">
-                            <select class="select-basic">
-                                <option>縣/市</option>
-                            </select>
-            
-                            <select class="select-basic">
-                                <option>鄉鎮市區</option>
-                            </select>
-            
-                            <input type="text" class="input-basic detail-add" placeholder="詳細地址" value="">
-                        </div>
-                    </div><!-- END .form-table -->
-                </div><!-- END #by-email -->
-
-                <div class="container__title-s">會員及購物同意條款</div>
-                <div class="form-table__row agree-list">
+                <div class="form-table__row agree-list center">
                     <div class="checkbox-basic">
                         <input type="checkbox" id="agree-edm" checked>
                         <label for="agree-edm"><i class="icon-check"></i><span>訂閱D+AF電子報</span></label>
                     </div>
                 </div>
 
-                <div class="form-table__row agree-list">
-                    <div class="checkbox-basic">
-                        <input type="checkbox" id="agree-term">
-                        <label for="agree-term"><i class="icon-check"></i>
-                            <span>我已仔細閱讀並明瞭
-                                <p class="other-note">「<a target="_blank" href="https://www.daf-shoes.com/product/pageSet/1081">網站使用條款</a>」、「<a target="_blank" href="https://www.daf-shoes.com/product/pageSet/1081">隱私權政策</a>」、「<a target="_blank" href="https://www.daf-shoes.com/product/pageSet/1081">免責聲明</a>」，等所載內容及其意義，茲同意該等條款規定，並願遵守網站現今、嗣後規範的各種規則。</p>
-                            </span>
-                        </label>
-                    </div>
-                </div>
+                <a class="btn-basic save-btn" href="edit-account.html">儲存資料</a>
+            </div><!-- END .form-table -->
+        </div><!-- END .member__main -->
 
-                <a class="btn-basic" href="register-finish.html">確認送出</a>
-            </div><!-- END .login-way__pane -->
-
-        </div><!-- END .container-wrap__column -->
-
-        <div class="container-wrap__column other">
-            <div class="container__title-s">快速加入會員</div>
-            <div class="fast-login">
-                <a class="fast-login__fb" href="#"><i class="icon-fb"></i><span>FACEBOOK登入</span></a>
-                <a class="fast-login__line" href="#"><i class="icon-line"></i><span>LINE登入</span></a>
-            </div>
-
-            <div class="container__title-s">已有帳號？</div>
-            <a class="btn-basic-border" href="login.html">登入會員</a>
-        </div>
     </div><!-- END .container-wrap -->
 </div><!-- END .container -->
 <!-- 內容結束 -->
@@ -621,6 +565,69 @@
                 <time>還剩下 281 秒</time>
                 <button type="button" class="btn-basic" onclick="closePopup();">確認送出</button>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- 適合我的尺寸popup -->
+<div class="popup-theme size-suggestion" id="size-suggestion">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content">
+            <button type="button" class="btn-close"><i class="icon-close"></i></button>
+
+            <div class="popup-title">適合我的尺寸</div>
+            <div class="popup-title-s">請輸入以下內容，我們將依據您的資料，計算適合您的尺寸</div>
+
+            <div class="popup-detail">
+                <div class="form-table">
+                    <div class="form-table__row">
+                        <span>平常穿的尺寸</span>
+                        <input type="text" class="input-basic" placeholder="ex:37">
+                    </div>
+
+                    <div class="form-table__row">
+                        <span>小腿圍(cm)</span>
+                        <input type="text" class="input-basic" placeholder="小腿最豐滿處，繞一圈測量">
+                    </div>
+
+                    <div class="form-table__row">
+                        <span>腳長(cm)</span>
+                        <input type="text" class="input-basic" placeholder="平量最長處">
+                    </div>
+
+                    <div class="form-table__row">
+                        <span>腳寬(cm)</span>
+                        <input type="text" class="input-basic" placeholder="平量最寬處">
+                    </div>
+
+                    <div class="form-table__row full">
+                        <span>腳型</span>
+                        <a target="_blank" href="https://www.daf-shoes.com/product/pageSet/2289">我的腳型怎麼挑鞋？</a>
+                        <div>
+                            <div class="radio-basic">
+                                <input type="radio" id="foot-style1" name="foot-style">
+                                <label for="foot-style1"><i class="icon-radio"></i><span>埃及型</span></label>
+                            </div>
+
+                            <div class="radio-basic">
+                                <input type="radio" id="foot-style2" name="foot-style">
+                                <label for="foot-style2"><i class="icon-radio"></i><span>羅馬型</span></label>
+                            </div>
+
+                            <div class="radio-basic">
+                                <input type="radio" id="foot-style3" name="foot-style">
+                                <label for="foot-style3"><i class="icon-radio"></i><span>希臘型</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-title-s"><b>測量說明</b> (丈量尺寸皆以公分方式計算)</div>
+                <img src="images/size-chart3.png" alt="測量說明">
+            </div>
+
+            <button class="btn-basic" onclick="closePopup();">儲存資料</button>
         </div>
     </div>
 </div>
