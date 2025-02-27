@@ -58,6 +58,18 @@ $(function(){
                 $(this).stop(false, true).slideUp(600);
             }
         );
+
+        //電腦版 打開選擇尺寸跳窗
+        $('.pt-item .add-btn').click(function(){
+            $('.header').addClass('no-sticky');
+            $('.size-select').stop(false, true).fadeOut(0);
+            $('.top-btn').stop(false, true).fadeOut(0);
+            $(this).closest('.pt-item').find('.size-select').stop(false, true).fadeIn(300);
+        });
+        $('.size-select__bg, .size-select .btn-close').click(function(){
+            $('.header').removeClass('no-sticky');
+            $(this).closest('.size-select').stop(false, true).fadeOut(300);
+        });
     }else {
         //手機版 menu.click 展開左側選單 
         $('.header__syslink__menu').click(function(){
@@ -73,6 +85,20 @@ $(function(){
         $('.download-app .btn-close').click(function(){
             $('.download-app').stop(false, true).slideUp(100);
         });
+
+        //手機版 打開選擇尺寸跳窗
+        $('.pt-item .add-btn').click(function(){
+            $('.header').addClass('no-sticky');
+            $('body').addClass('no-scroll');
+            $('.size-select').stop(false, true).fadeOut(0);
+            $('.top-btn').stop(false, true).fadeOut(0);
+            $(this).closest('.pt-item').find('.size-select').stop(false, true).fadeIn(300);
+        });
+        $('.size-select__bg, .size-select .btn-close').click(function(){
+            $('.header').removeClass('no-sticky');
+            $('body').removeClass('no-scroll');
+            $(this).closest('.size-select').stop(false, true).fadeOut(300);
+        });
     }
 
     //電腦版&手機版 打開搜尋頁  
@@ -83,21 +109,6 @@ $(function(){
     $('.search-page .btn-close').click(function(){
         $('body').removeClass('no-scroll');
         $('.search-page').stop(false, true).animate({right:'-100dvw'}).fadeOut(0);
-    });
-
-    //電腦版 手機版 打開選擇尺寸跳窗
-    $('.pt-item .add-btn').click(function(){
-        $('.header').addClass('no-sticky');
-        $('body').addClass('no-scroll');
-        $('.size-select').stop(false, true).fadeOut(0);
-        $('.top-btn').stop(false, true).fadeOut(0);
-        $(this).closest('.pt-item').find('.size-select').stop(false, true).fadeIn(300);
-    });
-
-    $('.size-select__bg, .size-select .btn-close').click(function(){
-        $('.header').removeClass('no-sticky');
-        $('body').removeClass('no-scroll');
-        $(this).closest('.size-select').stop(false, true).fadeOut(300);
     });
 
     //電腦版&手機版 popup彈窗開關
