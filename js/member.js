@@ -4,7 +4,6 @@ $(function(){
     if(window.innerWidth > 820) {
         //電腦版 常用收件地址/門市 切換tab
         $('.receiving__tab a').click(function(){
-            
             var id = $(this).attr('rel');
             $('.receiving__tab a').removeClass('current');
             $(this).addClass('current');

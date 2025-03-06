@@ -252,6 +252,7 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
     .pt-item__pic { display: block; width: 25%; height: fit-content; margin-right: 5%; }
     .pt-item__info { width: 70%; display: flex; flex-flow: column; gap: 5px;
         .pt-item__info__pre-order { color: @color-cis; }
+        .pt-item__info__gift { color: @color-cis; }
         .pt-item__info__name { width: fit-content; }
         .pt-item__info__price { 
             > * { white-space: nowrap; }
@@ -398,7 +399,7 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
         .popup-content { position: relative; width: 100%; max-height: 90dvh; margin: 0 auto; padding: 20px 30px;
             background: @color-white; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); z-index: 6; overflow: auto;
 
-            .btn-close { position: absolute; top: 15px; right: 10px; }
+            .btn-close { position: absolute; top: 15px; right: 15px; }
             .popup-title { display: flex; flex-flow: wrap; align-items: center; justify-content: center;
                 font-size: @font-L; font-weight: 500; text-align: center; }
             .popup-title-s { margin: 10px 0; color: @color-gray1; font-size: @font-S; 
@@ -587,4 +588,19 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
         background: url(../images/icons/404.svg) no-repeat center; background-size: contain; }
         .btn-basic, .btn-basic-border { padding: 10px 25px; }
     }
+}
+
+/* ATM轉帳銀行資訊 */
+.atm-info { padding: 20px 30px; margin-top: 20px; text-align: left; background: @color-white;
+    .atm-info__title { padding-bottom: 10px; margin-bottom: 10px; 
+        font-size: @font-L; font-weight: 500; border-bottom: 1px solid @color-border; }
+    .atm-info__content time { color: @color-red; font-weight: 500; }
+    .atm-info__bank { margin-top: 15px; line-height: 200%; 
+        > b { color: @color-red; font-weight: 500; }
+    }
+}
+
+/* 訂單&付款 注意事項 */
+.payment-important { color: @color-gray0; line-height: 160%;
+    .payment-important__notice { color: @color-red; font-size: @font-M; font-weight: bold; }
 }

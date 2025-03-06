@@ -255,72 +255,208 @@
         
         <div class="member__main">
             <div class="container__title">
-                <a class="back-btn mobile" href="order-detail.html"><i class="icon-arrow-left"></i></a><!-- 手機版顯示 -->
-                <span>客服問答</span>
+                <a class="back-btn mobile" href="order.html"><i class="icon-arrow-left"></i></a><!-- 手機版顯示 -->
+                <span>訂單明細</span>
             </div>
 
             <div class="order__title">
-                <span>[ 官網 ] 訂單編號：<a href="order-detail.html">230925000016</a></span>
-                <time>2023-09-25 09:23:13</time>
+                <span>[ 官網 ] 訂單編號：230925000016</span>
+                <time>2023-09-25 09:23:13
+                    <div>下單地區： 馬來西亞</div><!-- 國外訂單顯示 -->
+                </time>
             </div>
             
-            <a class="btn-basic-border add-btn popup" rel="add-question"><i class="icon-add"></i>新增問題</a>
-
-            <div class="qa-group">
-                <div class="qa-group__question">
-                    <div class="qa-group__icon">Q.</div>
-                    <div class="qa-group__subject">請問我的訂單何時出貨？</div>
-                    <div class="qa-group__time">2023-09-25 09:23:13</div>
-                    <div class="qa-group__content">已經等待許久，請問我的訂單何時出貨？</div>
+            <!-- 選擇ATM轉帳時顯示提醒 -->
+            <div class="atm-info">
+                <div class="atm-info__title">ATM轉帳付款</div>
+                <div class="atm-info__content">
+                    親愛的 先生/小姐 您好，D+AF已經收到您的訂單，請務必於
+                    <time>2024-05-24 23:59:59</time>
+                    前，至自動提款機(ATM)，進行轉帳(跨行轉帳手續費用，由客戶自行負擔)，逾期D+AF將自動取消此筆交易。
                 </div>
-
-                <a class="btn-basic-border add-btn popup" rel="reply-question"><i class="icon-add"></i>我要回覆</a>
+                <div class="atm-info__bank">
+                    匯款銀行：玉山商業銀行<br>
+                    銀行代碼：808<br>
+                    銀行帳號：<b>92600052408909</b>
+                </div>
             </div>
 
-            <div class="qa-group">
-                <div class="qa-group__question">
-                    <div class="qa-group__icon">Q.</div>
-                    <div class="qa-group__subject">請問我的訂單何時出貨？</div>
-                    <div class="qa-group__time">2023-09-25 09:23:13</div>
-                    <div class="qa-group__content">已經等待許久，請問我的訂單何時出貨？</div>
-                </div>
+            <div class="order-group">
+                <table class="table-basic order-list">
+                    <thead>
+                        <tr class="pc"><!-- 大網顯示 -->
+                            <th>處理進度</th>
+                            <th>應付金額</th>
+                            <th>付款方式</th>
+                            <th>狀態</th>
+                            <th>操作</th>
+                        </tr>
+                    
+                        <tr class="mobile"><!-- 小網顯示 -->
+                            <th>處理進度</th>
+                            <th>應付金額</th>
+                            <th>付款方式</th>
+                            <th>狀態</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td class="order-state">出貨中</td>
+                            <td class="order-total">NT$ 1380</td>
+                            <td class="payment-type">
+                                信用卡
 
-                <div class="qa-group__reply">
-                    <div class="qa-group__icon">A.</div>
-                    <div class="qa-group__subject">D+AF客服回覆</div>
-                    <div class="qa-group__time">2023-09-25 09:23:13</div>
-                    <div class="qa-group__content">近期物流量較大 ，會盡快為您安排出貨，謝謝。</div>
-                </div>
+                                <!-- 如果是選ATM轉帳會顯示連結, 並跳窗顯示付款帳戶資訊 -->
+                                <!-- <a class="atm popup" rel="atm-payment">ATM轉帳</a> -->
+                            </td>
+                            <td class="payment-state">付款成功</td>
+                            <td class="system-btn">
+                                <a class="btn-basic-border popup" rel="order-cancel">取消訂單</a><!-- 可取消時才顯示 -->
+                                <a class="btn-basic-border popup" rel="order-return">我要退貨</a><!-- 可退貨時才顯示 -->
+                                <a class="btn-basic-border" href="return-detail.html">退貨詳情</a><!-- 已申請退貨才顯示 -->
+                                <a class="btn-basic-border" href="customer-qa.html">客服問答</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><!-- END .order-group -->
 
-                <a class="btn-basic-border add-btn popup" rel="reply-question"><i class="icon-add"></i>我要回覆</a>
+            <div>訂單備註：請管理員簽收</div>
+
+            <table class="table-basic pt-list">
+                <thead>
+                    <tr class="pc"><!-- 大網顯示 -->
+                        <th>商品資訊</th>
+                        <th>原價</th>
+                        <th>優惠價</th>
+                    </tr>
+                    <tr class="mobile"><!-- 小網顯示 -->
+                        <th>商品資訊</th>
+                        <th>單價</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="pt-item">
+                            <a class="pt-item__pic" href="product-detail.html"><img src="images/pt1.jpg"></a>
+
+                            <div class="pt-item__info">
+                                <div class="pt-item__info__pre-order">預購出貨日 2023-07-04</div>
+                                <div class="pt-item__info__gift">單筆訂含【舒華秋冬鞋款】，即可獲得【舒華小卡套組】</div>
+                                <div class="pt-item__info__name">
+                                    <span class="name">好穿一直穿芭蕾風休閒鞋</span> 
+                                    <span class="color">時尚黑 | 38</span>
+                                </div>
+
+                                <a class="pt-item__info__promotions" href="product-event.html"><i class="icon-checked"></i>A+B自由選，1+1=$1388</a>
+                                <!--<a class="pt-item__info__promotions non-compliant" href="product-event.html"><i class="icon-no-checked"></i>A+B自由選，1+1=$1388</a>-->
+                                <div class="pt-item__info__notice">此商品無提供退貨服務</div>
+                            </div>
+                        </td>
+                        <td class="price-original">NT$ 1680</td>
+                        <td class="price-deal">NT$ 1080</td>
+                        <td class="delivery-status">
+                            <div class="delivery-status__column current">09/25<br>收到訂單</div>
+                            <div class="delivery-status__column current">09/25<br>撿貨包裝</div>
+                            <div class="delivery-status__column current">09/25<br>出貨配送中<br>
+                                <a target="_blank" href="#">904382366122</a>
+                            </div>
+                            <div class="delivery-status__column">已送達</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="pt-item">
+                            <a class="pt-item__pic" href="product-detail.html"><img src="images/pt1.jpg"></a>
+
+                            <div class="pt-item__info">
+                                <div class="pt-item__info__name">
+                                    <span class="name">好穿一直穿芭蕾風休閒鞋</span> 
+                                    <span class="color">時尚黑 | 38</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price-original">NT$ 1680</td>
+                        <td class="price-deal">NT$ 1080</td>
+                        <td class="delivery-status">
+                            <div class="delivery-status__column current">09/25<br>收到訂單</div>
+                            <div class="delivery-status__column">撿貨包裝</div>
+                            <div class="delivery-status__column">出貨配送中</div>
+                            <div class="delivery-status__column">已送達</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table><!-- END .pt-list -->
+
+            <div class="order__tab">
+                <a class="current" rel="order-current">當前訂單 <i class="icon-arrow-down"></i></a>
+                <a rel="order-original">原始訂單 <i class="icon-arrow-down"></i></a>
             </div>
 
-            <div class="qa-group">
-                <div class="qa-group__question">
-                    <div class="qa-group__icon">Q.</div>
-                    <div class="qa-group__subject">請問我的訂單何時出貨？</div>
-                    <div class="qa-group__time">2023-09-25 09:23:13</div>
-                    <div class="qa-group__content">已經等待許久，請問我的訂單何時出貨？</div>
+            <div class="order__pane">
+                <div class="order__pane__content current" id="order-current"><!-- 當前訂單 -->
+                    <div class="order-details">
+                        <span>消費小計</span><b>1080</b>
+                        <span>折價券 (9hbd-860)</span><b>-</b>
+                        <span>運費 (宅配)</span><b>80</b>
+                        <span>手續費 (ATM轉帳)</span><b>-</b>
+                        <span>使用D幣折抵</span><b>-</b>
+                        <span>使用保留金折抵</span><b>-</b>
+                    </div>
+
+                    <div class="order-total-count">
+                        <span>共 <b class="order-total-count__pieces">1</b> 件商品，應付總金額</span><b class="order-total-count__price">NT$ 1160</b>
+                        <span>重量</span><b>0.6kg</b>
+                    </div>
                 </div>
 
-                <div class="qa-group__reply">
-                    <div class="qa-group__icon">A.</div>
-                    <div class="qa-group__subject">D+AF客服回覆</div>
-                    <div class="qa-group__time">2023-09-25 09:23:13</div>
-                    <div class="qa-group__content">近期物流量較大 ，會盡快為您安排出貨，謝謝。</div>
-                </div>
+                <div class="order__pane__content" id="order-original"><!-- 原始訂單 -->
+                    <div class="order-details">
+                        <span>消費小計</span><b>2160</b>
+                        <span>折價券 (9hbd-860)</span><b>- 100</b>
+                        <span>運費 (宅配)</span><b>0</b>
+                        <span>手續費 (ATM轉帳)</span><b>-</b>
+                        <span>使用D幣折抵</span><b>- 50</b>
+                        <span>使用保留金折抵</span><b>- 500</b>
+                    </div>
 
-                <div class="qa-group__reply">
-                    <div class="qa-group__icon">A.</div>
-                    <div class="qa-group__subject">我的回覆</div>
-                    <div class="qa-group__time">2023-09-25 09:23:13</div>
-                    <div class="qa-group__content">所以大概何時會出貨呢？</div>
+                    <div class="order-total-count">
+                        <span>共 <b class="order-total-count__pieces">2</b> 件商品，應付總金額</span><b class="order-total-count__price">NT$ 1510</b>
+                        <span>重量</span><b>1.2kg</b>
+                    </div>
                 </div>
+            </div><!-- END .order__pane -->
 
-                <a class="btn-basic-border add-btn popup" rel="reply-question"><i class="icon-add"></i>我要回覆</a>
+            <div class="payment-important">
+                線上保留金餘額(扣除本筆訂單後)→NT$0<br>
+                此次購物將可取得0點D幣<br>
+                此次購物將可取得0點購物金<br>
+                <br>
+                <span class="payment-important__notice">注意！</span><br>
+                *福袋為組合商品，無法單獨退貨。<br>
+                *若因退貨導致不達贈品贈送標準，須連同贈品一同退回。<br>
+                *辦理退貨時等同於同意授權由D+AF代為處理發票及折讓證明單。<br>
+                *若同筆訂單內含有現貨及預購商品，現貨會拆單先出貨，預購待到貨後寄出。<br>
+                *訂單成立後恕無法修改訂購內容及配送資訊。<br>
+                *兌換商品無法退換貨。<br>
+                *兌換單成立後無法修改內容及配送資訊。
             </div>
 
+            <div class="order-data">
+                <div><span>收件人：</span><b>王小美</b></div>
+                <div><span>聯絡電話：</span><b>0912345678</b></div>
+                <div><span>配送地址：</span><b>(台灣及離島) 235 新北市中和區建康路176號2樓</b></div>
+                <div class="order-data__invoice">
+                    <span>發票號碼：</span>
+                    <b>WH-50610861 / 鑑賞期後開立
+                        <a class="btn-basic-border popup" rel="apply-invoice">申請紙本發票</a>
+                    </b>
+                </div>
+                <div><span>手機載具：</span><b>/KEW55UI</b></div>
+            </div>
         </div><!-- END .member__main -->
+
     </div><!-- END .container-wrap -->
 </div><!-- END .container -->
 <!-- 內容結束 -->
@@ -509,54 +645,121 @@
     </div><!-- END .search-page__container -->
 </div><!-- END .search-page -->
 
-<!-- 新增問題popup -->
-<div class="popup-theme popup-question" id="add-question">
+<!-- 取消訂單popup -->
+<div class="popup-theme" id="order-cancel">
     <div class="popup-container">
         <div class="overlay-bg"></div>
 
         <div class="popup-content">
             <button type="button" class="btn-close"><i class="icon-close"></i></button>
-            
-            <div class="popup-title"><i class="icon-checked"></i> 問題詢問</div>
-            <div class="popup-detail"><span class="notice">
-                ※問題詢問的答覆時間為09:00-18:00，例假日休息及下班時間無法及時回覆，謝謝您的配合。
-            </span></div>
 
-            <div class="form-table">
-                <div class="form-table__row">
-                    <input type="text" class="input-basic" placeholder="主旨" value="">
-                </div>
+            <div class="popup-title">取消訂單</div>
+            <div class="popup-title-s">是否確定取消訂單？</div>
 
-                <div class="form-table__row">
-                    <textarea placeholder="問題說明"></textarea>
-                </div>
-
-                <button type="button" class="btn-basic confirm-btn">送出</button>
-            </div><!-- END .form-table -->
+            <div class="popup-content__bottom">
+                <button type="button" class="btn-basic-border" onclick="closePopup();">返回</button>
+                <button type="button" class="btn-basic">確定取消</button>
+            </div>
         </div>
     </div>
 </div>
 
-<!-- 回覆問題popup -->
-<div class="popup-theme popup-question" id="reply-question">
+<!-- 我要退貨popup -->
+<div class="popup-theme" id="order-return">
     <div class="popup-container">
         <div class="overlay-bg"></div>
 
         <div class="popup-content">
             <button type="button" class="btn-close"><i class="icon-close"></i></button>
 
-            <div class="popup-title"><i class="icon-checked"></i> 我要回覆</div>
-            <div class="popup-detail"><span class="notice">
-                ※問題詢問的答覆時間為09:00-18:00，例假日休息及下班時間無法及時回覆，謝謝您的配合。
-            </span></div>
+            <div class="popup-title">我要退貨</div>
+            <div class="popup-title-s">請注意！退貨多次將列入黑名單，將會影響您之後訂購的權益。</div>
+
+            <div class="popup-content__bottom">
+                <button type="button" class="btn-basic-border" onclick="closePopup();">再考慮</button>
+                <button type="button" class="btn-basic">確認</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ATM轉帳付款popup -->
+<div class="popup-theme atm-payment" id="atm-payment">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content">
+            <button type="button" class="btn-close"><i class="icon-close"></i></button>
+
+            <div class="atm-info">
+                <div class="atm-info__title">ATM轉帳付款</div>
+                <div class="atm-info__content">
+                    親愛的 先生/小姐 您好，D+AF已經收到您的訂單，請務必於
+                    <time>2024-05-24 23:59:59</time>
+                    前，至自動提款機(ATM)，進行轉帳(跨行轉帳手續費用，由客戶自行負擔)，逾期D+AF將自動取消此筆交易。
+                </div>
+                <div class="atm-info__bank">
+                    匯款銀行：玉山商業銀行<br>
+                    銀行代碼：808<br>
+                    銀行帳號：<b>92600052408909</b>
+                </div>
+            </div>
+
+            <div class="popup-content__bottom">
+                <button type="button" class="btn-basic" onclick="closePopup();">確認</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 發票資訊popup -->
+<div class="popup-theme atm-payment" id="apply-invoice">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content">
+            <button type="button" class="btn-close"><i class="icon-close"></i></button>
+
+            <div class="popup-title">發票資訊</div>
+            <div class="popup-title-s">※請填入正確的收件資訊，協助客服人員處理您的發票紙本寄送。</div>
 
             <div class="form-table">
                 <div class="form-table__row">
-                    <textarea placeholder="回覆說明"></textarea>
+                    <input type="text" class="input-basic" placeholder="姓名" value="王小美">
+                </div>
+                <div class="error-msg">※請填寫正確中文姓名，以確保不會被退件。</div>
+
+                <div class="form-table__row phone">
+                    <select class="select-basic">
+                        <option selected>886台灣</option>
+                    </select>
+                    <input type="tel" class="input-basic" placeholder="手機號碼" value="0910234567">
                 </div>
 
-                <button type="button" class="btn-basic confirm-btn">送出</button>
+                <div class="form-table__row phone">
+                    <input type="tel" class="input-basic" placeholder="區碼"> - 
+                    <input type="tel" class="input-basic" placeholder="市話(非必填)"> # 
+                    <input type="tel" class="input-basic" placeholder="分機">
+                </div>
+
+                <div class="form-table__row address">
+                    <select class="select-basic">
+                        <option>縣/市</option>
+                        <option selected>新北市</option>
+                    </select>
+    
+                    <select class="select-basic">
+                        <option>鄉鎮市區</option>
+                        <option selected>中和區</option>
+                    </select>
+    
+                    <input type="text" class="input-basic detail-add" placeholder="詳細地址" value="建康路162號2樓">
+                </div>
             </div><!-- END .form-table -->
+
+            <div class="popup-content__bottom">
+                <button type="button" class="btn-basic" onclick="closePopup();">確認送出</button>
+            </div>
         </div>
     </div>
 </div>

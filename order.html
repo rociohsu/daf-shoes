@@ -257,10 +257,7 @@
             <div class="container__title">
                 <a class="pc" href="member.html">會員中心</a><!-- 電腦版顯示 -->
                 <i class="icon-arrow-right pc"></i><!-- 電腦版顯示 -->
-                <a class="back-btn mobile" href="member.html"><!-- 手機版顯示 -->
-                    <span class="pc">回會員中心</span>
-                    <i class="icon-arrow-left"></i>
-                </a>
+                <a class="back-btn mobile" href="member.html"><i class="icon-arrow-left"></i></a><!-- 手機版顯示 -->
                 <span>訂單查詢</span>
             </div>
 
@@ -286,6 +283,214 @@
                 <p>目前沒有訂單記錄，快來一起shoping吧！</p>
                 <a class="btn-basic" href="product-category.html">繼續逛逛</a>
             </div>
+
+            <div class="order-group">
+                <div class="order__title">
+                    <span>[ 官網 ] 訂單編號：<a href="order-detail.html">230925000016</a></span>
+                    <time>2023-09-25 09:23:13</time>
+                </div>
+
+                <table class="table-basic order-list">
+                    <thead>
+                        <tr class="pc"><!-- 大網顯示 -->
+                            <th>處理進度</th>
+                            <th>應付金額</th>
+                            <th>付款方式</th>
+                            <th>狀態</th>
+                            <th>操作</th>
+                        </tr>
+                    
+                        <tr class="mobile"><!-- 小網顯示 -->
+                            <th>處理進度</th>
+                            <th>應付金額</th>
+                            <th>付款方式</th>
+                            <th>狀態</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td class="order-state">出貨中</td>
+                            <td class="order-total">NT$ 1380</td>
+                            <td class="payment-type">
+                                信用卡
+
+                                <!-- 如果是選ATM轉帳會顯示連結, 並跳窗顯示付款帳戶資訊 -->
+                                <!-- <a class="atm popup" rel="atm-payment">ATM轉帳</a> -->
+                            </td>
+                            <td class="payment-state">付款成功</td>
+                            <td class="system-btn">
+                                <a class="btn-basic-border popup" rel="order-cancel">取消訂單</a><!-- 可取消時才顯示 -->
+                                <a class="btn-basic-border popup" rel="order-return">我要退貨</a><!-- 可退貨時才顯示 -->
+                                <a class="btn-basic-border" href="return-detail.html">退貨詳情</a><!-- 已申請退貨才顯示 -->
+                                <a class="btn-basic-border" href="customer-qa.html">客服問答</a>
+                                <a class="btn-basic-border" href="order-detail.html">訂單明細</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><!-- END .order-group -->
+
+            <div class="order-group">
+                <div class="order__title">
+                    <span>[ 門市 ] 訂單編號：<a href="order-detail-store.html">230925000016</a></span>
+                    <time>2023-09-25 09:23:13</time>
+                </div>
+
+                <table class="table-basic order-list">
+                    <thead>
+                        <tr class="pc"><!-- 大網顯示 -->
+                            <th>處理進度</th>
+                            <th>應付金額</th>
+                            <th>付款方式</th>
+                            <th>狀態</th>
+                            <th>操作</th>
+                        </tr>
+                    
+                        <tr class="mobile"><!-- 小網顯示 -->
+                            <th>處理進度</th>
+                            <th>應付金額</th>
+                            <th>付款方式</th>
+                            <th>狀態</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td class="order-state"></td>
+                            <td class="order-total">NT$ 2560</td>
+                            <td class="payment-type">門市直購</td>
+                            <td class="payment-state"></td>
+                            <td class="system-btn">
+                                <a class="btn-basic-border" href="order-detail-store.html">訂單明細</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><!-- END .order-group -->
+
+            <div class="order-group">
+                <div class="order__title">
+                    <span>[ 官網 ] 訂單編號：<a href="order-detail.html">230925000016</a></span>
+                    <time>2023-09-25 09:23:13</time>
+                </div>
+
+                <table class="table-basic order-list">
+                    <thead>
+                        <tr class="pc"><!-- 大網顯示 -->
+                            <th>處理進度</th>
+                            <th>應付金額</th>
+                            <th>付款方式</th>
+                            <th>狀態</th>
+                            <th>操作</th>
+                        </tr>
+                    
+                        <tr class="mobile"><!-- 小網顯示 -->
+                            <th>處理進度</th>
+                            <th>應付金額</th>
+                            <th>付款方式</th>
+                            <th>狀態</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td class="order-state">出貨中</td>
+                            <td class="order-total">NT$ 1380</td>
+                            <td class="payment-type">
+                                <!-- 如果是選ATM轉帳會顯示連結, 並跳窗顯示付款帳戶資訊 -->
+                                <a class="atm popup" rel="atm-payment">ATM轉帳</a>
+                            </td>
+                            <td class="payment-state">付款成功</td>
+                            <td class="system-btn">
+                                <a class="btn-basic-border popup" rel="order-cancel">取消訂單</a><!-- 可取消時才顯示 -->
+                                <a class="btn-basic-border" href="customer-qa.html">客服問答</a>
+                                <a class="btn-basic-border" href="order-detail.html">訂單明細</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><!-- END .order-group -->
+
+            <div class="order-group">
+                <div class="order__title">
+                    <span>[ 官網 ] 訂單編號：<a href="order-detail.html">230925000016</a></span>
+                    <time>2023-09-25 09:23:13</time>
+                </div>
+
+                <table class="table-basic order-list">
+                    <thead>
+                        <tr class="pc"><!-- 大網顯示 -->
+                            <th>處理進度</th>
+                            <th>應付金額</th>
+                            <th>付款方式</th>
+                            <th>狀態</th>
+                            <th>操作</th>
+                        </tr>
+                    
+                        <tr class="mobile"><!-- 小網顯示 -->
+                            <th>處理進度</th>
+                            <th>應付金額</th>
+                            <th>付款方式</th>
+                            <th>狀態</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td class="order-state">出貨中</td>
+                            <td class="order-total">NT$ 1380</td>
+                            <td class="payment-type">7-11取貨付款</td>
+                            <td class="payment-state">付款成功</td>
+                            <td class="system-btn">
+                                <a class="btn-basic-border popup" rel="order-return">我要退貨</a><!-- 可退貨時才顯示 -->
+                                <a class="btn-basic-border" href="customer-qa.html">客服問答</a>
+                                <a class="btn-basic-border" href="order-detail.html">訂單明細</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><!-- END .order-group -->
+
+            <div class="order-group">
+                <div class="order__title">
+                    <span>[ 官網 ] 訂單編號：<a href="order-detail.html">230925000016</a></span>
+                    <time>2023-09-25 09:23:13</time>
+                </div>
+
+                <table class="table-basic order-list">
+                    <thead>
+                        <tr class="pc"><!-- 大網顯示 -->
+                            <th>處理進度</th>
+                            <th>應付金額</th>
+                            <th>付款方式</th>
+                            <th>狀態</th>
+                            <th>操作</th>
+                        </tr>
+                    
+                        <tr class="mobile"><!-- 小網顯示 -->
+                            <th>處理進度</th>
+                            <th>應付金額</th>
+                            <th>付款方式</th>
+                            <th>狀態</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td class="order-state">出貨中</td>
+                            <td class="order-total">NT$ 1380</td>
+                            <td class="payment-type">信用卡</td>
+                            <td class="payment-state">付款成功</td>
+                            <td class="system-btn">
+                                <a class="btn-basic-border" href="return-detail.html">退貨詳情</a><!-- 已申請退貨才顯示 -->
+                                <a class="btn-basic-border" href="customer-qa.html">客服問答</a>
+                                <a class="btn-basic-border" href="order-detail.html">訂單明細</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><!-- END .order-group -->
 
             <div class="pager"><!-- 頁碼 -->
                 <a><i class="icon-arrow-left-start"></i></a>
@@ -490,13 +695,69 @@
     </div><!-- END .search-page__container -->
 </div><!-- END .search-page -->
 
-<!-- 加入購物車成功popup -->
-<div class="popup-theme add-success" id="add-success">
+<!-- 取消訂單popup -->
+<div class="popup-theme" id="order-cancel">
     <div class="popup-container">
         <div class="overlay-bg"></div>
 
         <div class="popup-content">
-            <div class="popup-title"><i class="icon-checked"></i> 已加入購物車</div>
+            <button type="button" class="btn-close"><i class="icon-close"></i></button>
+
+            <div class="popup-title">取消訂單</div>
+            <div class="popup-title-s">是否確定取消訂單？</div>
+
+            <div class="popup-content__bottom">
+                <button type="button" class="btn-basic-border" onclick="closePopup();">返回</button>
+                <button type="button" class="btn-basic">確定取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 我要退貨popup -->
+<div class="popup-theme" id="order-return">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content">
+            <button type="button" class="btn-close"><i class="icon-close"></i></button>
+
+            <div class="popup-title">我要退貨</div>
+            <div class="popup-title-s">請注意！退貨多次將列入黑名單，將會影響您之後訂購的權益。</div>
+
+            <div class="popup-content__bottom">
+                <button type="button" class="btn-basic-border" onclick="closePopup();">再考慮</button>
+                <button type="button" class="btn-basic">確認</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ATM轉帳付款popup -->
+<div class="popup-theme atm-payment" id="atm-payment">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content">
+            <button type="button" class="btn-close"><i class="icon-close"></i></button>
+
+            <div class="atm-info">
+                <div class="atm-info__title">ATM轉帳付款</div>
+                <div class="atm-info__content">
+                    親愛的 先生/小姐 您好，D+AF已經收到您的訂單，請務必於
+                    <time>2024-05-24 23:59:59</time>
+                    前，至自動提款機(ATM)，進行轉帳(跨行轉帳手續費用，由客戶自行負擔)，逾期D+AF將自動取消此筆交易。
+                </div>
+                <div class="atm-info__bank">
+                    匯款銀行：玉山商業銀行<br>
+                    銀行代碼：808<br>
+                    銀行帳號：<b>92600052408909</b>
+                </div>
+            </div>
+
+            <div class="popup-content__bottom">
+                <button type="button" class="btn-basic" onclick="closePopup();">確認</button>
+            </div>
         </div>
     </div>
 </div>
