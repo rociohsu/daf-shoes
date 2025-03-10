@@ -16,7 +16,7 @@ $(function(){
             function() {
                 $('.header__hover-menu').stop(false, true).slideDown(300);
             }, function() {
-                $('.header__hover-menu').stop(false, true).slideUp(600);
+                $('.header__hover-menu').stop(false, true).slideUp(300);
             }
         );
         $('.header__hover-menu').hover(
@@ -32,7 +32,7 @@ $(function(){
             function() {
                 $('.member-hover-menu').stop(false, true).slideDown(300);
             }, function() {
-                $('.member-hover-menu').stop(false, true).slideUp(600);
+                $('.member-hover-menu').stop(false, true).slideUp(300);
             }
         );
         $('.member-hover-menu').hover(
@@ -48,14 +48,14 @@ $(function(){
             function() {
                 $('.cart-hover-menu').stop(false, true).slideDown(300);
             }, function() {
-                $('.cart-hover-menu').stop(false, true).slideUp(600);
+                $('.cart-hover-menu').stop(false, true).slideUp(300);
             }
         );
         $('.cart-hover-menu').hover(
             function() {
                 $(this).stop(false, true).show(0);
             }, function() {
-                $(this).stop(false, true).slideUp(600);
+                $(this).stop(false, true).slideUp(300);
             }
         );
 
