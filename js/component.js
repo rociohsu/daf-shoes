@@ -63,7 +63,6 @@ $(function(){
         $('.pt-item .add-btn').click(function(){
             $('.header').addClass('no-sticky');
             $('.size-select').stop(false, true).fadeOut(0);
-            $('.top-btn').stop(false, true).fadeOut(0);
             $(this).closest('.pt-item').find('.size-select').stop(false, true).fadeIn(300);
         });
         $('.size-select__bg, .size-select .btn-close').click(function(){
