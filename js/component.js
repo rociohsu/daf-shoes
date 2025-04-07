@@ -72,11 +72,11 @@ $(function(){
     }else {
         //手機版 menu.click 展開左側選單 
         $('.header__syslink__menu').click(function(){
-            $('body').addClass('no-scroll');
+            $('html').addClass('no-scroll');
             $('.header__hover-menu').stop(false, true).fadeIn(0).animate({right:'0'});
         });
         $('.header__hover-menu .btn-close').click(function(){
-            $('body').removeClass('no-scroll');
+            $('html').removeClass('no-scroll');
             $('.header__hover-menu').stop(false, true).animate({right:'-100dvw'}).fadeOut(0);
         });
 
@@ -88,25 +88,25 @@ $(function(){
         //手機版 打開選擇尺寸跳窗
         $('.pt-item .add-btn').click(function(){
             $('.header').addClass('no-sticky');
-            $('body').addClass('no-scroll');
+            $('html').addClass('no-scroll');
             $('.size-select').stop(false, true).fadeOut(0);
             $('.top-btn').stop(false, true).fadeOut(0);
             $(this).closest('.pt-item').find('.size-select').stop(false, true).fadeIn(300);
         });
         $('.size-select__bg, .size-select .btn-close').click(function(){
             $('.header').removeClass('no-sticky');
-            $('body').removeClass('no-scroll');
+            $('html').removeClass('no-scroll');
             $(this).closest('.size-select').stop(false, true).fadeOut(300);
         });
     }
 
     //電腦版&手機版 打開搜尋頁  
     $('.header__syslink__search').click(function(){
-        $('body').addClass('no-scroll');
+        $('html').addClass('no-scroll');
         $('.search-page').stop(false, true).fadeIn(0).animate({right:'0'});
     });
     $('.search-page .btn-close').click(function(){
-        $('body').removeClass('no-scroll');
+        $('html').removeClass('no-scroll');
         $('.search-page').stop(false, true).animate({right:'-100dvw'}).fadeOut(0);
     });
 

@@ -3,9 +3,9 @@
 
 /* 大框架 */
 html { scroll-behavior: smooth; }
+html.no-scroll { overflow: hidden; }
 :root { scroll-padding-top: 100px; }
 body { .padding-box(); .font-family(); font-size: @font-S; overflow-x: hidden; }
-body.no-scroll { overflow: hidden; }
 body * { .padding-box(); }
 a { color: @color-default; text-decoration: none; }
 a:hover { text-decoration: underline; }
