@@ -4,7 +4,7 @@
 .event-container { position: relative; width: 100%; max-width: 1280px; margin: 0 auto; padding-bottom: 170px; 
     background: @color-white; }
 
-.event-top { display: flex; flex-flow: column-reverse; 
+.event-top { display: flex; flex-flow: column; 
     h1.event-title { margin: 10px auto 5px auto; font-size: @font-XL; font-weight: bold; text-align: center; }
     .event-banner { width: 100%; max-width: 1024px; margin: 0 auto;
         img { display: block; }
@@ -61,7 +61,7 @@
 }
 
 .event-cart { position: fixed; width: 100%; max-width: 1280px; bottom: 0; left: 0; right: 0; margin: 0 auto;
-    background: @color-white; border: 1px solid @color-black; border-bottom: none; z-index: 5;
+    background: @color-white; border: 1px solid @color-black; border-bottom: none; z-index: 2;
 
     .action-bar { position: sticky; top: 0;
         display: flex; flex-flow: nowrap; justify-content: center; align-items: center; gap: 10px; padding: 15px 10px; 
@@ -134,23 +134,15 @@
         .size-select .size-select__container { bottom: 50px; }
     }
 
-    .event-top { flex-flow: column; 
-        .container__title { display: flex; flex-flow: nowrap; justify-content: center; align-items: center; 
-            width: 100%; height: 46px; padding: 8px 15px; background: @color-white; 
-            border-bottom: 1px solid @color-border;
-            .back-btn { display: inline-flex; align-items: center; width: 24px; height: 24px; 
-                background: @color-gray1; border-radius: 99em; }
-            .icon-arrow-left { display: inline-block; width: 24px; height: 24px; padding: 5px;
-                background: url(../images/icons/arrow-left-w.svg) no-repeat center; background-size: 6px; }
-        }
-        h1.event-title { width: calc(100% - 24px); margin: 0; font-size: @font-L; }
+    .event-top {
+        h1.event-title { width: calc(100% - 24px); margin: 10px auto 5px auto; font-size: @font-L; }
     }
 
-    .event-tabs { top: 0; 
+    .event-tabs { top: 90px; 
         .event-menu > a { height: 50px; padding: 10px 7px; font-size: @font-M; }
     }
     
-    .event-selectbar { padding: 5px 15px 0 15px;
+    .event-selectbar {
         .size-action { 
             .event-select select { height: 35px; padding: 10px 30px 10px 7px !important; }
         }
