@@ -355,6 +355,14 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
     }
 }
 
+/* 搜尋/篩選無結果提示 */
+.search-no-result { display: flex; flex-flow: nowrap; justify-content: center; align-items: center;
+    padding: 10dvh 10px; font-size: @font-L; text-align: center; gap: 15px;
+    .icon-no-result { display: inline-block; width: 60px; height: 60px;
+        background-image: url(../images/icons/exclamation-mark-p.svg);
+        background-position: center; background-repeat: no-repeat; background-size: 100%; }
+}
+
 /* 手機版 */
 @media (max-width: 820px) {
     .search-page, .filter-page { padding: 25px;
@@ -369,6 +377,8 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
     }
 
     .tags-group .tags-list > a { font-size: @font-S; }
+
+    .search-no-result { flex-flow: column; }
 }
 
 /* 頁碼 */
