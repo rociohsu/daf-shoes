@@ -5,7 +5,7 @@ $(function(){
         //電腦版 商品列表頁左側選單開合
         $('.container.product .pt-category__title').click(function(){
             $(this).toggleClass('open');
-            $(this).next('.pt-category__menu').stop(false, true).slideToggle(300);
+            $(this).parent('.pt-category__group').children('.pt-category__menu').stop(false, true).slideToggle(300);
         });
 
         //電腦版 商品列表頁 hover商品換圖
@@ -21,7 +21,7 @@ $(function(){
         );
 
         //電腦版 商品詳情頁 商品圖放大鏡功能
-        var $easyzoom = $('.easyzoom').easyZoom();
+        //var $easyzoom = $('.easyzoom').easyZoom();
     }else{
         //手機版 打開篩選頁  
         $('.filter-btn').click(function(){

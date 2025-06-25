@@ -130,6 +130,10 @@ $(function(){
         $(this).closest('.size-select').stop(false, true).fadeOut(0);
     });
 
+    //電腦版&手機版 pageSet自訂頁面 打開選擇尺寸跳窗
+    $('.addCartPs').click(function(){
+        $('.size-select-center').stop(false, true).fadeIn(300);
+    });
 });
 
 //關閉popup彈窗
