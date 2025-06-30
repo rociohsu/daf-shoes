@@ -6,19 +6,7 @@ $(function(){
         $('.container.product .pt-category__title').click(function(){
             $(this).toggleClass('open');
             $(this).parent('.pt-category__group').children('.pt-category__menu').stop(false, true).slideToggle(300);
-        });
-
-        //電腦版 商品列表頁 hover商品換圖
-        $('.pt-list .pt-item__pic').hover(
-            function() {
-                imgUrl1 = $(this).children('img').attr('src');
-                imgUrl2 = $(this).attr('rel');
-                
-                $(this).children('img').attr('src',imgUrl2);
-            }, function() {
-                $(this).children('img').attr('src',imgUrl1);
-            }
-        );
+        }); 
 
         //電腦版 商品詳情頁 商品圖放大鏡功能
         //var $easyzoom = $('.easyzoom').easyZoom();
@@ -48,6 +36,18 @@ $(function(){
             },
         });
     }
+
+    //商品列表頁 hover商品換圖
+    $('.pt-list .pt-item__pic').hover(
+        function() {
+            imgUrl1 = $(this).children('img').attr('src');
+            imgUrl2 = $(this).attr('rel');
+                
+            $(this).children('img').attr('src',imgUrl2);
+        }, function() {
+            $(this).children('img').attr('src',imgUrl1);
+        }
+    );
 
     //商品詳情頁 切換tab
     $('.pt-content__tab a:not(.popup)').click(function(){
