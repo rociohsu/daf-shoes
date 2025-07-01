@@ -2,9 +2,12 @@
 
 /* 商品列表頁 */
 .product {
-    .filter-title { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
-        padding: 10px 0; margin-top: 20px; font-size: @font-M; border-bottom: 1px solid @color-border;
+    .filter-title { position: sticky; top: 70px;
+        display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
+        padding: 10px 0; margin-top: 20px; font-size: @font-M; 
+        background: #FFFFFF; border-bottom: 1px solid @color-border;
         .btn-basic-border { width: fit-content; height: 30px; padding: 5px 10px; font-size: @font-S; }
+        .btn-basic{ width: fit-content; height: 30px; padding: 5px 10px; font-size: @font-S; }
     }
     .tags-group .tags-list__title { font-size: @font-M; }
     .filter-title + .tags-group { margin-top: 10px; }
