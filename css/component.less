@@ -453,6 +453,15 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
     }
 }
 
+/* 取代alert跳通知用 */
+.popup-theme.message-alert {
+    .popup-container { max-width: 320px; 
+        .popup-detail { text-align: center; }
+        .popup-content__bottom { position: inherit; margin-top: 0; 
+            padding-bottom: 0 !important; bottom: 0 !important; }
+    }
+}
+
 //加入購物車成功彈窗
 .add-success, .msg-alert { 
     .popup-container { max-width: fit-content; 
