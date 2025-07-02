@@ -20,12 +20,21 @@ $(function(){
         $(this).addClass('current');
         $(this).parent('.login-way__tab').next('.login-way__pane').find('.login-way__pane__content').removeClass('current');
         $('#'+id).addClass('current');
+        reimg(id);
     });
 
     //關閉會員任務條
     $('.task-close').click(function(){
         $('.task-box').stop(false, true).slideUp(300);
     });
+
+    function reimg(id){
+        console.log("reimg-" + id , $('#reimg-' + id));
+        d = new Date();
+        $('#reimg-by-mobile').empty();
+        $('#reimg-by-email').empty();
+        $('#reimg-' + id).empty().append('<img src="/auth/verifyImg?v1=login&time'+d.getTime()+'" alt="驗證碼">');
+    }
 });
 
 //門市折價券兌換成功彈窗 1秒後自動消失
