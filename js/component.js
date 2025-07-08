@@ -125,6 +125,7 @@ $(function(){
     //加入購物車成功彈窗 1秒後自動消失
     $('.size-select__option > a:not(.state--sold-out)').click(function(){;
         $('.header').removeClass('no-sticky');
+        $('html').removeClass('no-scroll');
         var id = $(this).attr('rel');
         $('#'+id).stop(false, true).fadeIn(300).delay(1000).fadeOut(300);
         $(this).closest('.size-select').stop(false, true).fadeOut(0);
@@ -144,6 +145,7 @@ function closePopup(){
 //加入購物車成功彈窗 1秒後自動消失
 function addtoCart( id ){
     $('.header').removeClass('no-sticky');
+    $('html').removeClass('no-scroll');
     $('#'+id).stop(false, true).fadeIn(300).delay(1000).fadeOut(300);
     $('.size-select').stop(false, true).fadeOut(0);
 }
