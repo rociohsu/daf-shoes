@@ -22,20 +22,22 @@ $(function(){
         });
 
         //手機板 把商品輪播往上放至header下
-        $('.photo-products').appendTo( $('.container.product-detail') );
+        $('.photo-products').insertBefore( $('.product-detail') );
 
-        //手機版 商品圖輪播
-        var swiper = new Swiper('.photo-products', {
-            autoHeight: true,
-            spaceBetween: 0,
-            allowTouchMove: true,
-            loop: true,
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
-        });
+        //商品圖輪播 重新檢查
+        initOrDestroySwiper();
     }
+
+    $(window).resize(function(){
+        if(window.innerWidth > 820){
+            $('.photo-products').insertBefore( $('.container__left__wrap') );
+        }else{
+            //手機板 把商品輪播往上放至header下
+            $('.photo-products').insertBefore( $('.product-detail') );
+        }
+        //商品圖輪播 重新檢查
+        initOrDestroySwiper();
+    });
 
     //商品列表頁 hover商品換圖
     $('.pt-list .pt-item__pic').hover(
@@ -58,3 +60,30 @@ $(function(){
         $('#'+id).addClass('current');
     });
 });
+
+/* 是否啟用swiper輪播 */
+let mySwiper = null;
+
+function initOrDestroySwiper() {
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth <= 820) {
+    if (!mySwiper) {
+      mySwiper = new Swiper('.photo-products', {
+            autoHeight: true,
+            spaceBetween: 0,
+            allowTouchMove: true,
+            loop: true,
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+        });
+    }
+  } else {
+    if (mySwiper) {
+      mySwiper.destroy(true, true); // 銷毀並移除 DOM 修改
+      mySwiper = null;
+    }
+  }
+}
