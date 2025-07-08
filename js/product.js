@@ -13,11 +13,11 @@ $(function(){
     }else{
         //手機版 打開篩選頁  
         $('.filter-btn').click(function(){
-            $('body').addClass('no-scroll');
+            $('html').addClass('no-scroll');
             $('.filter-page').stop(false, true).fadeIn(0).animate({right:'0'});
         });
         $('.filter-page .btn-close').click(function(){
-            $('body').removeClass('no-scroll');
+            $('html').removeClass('no-scroll');
             $('.filter-page').stop(false, true).animate({right:'-100dvw'}).fadeOut(0);
         });
 
