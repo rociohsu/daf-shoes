@@ -10,6 +10,63 @@ $(function(){
         }
     });
     
+    componentResize();
+    $(window).resize(function(){
+        componentResize();
+    });
+
+    //電腦版&手機版 打開搜尋頁  
+    $('.header__syslink__search').click(function(){
+        $('html').addClass('no-scroll');
+        $('.search-page').stop(false, true).fadeIn(0).animate({right:'0'});
+    });
+    $('.search-page .btn-close').click(function(){
+        $('html').removeClass('no-scroll');
+        $('.search-page').stop(false, true).animate({right:'-100dvw'}).fadeOut(0);
+    });
+
+    //電腦版&手機版 popup彈窗開關
+    /* open popup */
+    $('a.popup').click(function(){
+        var id = $(this).attr('rel');
+        $('#'+id).stop(false, true).fadeIn(300);
+    });
+
+    /* close popup */
+    $('.popup-theme .overlay-bg, .popup-theme .btn-close').click(function() {
+        $(this).closest('.popup-theme').stop(false, true).fadeOut(300);
+    });
+
+    //加入購物車成功彈窗 1秒後自動消失
+    $('.size-select__option > a:not(.state--sold-out)').click(function(){;
+        $('.header').removeClass('no-sticky');
+        $('html').removeClass('no-scroll');
+        var id = $(this).attr('rel');
+        $('#'+id).stop(false, true).fadeIn(300).delay(1000).fadeOut(300);
+        $(this).closest('.size-select').stop(false, true).fadeOut(0);
+    });
+
+    //電腦版&手機版 pageSet自訂頁面 打開選擇尺寸跳窗
+    $('.addCartPs').click(function(){
+        $('.size-select-center').stop(false, true).fadeIn(300);
+    });
+});
+
+//關閉popup彈窗
+function closePopup(){
+    $('.popup-theme').stop(false, true).fadeOut(300);
+}
+
+//加入購物車成功彈窗 1秒後自動消失
+function addtoCart( id ){
+    $('.header').removeClass('no-sticky');
+    $('html').removeClass('no-scroll');
+    $('#'+id).stop(false, true).fadeIn(300).delay(1000).fadeOut(300);
+    $('.size-select').stop(false, true).fadeOut(0);
+}
+
+//電腦版/手機版分別調用js
+function componentResize(){
     if(window.innerWidth > 820) {
         //header 全部商品.hover 展開下拉選單
         $('.header__menu .pt-all').hover(
@@ -69,7 +126,15 @@ $(function(){
             $('.header').removeClass('no-sticky');
             $(this).closest('.size-select').stop(false, true).fadeOut(300);
         });
+
+        //電腦版 把語系/幣值往上放至footer上
+        $('.footer__menu.right').insertBefore( $('.footer__copyright') );
+
     }else {
+
+        //手機版 把語系/幣值往上放至選單上
+        $('.footer__menu.right').insertBefore( $('.header__hover-menu__container') );
+
         //手機版 menu.click 展開左側選單 
         $('.header__syslink__menu').click(function(){
             $('html').addClass('no-scroll');
@@ -99,53 +164,4 @@ $(function(){
             $(this).closest('.size-select').stop(false, true).fadeOut(300);
         });
     }
-
-    //電腦版&手機版 打開搜尋頁  
-    $('.header__syslink__search').click(function(){
-        $('html').addClass('no-scroll');
-        $('.search-page').stop(false, true).fadeIn(0).animate({right:'0'});
-    });
-    $('.search-page .btn-close').click(function(){
-        $('html').removeClass('no-scroll');
-        $('.search-page').stop(false, true).animate({right:'-100dvw'}).fadeOut(0);
-    });
-
-    //電腦版&手機版 popup彈窗開關
-    /* open popup */
-    $('a.popup').click(function(){
-        var id = $(this).attr('rel');
-        $('#'+id).stop(false, true).fadeIn(300);
-    });
-
-    /* close popup */
-    $('.popup-theme .overlay-bg, .popup-theme .btn-close').click(function() {
-        $(this).closest('.popup-theme').stop(false, true).fadeOut(300);
-    });
-
-    //加入購物車成功彈窗 1秒後自動消失
-    $('.size-select__option > a:not(.state--sold-out)').click(function(){;
-        $('.header').removeClass('no-sticky');
-        $('html').removeClass('no-scroll');
-        var id = $(this).attr('rel');
-        $('#'+id).stop(false, true).fadeIn(300).delay(1000).fadeOut(300);
-        $(this).closest('.size-select').stop(false, true).fadeOut(0);
-    });
-
-    //電腦版&手機版 pageSet自訂頁面 打開選擇尺寸跳窗
-    $('.addCartPs').click(function(){
-        $('.size-select-center').stop(false, true).fadeIn(300);
-    });
-});
-
-//關閉popup彈窗
-function closePopup(){
-    $('.popup-theme').stop(false, true).fadeOut(300);
-}
-
-//加入購物車成功彈窗 1秒後自動消失
-function addtoCart( id ){
-    $('.header').removeClass('no-sticky');
-    $('html').removeClass('no-scroll');
-    $('#'+id).stop(false, true).fadeIn(300).delay(1000).fadeOut(300);
-    $('.size-select').stop(false, true).fadeOut(0);
 }
