@@ -11,6 +11,10 @@
         }
         .container-wrap__column.other { padding: 20px; border-right: none; }
     }
+    .container-wrap.nocolumn { display: block; max-width: 480px; 
+        .container__title { font-size: @font-XL; }
+        .container-wrap__column { border: none; }
+    }
     .fast-login { display: flex; flex-flow: column; justify-content: center; align-items: center; gap: 10px;
         margin-bottom: 25px;
 
@@ -97,7 +101,7 @@
 /* 手機版 */
 @media (max-width: 820px) {
     .member-login { padding-top: 0;
-        .container__title { display: none; }
+        > .container__title { display: none; }
         .container-wrap { display: flex; flex-flow: column; 
             .container-wrap__column { padding: 0; border-right: none; }
             .container-wrap__column.other { padding: 0; margin-top: 30px; } 

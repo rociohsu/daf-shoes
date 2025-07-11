@@ -39,7 +39,7 @@ function initOrDestroySwiper() {
 
   if (screenWidth < 821) {
     if (!mySwiper) {
-      mySwiper = new Swiper('.photo-products', {
+        mySwiper = new Swiper('.photo-products', {
             autoHeight: true,
             spaceBetween: 0,
             allowTouchMove: true,
@@ -52,8 +52,8 @@ function initOrDestroySwiper() {
     }
   } else {
     if (mySwiper) {
-      mySwiper.destroy(true, true); // 銷毀並移除 DOM 修改
-      mySwiper = null;
+        mySwiper.destroy(true, true); // 銷毀並移除 DOM 修改
+        mySwiper = null;
     }
   }
 }

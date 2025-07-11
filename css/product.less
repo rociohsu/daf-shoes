@@ -196,12 +196,10 @@
 
 .maybe-you-like { padding-bottom: 60px;
     h2 { font-size: @font-XL; font-weight: normal; text-align: center; }
-    .pt-list { grid-template-columns: repeat(4, 1fr); }
-}
-
-/* 電腦版小螢幕 */
-@media (max-width: 1140px) {
-    .maybe-you-like .pt-list { grid-template-columns: repeat(3, 1fr); }
+    > .pt-list { display: block; overflow-y: hidden; overflow-x: auto; }
+    .pt-list-scroll { width: fit-content; display: flex; flex-flow: nowrap; gap: 30px;
+        > .pt-item { width: 20dvw; }
+    }
 }
 
 /* 手機版 */
@@ -234,5 +232,9 @@
         }
     }
 
-    .maybe-you-like .pt-list { grid-template-columns: repeat(2, 1fr); }
+    .maybe-you-like { 
+        .pt-list-scroll { padding: 0 10px; gap: 25px;
+            > .pt-item { width: 35dvw; }
+        }
+    }
 }
