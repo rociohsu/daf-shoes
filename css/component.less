@@ -652,3 +652,52 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
 .payment-important { color: @color-gray0; line-height: 160%;
     .payment-important__notice { color: @color-red; font-size: @font-M; font-weight: bold; }
 }
+
+/* RD使用的跳窗通知樣式 */
+.swal2-modal { top: 0 !important; right: 0 !important; bottom: 0 !important; left: 0 !important; 
+    margin: auto !important; 
+
+    .swal2-styled { background-color: @color-black !important; }
+
+    /* 改變成功圖示的邊框顏色和背景色 */
+    .swal2-icon.swal2-success {
+        color: @color-cis !important;
+        border-color: @color-cis !important;
+        background-color: transparent !important;
+    }
+
+    /* 改變成功圖示內部線條的顏色 (勾勾) */
+    .swal2-success [class^='swal2-success-line'] {
+        background-color: @color-cis !important;
+    }
+
+    /* 改變警告圖示的顏色和邊框 */
+    .swal2-icon.swal2-warning {
+        color: @color-cis !important;
+        border-color: @color-cis !important;
+    }
+
+    /* 改變資訊圖示的顏色和邊框 */
+    .swal2-icon.swal2-info {
+        color: @color-cis !important;
+        border-color: @color-cis !important;;
+    }
+
+    /* 改變問號圖示的顏色 */
+    .swal2-icon.swal2-question {
+        color: @color-cis !important;
+        border-color: @color-cis !important;
+    }
+
+    /* 改變錯誤圖示的叉叉顏色 */
+    .swal2-icon.swal2-error {
+        color: @color-cis !important;
+        border-color: @color-cis !important;
+    }
+    .swal2-icon.swal2-error .swal2-x-mark-line-left,
+    .swal2-icon.swal2-error .swal2-x-mark-line-right {
+        color: @color-cis !important;
+        background-color: @color-cis !important;
+        border-color: @color-cis !important;
+    }
+}
