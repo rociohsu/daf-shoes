@@ -48,7 +48,7 @@
     /* 訂單詳情 商品列清單 */
     .pt-list { margin-top: 20px; border-bottom: 1px solid @color-border;
         tr { display: grid !important; grid-template-columns: repeat(3, 64% 18% 18% ); }
-        tr:hover td { background: none; }
+        tr:hover td:not(.return-status) { background: none; }
         .mobile { display: none !important; }
         .pt-item { padding: 15px 10px; grid-column: 1 / 2; grid-row: 1 / 2;
             display: flex; flex-flow: nowrap; justify-content: flex-start; align-items: center; 
@@ -76,7 +76,8 @@
             color: @color-cis; font-size: @font-M; }
         .delivery-status { grid-column: 1 / 4; grid-row: 2 / 3; display: flex; flex-flow: nowrap; justify-content: space-between; border: none;
             .delivery-status__column { position: relative; width: 100%; padding-top: 15px; 
-                color: @color-gray1; font-size: @font-XS; }
+                color: @color-gray1; font-size: @font-XS; display: flex; flex-flow: column;
+            }
             .delivery-status__column::before { content: ''; position: absolute; 
                 width: 100%; height: 3px; top: 0; left: 0;
                 background: @color-border; }
@@ -88,6 +89,12 @@
             .delivery-status__column.current { color: @color-default; }
             .delivery-status__column.current::before { background: @color-gray2; }
             .delivery-status__column.current::after { background: @color-default; border-color: @color-default; }
+        }
+        .return-status { grid-column: 1 / 4; grid-row: 3 / 4; 
+            width: 100%; margin-bottom: 20px; padding: 10px; font-size: @font-S;
+            background:  @color-cis-bg; border-top: none; border-radius: 99em;
+            .icon-circle { display: inline-block; width: 10px; height: 10px; margin-right: 5px;
+                background: @color-cis; border-radius: 99em; }
         }
     }
 
@@ -196,6 +203,7 @@
             .price-original { grid-column: 2 / 3; grid-row: 1 / 2; align-items: flex-end; text-align: right; }
             .price-deal { grid-column: 2 / 3; grid-row: 2 / 3; align-items: flex-start; text-align: right; }
             .delivery-status { grid-column: 1 / 3; grid-row: 3 / 4; padding: 15px 0; }
+            .return-status { grid-column: 1 / 3; grid-row: 4 / 5; font-size: @font-XS; }
         }
 
         .order-data { 
