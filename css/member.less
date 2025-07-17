@@ -240,7 +240,7 @@
     -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
 
     .member__bonus__column { 
-        width: 25%; padding: 0 10px; text-align: center; border-right: 1px solid @color-border; 
+        width: 33.3%; padding: 0 10px; text-align: center; border-right: 1px solid @color-border; 
         -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
         a:hover { text-decoration: none; }
         a:hover + .name > a { text-decoration: underline; }
@@ -332,6 +332,13 @@
     .coupon-item { min-width: auto; }
     .coupon-item:hover { background: none; }
     .coupon-item__state--overdue:hover, .coupon-item__state--used:hover { background: @color-bg; }
+    .popup.link { color: @color-black; text-decoration: underline; }
+}
+
+/* 運費折抵券適用範圍popup */
+.popup-theme.applicable-area {
+    .popup-content { max-width: 400px; }
+    .popup-detail .btn-basic { width: 100%; }
 }
 
 /* 手機版 */
@@ -415,7 +422,17 @@
             .date-start { grid-column: 1 / 2; grid-row: 2 / 3; text-align: left; }
             .date-end { grid-column: 1 / 2; grid-row: 3 / 4; text-align: left; }
             .date-used { grid-column: 2 / 3; grid-row: 1 / 4; }
-            .d-coin, .point { grid-column: 3 / 4; grid-row: 1 / 4; } 
+            .d-coin { grid-column: 3 / 4; grid-row: 1 / 4; } 
+        }
+    }
+
+    .table-point {
+         tr { grid-template-columns: repeat(2, calc(80% - 10px) 20%); grid-gap: 3px 10px; }
+        tbody tr {
+            .mobile { display: inline-block !important; margin-right: 5px; }
+            .date-used { grid-column: 1 / 2; grid-row: 4 / 5; text-align: left; }
+            .date-return { grid-column: 1 / 2; grid-row: 5 / 6; text-align: left; }
+            .point { grid-column: 2 / 3; grid-row: 1 / 6; } 
         }
     }
 }

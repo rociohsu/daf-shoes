@@ -312,7 +312,7 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
 .size-select__option { display: flex; flex-flow: wrap; gap: 8px; margin: 15px auto;
     > a { display: inline-block; padding: 5px 10px;
         background: @color-white; border: 1px solid @color-border; transition: 0.3s; }
-    > a:hover { text-decoration: none; background: @color-cis-bg; border-color: @color-cis-bg; }
+    > a:hover { text-decoration: none; /*background: @color-cis-bg; border-color: @color-cis-bg;*/ }
     .state--sold-out { position: relative; color: @color-gray2; 
         background-image: linear-gradient(to top left,white 49%, @color-gray2, white 51%); cursor: text; }
     .state--selected { color: @color-white; background: @color-cis; border-color: @color-cis; }
@@ -512,7 +512,8 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
     display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center;
     border: 1px solid @color-gray2; border-radius: 10px; transition: 0.3s;
     .coupon-item__price { width: 35%; color: @color-cis; font-size: @font-L; text-align: center; 
-        > b { display: block; font-size: @font-XXXL; font-weight: 500; }
+        > b { display: block; font-size: @font-XXXL; font-weight: 500; line-height: 100%; }
+        .coupon-item__tag { margin-bottom: 10px; font-size: @font-M; font-weight: 600; }
     }
     .coupon-item__content { width: 65%; display: flex; flex-flow: column; gap: 5px; padding: 15px 15px 20px 15px;
         border-left: 1px dashed @color-gray2;

@@ -272,6 +272,23 @@
             </div>
             
             <div class="coupon-lists">
+                <div class="coupon-item"><!-- 運費抵用券 -->
+                    <div class="coupon-item__price">
+                        <div class="coupon-item__tag">運費抵用券</div>
+                        NT$<b>100</b>
+                    </div>
+                    <div class="coupon-item__content">
+                        <div class="coupon-item__title">小週末運費折100</div>
+                        <div class="coupon-item__detail">
+                            序號: 9hbd-860<br>
+                            運費折抵: <a class="popup link" rel="applicable-area">適用區域</a><br>
+                            生效日: 2023-09-01<br>
+                            到期日: 2023-09-30
+                        </div>
+                        <div class="coupon-item__state">狀態：可使用</div>
+                    </div>
+                </div>
+
                 <div class="coupon-item"><!-- 門市折價券可兌換 -->
                     <div class="coupon-item__price">NT$<b>100</b></div>
                     <div class="coupon-item__content">
@@ -554,6 +571,23 @@
 
         <div class="popup-content">
             <div class="popup-title"><i class="icon-checked"></i> 兌換成功</div>
+        </div>
+    </div>
+</div>
+
+<!-- 運費折抵券適用範圍popup -->
+<div class="popup-theme applicable-area" id="applicable-area">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content">
+            <button type="button" class="btn-close"><i class="icon-close"></i></button>
+
+            <div class="popup-title"><i class="icon-checked"></i> 運費折抵</div>
+            <div class="popup-title-s">台灣、香港、台灣VIP超取</div>
+            <div class="popup-detail">
+                <button type="button" class="btn-basic" onclick="closePopup();">關閉</button>
+            </div>
         </div>
     </div>
 </div>
