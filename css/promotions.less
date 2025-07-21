@@ -86,12 +86,12 @@
     .pt-list { display: none; }
 }
 
-.event-cart.open-list { max-height: 70dvh; overflow-y: auto;
+.event-cart.open-list { height: 100dvh; overflow-y: auto; z-index: 3;
     .action-bar { 
         > i.action-arrow { background: url(../images/icons/arrow-down.svg) no-repeat center; background-size: contain; }
     }
 
-    .total-bar { position: sticky; left: 0; right: 0; bottom: 0; }
+    .total-bar { position: fixed; left: 0; right: 0; bottom: 0; }
 
     .pt-list { display: grid; grid-template-columns: repeat(5, 1fr); padding-top: 0; padding-bottom: 0; 
         .pt-item { 
@@ -119,6 +119,8 @@
         .pt-list { grid-template-columns: repeat(3, 1fr); }
     }
     .event-cart.open-list { 
+        .total-bar { position: fixed; }
+
         .pt-list { grid-template-columns: repeat(4, 1fr); 
             .pt-item {
                 .pt-item__info {
