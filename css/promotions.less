@@ -86,7 +86,7 @@
     .pt-list { display: none; }
 }
 
-.event-cart.open-list { height: 100dvh; overflow-y: auto; z-index: 3;
+.event-cart.open-list { height: calc(100% - 70px); overflow-y: auto; z-index: 3;
     .action-bar { 
         > i.action-arrow { background: url(../images/icons/arrow-down.svg) no-repeat center; background-size: contain; }
     }
@@ -118,7 +118,7 @@
     .event-pt { 
         .pt-list { grid-template-columns: repeat(3, 1fr); }
     }
-    .event-cart.open-list { 
+    .event-cart.open-list { height: calc(100% - 90px);
         .total-bar { position: fixed; }
 
         .pt-list { grid-template-columns: repeat(4, 1fr); 
