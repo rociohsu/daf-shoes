@@ -360,31 +360,46 @@
 
         <div class="form-table">
             <div class="form-table__title">信用卡付款資訊</div>
-            <a class="choose-btn popup" rel="credit-card"><i class="icon-search"></i>選擇常用信用卡</a>
-
-            <div class="form-table__row">
-                <div>信用卡號</div>
-                <input type="text" class="input-basic detail-add" placeholder="**** **** **** ****" value="">
+            <div class="credit-card-menu">
+                <a class="choose-btn" onclick="creditCardNew();">手動輸入信用卡</a> | 
+                <a class="choose-btn popup" rel="credit-card"><i class="icon-search"></i>選擇常用信用卡</a>
             </div>
 
-            <div class="form-table__row">
-                <div>有效期限</div>
-                <input type="text" class="input-basic detail-add" placeholder="MM/YY" value="">
+            <!-- 手動輸入信用卡時顯示 -->
+            <div class="form-table credit-card-new">
+                <div class="form-table__row">
+                    <input type="text" class="input-basic" placeholder="卡號16碼" value="">
+                </div>
+
+                <div class="form-table__row">
+                    <input type="text" class="input-basic" placeholder="有效期限(月/年) MM/YY" value="">
+                </div>
+
+                <div class="form-table__row">
+                    <input type="text" class="input-basic" placeholder="卡號背面3碼" value="">
+                </div>
+
+                <div class="checkbox-basic">
+                    <input type="checkbox" id="rememberThisCard">
+                    <label for="rememberThisCard">
+                        <i class="icon-check"></i>
+                        <span>記住此卡下次結帳更快
+                            <p class="other-note">本公司採用喬睿科技 TapPay 金流交易系統，消費者刷卡時直接在銀行端系統中交易，本公司不會留下您的信用卡資料，以保障你的權益，資料傳輸過程採用嚴密的 SSL 2048bit 加密技術保護。</p>
+                        </span>
+                    </label>
+                </div>
             </div>
 
-            <div class="form-table__row">
-                <div>卡號背面三碼</div>
-                <input type="text" class="input-basic detail-add" placeholder="CCV" value="">
-            </div>
+            <!-- 常用信用卡 已選擇時顯示 -->
+            <div class="credit-card-selected">
+                <div class="credit-card">
+                    <div class="credit-card__name"><img src="images/mastercard.jpg" alt="mastercard">Cathay Bank</div>
+                    <div class="credit-card__desc">**** **** **** 1234</div>
 
-            <div class="checkbox-basic">
-                <input type="checkbox" id="rememberThisCard">
-                <label for="rememberThisCard">
-                    <i class="icon-check"></i>
-                    <span>記住此卡下次結帳更快
-                        <p class="other-note">本公司採用喬睿科技 TapPay 金流交易系統，消費者刷卡時直接在銀行端系統中交易，本公司不會留下您的信用卡資料，以保障你的權益，資料傳輸過程採用嚴密的 SSL 2048bit 加密技術保護。</p>
-                    </span>
-                </label>
+                    <div class="form-table__row">
+                        <input type="text" class="input-basic-border" placeholder="卡號背面3碼" value="">
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -398,6 +413,8 @@
             <div>新保福門市<br>新北市永和區保安路220號</div>
 
             <button type="button" class="btn-basic-border"><i class="icon-add"></i>加入常用取貨門市</button>
+        
+            <div class="font-color-red">* 『取貨不付款』取貨時，須出示與包裹姓名相同的身分證明文件給店員檢核後才可取貨。</div>
         </div>
 
         <div class="form-table">
@@ -723,7 +740,7 @@
             <div class="popup-list">
                 <div class="radio-basic">
                     <input type="radio" id="credit-card1" name="credit-card" checked>
-                    <label for="credit-card1" onclick="closePopup();"><i class="icon-radio"></i>
+                    <label for="credit-card1" onclick="closePopup();creditCardSelected();"><i class="icon-radio"></i>
                         <div class="popup-group">
                             <div class="popup-group__name"><img src="images/mastercard.jpg" alt="mastercard">Cathay Bank</div>
                             <div class="popup-group__desc">**** **** **** 1234</div>
@@ -733,7 +750,7 @@
 
                 <div class="radio-basic">
                     <input type="radio" id="credit-card2" name="credit-card">
-                    <label for="credit-card2" onclick="closePopup();"><i class="icon-radio"></i>
+                    <label for="credit-card2" onclick="closePopup();creditCardSelected();"><i class="icon-radio"></i>
                         <div class="popup-group">
                             <div class="popup-group__name"><img src="images/visa.jpg" alt="VISA">Cathay Bank</div>
                             <div class="popup-group__desc">**** **** **** 1234</div>
@@ -743,7 +760,7 @@
 
                 <div class="radio-basic">
                     <input type="radio" id="credit-card3" name="credit-card">
-                    <label for="credit-card3" onclick="closePopup();"><i class="icon-radio"></i>
+                    <label for="credit-card3" onclick="closePopup();creditCardSelected();"><i class="icon-radio"></i>
                         <div class="popup-group">
                             <div class="popup-group__name"><img src="images/jcb.jpg" alt="JCB">Cathay Bank</div>
                             <div class="popup-group__desc">**** **** **** 1234</div>

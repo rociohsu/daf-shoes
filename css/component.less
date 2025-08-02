@@ -17,6 +17,7 @@ select:disabled { opacity: 0.5; cursor: text; }
 textarea { min-height: 80px; padding: 10px; border: 1px solid @color-border; }
 textarea:hover, textarea:focus { border: 1px solid @color-border; }
 .input-basic { display: block; width: 100%; height: 40px; padding: 10px; border-bottom: 1px solid @color-border; }
+.input-basic-border { display: block; width: 100%; height: 40px; padding: 10px; border: 1px solid @color-border; }
 .checkbox-basic {
     input[type="checkbox"] { display: none; }
     input[type="checkbox"] + label { width: fit-content; display: flex; flex-flow: nowrap; align-items: flex-start;
@@ -509,7 +510,7 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
 }
 
 /* 折價券 */
-.coupon-item { position: relative; width: 300px; min-height: 120px;
+.coupon-item { position: relative; width: 100%; min-height: 120px;
     display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center;
     border: 1px solid @color-gray2; border-radius: 10px; transition: 0.3s;
     .coupon-item__price { width: 35%; color: @color-cis; font-size: @font-L; text-align: center; 

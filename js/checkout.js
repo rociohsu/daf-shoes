@@ -11,3 +11,15 @@ function nextPayment(){
     $('.popup-theme').stop(false, true).fadeOut(300);
     $('#payment-option').stop(false, true).fadeIn(300);
 }
+
+//選擇常用信用卡時, 顯示相關欄位
+function creditCardSelected(){
+    $('.credit-card-new').stop(false, true).hide();
+    $('.credit-card-selected').stop(false, true).show();
+}
+
+//選擇手動輸入信用卡, 顯示相關欄位
+function creditCardNew(){
+    $('.credit-card-selected').stop(false, true).hide();
+    $('.credit-card-new').stop(false, true).show();
+}
