@@ -65,13 +65,14 @@
                 .pay-group__count__point { color: @color-red; }
                 .pay-group__count__desc { color: @color-gray1; }
                 .pay-group__count__price { white-space: nowrap; }
+                #ship_name { font-weight: 600; }
             }
         }
         .pay-group.d-coin .pay-group__count, .pay-group.online-cash .pay-group__count { margin-top: 0; }
 
-        .pay-group__discount-list { display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 10px; margin-top: 10px;
+        .pay-group__discount-list { display: grid; grid-template-columns: repeat(3, auto); grid-gap: 10px; margin-top: 10px;
             > a { display: inline-flex; flex-flow: nowrap; justify-content: center; align-items: center; 
-                width: 100%; height: 40px; padding: 8px 15px; transition: 0.3s;
+                width: 100%; padding: 10px 15px; transition: 0.3s;
                 color: @color-default; font-size: @font-M; text-align: center; line-height: 100%;
                 background: @color-white; border: 1px solid @color-default; }
             > a:hover { background: @color-cis-bg; border-color: @color-cis-bg; text-decoration: none; }

@@ -51,7 +51,7 @@
                 }
             }
             .pt-item__info { position: relative; width: 100%; margin-top: 12px; 
-                .add-btn { position: absolute; width: 30px; height: 30px; right: 0; bottom: 0; padding: 0; background: none; 
+                .add-btn { position: absolute; width: 30px; height: 30px; right: 0; bottom: -2px; padding: 0; background: none; 
                     display: flex; justify-content: center; align-items: center;
                     .icon-add { display: inline-block; width: 30px; height: 30px;
                         background: url(../images/icons/add.svg) no-repeat center; background-size: 75%; }
@@ -94,9 +94,7 @@
                     }
                 }
                 .pt-item__info {
-                    .add-btn { width: 24px; height: 24px;
-                        .icon-add { width: 24px; height: 24px; }
-                    }
+                    .add-btn { padding: 3px; }
                 }
             }
         }
@@ -163,7 +161,7 @@
             a { text-decoration: underline; }
             .notice { font-size: @font-XS; }
         }
-        .pt-info__pre-order, .pt-info__gift { width: 100%; color: @color-cis; text-align: left !important; }
+        .pt-info__pre-order, .pt-info__gift { width: 100%; color: @color-cis; font-size: @font-M; text-align: left !important; }
         .pt-info__pre-order + .pt-info__gift { margin-top: -10px; }
         .pre-order-time { margin: 15px auto; color: @color-cis; text-align: center; }
         .pt-btns { margin: 20px auto;
@@ -178,7 +176,9 @@
             .current {  font-weight: bold; text-decoration: none; }
         }
         .pt-content__pane {
-            .pt-content__pane__content { display: none; padding: 20px 0; line-height: 160%; }
+            .pt-content__pane__content { display: none; padding: 20px 0; line-height: 160%; 
+                div, p, span { font-size: @font-M; }
+            }
             .current { display: block; }
         }
 
@@ -224,11 +224,15 @@
         }
 
         .container__main { width: 100%; padding: 25px 15px; 
-            .size-select__option { width: 100%;  }
+            .size-select__option { width: 100%; }
             .size-select__suggestion { width: 100%; text-align: left !important; }
             .pt-btns { position: fixed; right: 0; bottom: 0; left: 0; margin: 0; }
             .pt-info { padding-top: 0; }
-            .pt-content { margin-top: 20px; padding-top: 20px; border-top: 1px solid @color-border; }
+            .pt-content { margin-top: 20px; padding-top: 20px; border-top: 1px solid @color-border; 
+                .pt-content__pane .pt-content__pane__content {
+                    div, p, span { font-size: @font-S; }
+                }
+            }
         }
     }
 
