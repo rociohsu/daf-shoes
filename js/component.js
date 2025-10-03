@@ -19,10 +19,12 @@ $(function(){
     $('.header__syslink__search').click(function(){
         $('html').addClass('no-scroll');
         $('.search-page').stop(false, true).fadeIn(0).animate({right:'0'});
+        $('.search-bar__keyword').focus();
     });
     $('.search-page .btn-close').click(function(){
         $('html').removeClass('no-scroll');
         $('.search-page').stop(false, true).animate({right:'-100dvw'}).fadeOut(0);
+        $('.search-bar__keyword').blur();
     });
 
     //電腦版&手機版 popup彈窗開關

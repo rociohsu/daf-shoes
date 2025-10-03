@@ -91,7 +91,8 @@
         > i.action-arrow { background: url(../images/icons/arrow-down.svg) no-repeat center; background-size: contain; }
     }
 
-    .total-bar { position: fixed; left: 0; right: 0; bottom: 0; }
+    .total-bar { position: fixed; left: 0; right: 0; bottom: 0; width: 100%; max-width: 1280px; margin: auto;
+        border-left: 1px solid @color-black; border-right: 1px solid @color-black; }
 
     .pt-list { display: grid; grid-template-columns: repeat(5, 1fr); padding-top: 0; padding-bottom: 0; 
         .pt-item { 
@@ -119,8 +120,6 @@
         .pt-list { grid-template-columns: repeat(3, 1fr); }
     }
     .event-cart.open-list { height: calc(100% - 90px);
-        .total-bar { position: fixed; }
-
         .pt-list { grid-template-columns: repeat(4, 1fr); 
             .pt-item {
                 .pt-item__info {
@@ -150,6 +149,7 @@
         }
     }
 
+    .event-cart.open-list .total-bar { border-left: none; border-right: none; }
     .event-pt, .event-cart.open-list { 
         .pt-list { grid-template-columns: repeat(2, 1fr); 
             .pt-item {
