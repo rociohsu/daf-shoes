@@ -150,6 +150,15 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
                 .pt-category__group:nth-child(7) { grid-column: 5 / 6; grid-row: 2 / 3; }
                 .pt-category__group:nth-child(8) { grid-column: 6 / 7; grid-row: 1 / 2; }
                 .pt-category__group:nth-child(9) { grid-column: 6 / 7; grid-row: 2 / 3; }*/
+                .pt-category__group:nth-child(1) .pt-category__menu > a:nth-child(2),
+                .pt-category__group:nth-child(1) .pt-category__menu > a:nth-child(3),
+                .pt-category__group:nth-child(4) .pt-category__menu > a:nth-child(1) { animation: colorChange 2s infinite; }
+
+                @keyframes colorChange {
+                    0%   { color: @color-cis; }
+                    50%  { color: @color-red; }
+                    100% { color: @color-cis; }
+                }
         }     
     }
 
