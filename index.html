@@ -21,14 +21,14 @@
 <body>
 <a class="top-btn" href="#"><i class="icon-top-btn"></i></a>
 
-<div class="download-app">
+<!-- <div class="download-app">
     <a target="_blank" href="https://apps.apple.com/tw/app/d-af-%E7%94%A8%E5%BF%83%E6%89%93%E9%80%A0%E8%88%92%E9%81%A9%E5%A5%BD%E7%A9%BF%E6%B5%81%E8%A1%8C%E5%A5%B3%E9%9E%8B/id1483729703"><button>下載</button> 使用APP，購物更流暢！</a>
     <button type="button" class="btn-close"><i class="icon-close"></i></button>
 </div>
 
 <a class="top-bar" style="color: #FFFFFF; background: #CF93CC;">
     情人節結帳輸入：Love2025，滿1314現折$99 
-</a>
+</a> -->
 
 <div class="header">
     <div class="header__menu">
@@ -243,166 +243,93 @@
 </div><!-- END .header -->
 
 <!-- 內容開始 -->
-<link rel="stylesheet" href="https://static.daf-shoes.com/_Art/landingpage/swiper-bundle.min.css" />
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+body { overflow-x: hidden; }
+.main .content { padding: 0; }
+.wrapper .wrapper-content { width: 100% !important; }
 
-.daf-container { color: #000000; font-size: 14px; font-weight: normal; letter-spacing: 0.5px;
-    font-family: 'DM Sans', 'Microsoft JhengHei', '黑體', sans-serif, serif; background: #FFFFFF; }
+/* 主視覺滿版的時候加這段 */
+/* .site-header { position: fixed; width: 100%; left: 0; top: 0; right: 0; background: none; border-bottom: none; z-index: 2; }
+.top__bar + .site-header, .header-timer + .site-header { padding-top: 70px; } */
+/* ---- */
+
+.daf-container { color: #000000; font-size: 16px; font-weight: normal; letter-spacing: 0.5px;
+    font-family: 'Jost', 'Microsoft JhengHei', '黑體', sans-serif, serif; background: #FFFFFF; }
 .daf-container * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-.daf-container section:not(.mainkv) { position: relative; width: 100%; margin: 0 auto; padding: 10dvh 5%; }
+.daf-container section:not(.mainkv) { position: relative; width: 100%; margin: 0 auto; }
 .daf-container img { display: block; width: 100%; height: auto; }
 .daf-container a { color: #000000; text-decoration: none !important; }
 .daf-container a:hover { text-decoration: none !important; }
-.daf-container a > .pic, .daf-container a.pic { display: block; overflow: hidden; }
-.daf-container a > .pic img, .daf-container a.pic > img { transition: 0.3s; }
-.daf-container a:hover > .pic img, .daf-container a.pic:hover > img { transform: scale(1.02); }
+.daf-container a > .pic { display: block; overflow: hidden; }
+.daf-container a > .pic img { transition: 0.3s; }
+.daf-container a:hover > .pic img { transform: scale(1.02); }
 .daf-container .mobile { display: none; }
-.daf-container h2 { margin: 0 auto 25px auto; font-family: "DM Serif Display", serif; font-size: 36px; font-weight: normal; text-align: center; }
-.daf-container h3 { margin: 20px auto 5px auto; font-size: 24px; font-weight: normal; text-align: center; line-height: 120%; }
-.daf-container h4 { margin: 15px auto 5px auto; font-size: 14px; font-weight: normal; line-height: 120%; }
-.daf-container a.shopnow { display: block; width: fit-content; margin: 0 auto; font-family: "Rokkitt", serif; font-family: 18px; }
-.daf-container a.shopnow:hover { text-decoration: underline !important; }
-
-.mainkv { position: relative; width: 100%; z-index: 0; }
-.mainkv .mainkv-list { width: 100%; }
-.mainkv .mainkv-list .swiper-slide { display: block; overflow: hidden; }
-.mainkv .swiper-button-prev, .swiper-button-next { display: none; }
-.mainkv .swiper-pagination { bottom: 15px; }
-.mainkv .swiper-pagination-bullet { width: 10px; height: 10px; margin: 0 6px !important; background: #FFFFFF; }
-
-.featured { padding-top: 0 !important; }
-.clt-list { width: 100%; max-width: 1140px; margin: 0 auto; display: flex; flex-flow: wrap; justify-content: space-between; }
-.clt-list > div { width: 32.5%; }
-.clt-list > div .pic { position: relative; }
-.clt-list > div .pic::after { display: block; position: absolute; content: ""; width: 4dvw; height: 4dvw; right: 0; bottom: 0; 
-    background: url("https://static.daf-shoes.com/_Art/index/2025/250120/arrow.svg") no-repeat right bottom; background-size: contain; }
 
 @media (max-width: 820px) {
-    .daf-container { font-size: 12px; -webkit-text-size-adjust: none; }
-    .daf-container section:not(.mainkv) { padding: 5dvh 5%; }
+    .daf-container { margin-bottom: 45px; font-size: 15px; -webkit-text-size-adjust: none; }
     .daf-container .pc { display: none; }
     .daf-container .mobile { display: block; }
-    .daf-container h2 { margin: 0 auto 15px auto; font-size: 24px; }
-    .daf-container h3 { margin: 15px auto 5px auto; font-size: 16px; }
-    .daf-container h4 { margin: 10px auto 5px auto; font-size: 12px; }
-    .daf-container a.shopnow { font-family: 12px; }
+}
 
-    .clt-list > div { width: 48.5%; }
-    .clt-list > div .pic::after { width: 10dvw; height: 10dvw; }
-    .clt-list > div:first-child { width: 80%; margin: 0 auto 25px auto; }
+.confetti {
+    position: fixed;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #333b76;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+@keyframes fall {
+    to { transform: translateY(100vh) rotateZ(360deg); opacity: 0; }
 }
 </style>
 
-</div>
 <div class="daf-container">
-
+    
     <section class="mainkv">
-        <div class="swiper-container mainkv-list">
-			<div class="swiper-wrapper">
-				<a class="swiper-slide" href="product-category.html">
-                    <div class="pc"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/mainkv1.jpg" alt=""></div>
-                    <div class="mobile"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/mainkv1-m.jpg" alt=""></div>
-                </a>
-
-                <a class="swiper-slide" href="product-event.html">
-                    <div class="pc"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/mainkv2.jpg" alt=""></div>
-                    <div class="mobile"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/mainkv2-m.jpg" alt=""></div>
-                </a>
-
-                <a class="swiper-slide" href="product-category.html">
-                    <div class="pc"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/mainkv3.jpg" alt=""></div>
-                    <div class="mobile"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/mainkv3-m.jpg" alt=""></div>
-                </a>
-			</div>
-			<div class="swiper-button-next"></div>
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-pagination"></div>
-		</div>
+        <div class="pc"><img src="images/1111.jpg"></div>
+        <div class="mobile"><img src="images/1111-m.jpg"></div>
     </section>
-
-    <section class="collection">
-        <h2>New & Bestsellers</h2>
-
-        <div class="clt-list">
-            <div>
-                <a href="product-detail.html">
-                    <div class="pic"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/nb1.jpg" alt=""></div>
-                </a>
-                <h3>全新升級！踩雲感氣墊</h3>
-                <a class="shopnow" href="product-category.html">SHOP NOW</a>
-            </div>
-
-            <div>
-                <a href="product-detail.html">
-                    <div class="pic"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/nb2.jpg" alt=""></div>
-                </a>
-                <h3>人氣熱銷款</h3>
-                <a class="shopnow" href="product-category.html">SHOP NOW</a>
-            </div>
-
-            <div>
-                <a href="product-detail.html">
-                    <div class="pic"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/nb3.jpg" alt=""></div>
-                </a>
-                <h3>本週最新上架</h3>
-                <a class="shopnow" href="product-category.html">SHOP NOW</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="collection featured">
-        <h2>Discover Featured</h2>
-
-        <div class="clt-list">
-            <div>
-                <a href="product-detail.html">
-                    <div class="pic"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/df1.jpg" alt=""></div>
-                </a>
-                <h3>開工必備．經典樂福鞋系列</h3>
-                <a class="shopnow" href="product-category.html">SHOP NOW</a>
-            </div>
-
-            <div>
-                <a href="product-detail.html">
-                    <div class="pic"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/df2.jpg" alt=""></div>
-                </a>
-                <h3>美腿瘦瘦靴3.0</h3>
-                <a class="shopnow" href="product-category.html">SHOP NOW</a>
-            </div>
-
-            <div>
-                <a href="product-detail.html">
-                    <div class="pic"><img src="https://static.daf-shoes.com/_Art/index/2025/250120/df3.jpg" alt=""></div>
-                </a>
-                <h3>4D光腿神器保暖絲襪</h3>
-                <a class="shopnow" href="product-category.html">SHOP NOW</a>
-            </div>
-        </div>
-    </section>
+ 
 </div><!-- END .daf-container -->
 
-<script src="https://www.daf-shoes.com/web/js/jquery.flexslider-min.js"></script>
-<script src="https://static.daf-shoes.com/_Art/landingpage/swiper-bundle.min.js"></script>
 <script>
-var swiper = new Swiper('.mainkv-list', {
-	autoHeight: true,
-	spaceBetween: 0,
-    allowTouchMove: true,
-    loop: true,
-	autoplay: {
-	  delay: 2500,
-	  disableOnInteraction: false,
-	},
-	navigation: {
-	  nextEl: ".swiper-button-next",
-	  prevEl: ".swiper-button-prev",
-	},
-	pagination: {
-	  el: ".swiper-pagination",
-      clickable: true,
-	},
-});
+  const colors = ['#333b76', '#df6e1d', '#FFFFFF'];
+
+  function createConfetti() {
+    const confetti = document.createElement('div');
+    confetti.classList.add('confetti');
+
+    // 隨機顏色
+    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+    // 隨機位置與旋轉角度
+    confetti.style.left = Math.random() * window.innerWidth + 'px';
+    confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+    // 隨機大小
+    const size = Math.floor(Math.random() * 8) + 5; // 5px ~ 12px
+    confetti.style.width = size + 'px';
+    confetti.style.height = size + 'px';
+
+    // 隨機動畫時間
+    const duration = Math.random() * 2 + 3; // 3~5秒
+    confetti.style.animation = `fall ${duration}s linear forwards`;
+
+    document.body.appendChild(confetti);
+
+    // 動畫結束後移除
+    setTimeout(() => {
+      confetti.remove();
+    }, duration * 1000);
+  }
+
+  // 每隔一小段時間產生碎片
+  setInterval(createConfetti, 200);
 </script>
 <!-- 內容結束 -->
 
