@@ -522,6 +522,8 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
 //適合我的尺寸popup
 .popup-theme.size-suggestion {
     .btn-basic { width: 100%; }
+    .radio-basic input[type="radio"]:disabled + label .icon-radio { display: none; }
+    .radio-basic input[type="radio"]:disabled + label span { width: 100%; cursor: text; }
     .form-table { display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 20px; 
         .form-table__row { display: flex; flex-flow: column; margin-bottom: 20px; }
         .form-table__row.full { grid-column: 1 / 3; grid-row: 3 / 4; 
@@ -635,6 +637,7 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
             background: url(../images/icons/delete.svg) no-repeat center; background-size: 80%; }
     }
     .radio-basic { display: flex; justify-content: center; }
+    .select-basic { width: 100%; }
 }
 
 /* 手機版 */
