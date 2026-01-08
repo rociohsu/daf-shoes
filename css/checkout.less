@@ -42,10 +42,12 @@
         .other-total { display: flex; flex-flow: column; gap: 8px; padding-top: 20px; border-top: 1px solid @color-border;
             > div{ display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; }
         }
+
+        .form-table__row + .checkbox-basic { margin-top: 10px; } /* 儲存手機載具 */
     }
     .container__main { width: 100%; 
         .pay-group { padding: 20px 0; border-bottom: 1px solid @color-border; 
-            .pay-group__title { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center;
+            .pay-group__title { margin-top: 10px; display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center;
                 > * { display: flex; flex-flow: nowrap; align-items: center;
                     .icon-arrow-down { display: inline-block; width: 20px; height: 20px; margin: 2px 0 0 5px;
                         background: url(../images/icons/arrow-down.svg) no-repeat center; background-size: 60%; }
@@ -60,7 +62,7 @@
                     background: url(../images/icons/delivery.svg) no-repeat center; background-size: 100%; }
             }
             .pay-group__select:hover { text-decoration: none; background-color: @color-cis-bg; border-color: @color-cis-bg; }
-            .pay-group__count { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; gap: 8px; margin-top: 10px;
+            .pay-group__count { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; gap: 8px; margin-top: 10px; font-size: @font-M;
                 .checkbox-basic { width: 100%; }
                 .pay-group__count__point { color: @color-red; }
                 .pay-group__count__desc { color: @color-gray1; }
