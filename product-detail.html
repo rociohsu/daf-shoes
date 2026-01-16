@@ -323,6 +323,16 @@
             <div class="pt-info__gift">單筆訂含【舒華秋冬鞋款】，即可獲得【舒華小卡套組】</div>
         </div><!-- END .pt-info -->
 
+        <div class="coupon-get">
+            <div class="coupon-get__applicable">
+                <span>滿2件 $900</span>
+                <span>滿3件 $1200</span>
+                <span>2件 9折</span>
+                <span>3件 8折</span>
+            </div>
+            <a class="coupon-get__btn popup" rel="coupon-get-list">領取折價券<i class="icon-arrow-right"></i></a>
+        </div>
+
         <div class="pt-btns">
             <button type="button" class="btn-basic add-to-cart" onclick="addtoCart('add-success');">加入購物車</button>
             <!-- <button type="button" class="btn-basic preparing">即將開賣 2024-05-01 18:00</button> -->
@@ -1146,6 +1156,89 @@
             </div>
 
             <button class="btn-basic" onclick="closePopup();">儲存資料</button>
+        </div>
+    </div>
+</div>
+
+<!-- 領取折價券popup -->
+<div class="popup-theme coupon-get-list" id="coupon-get-list">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content">
+            <button type="button" class="btn-close"><i class="icon-close"></i></button>
+
+            <div class="popup-title">領取折價券</div>
+
+            <div class="coupon-lists">
+                <div class="coupon-item">
+                    <div class="coupon-item__price">
+                        <div class="coupon-item__tag">組合價</div>
+                        NT$<b>900</b>
+                    </div>
+                    <div class="coupon-item__content">
+                        <div class="coupon-item__title">滿2件 $900</div>
+                        <div class="coupon-item__detail">
+                            序號: 9hbd-860<br>
+                            生效日: 2023-09-01<br>
+                            到期日: 2023-09-30
+                        </div>
+                        <div class="coupon-item__state">指定商品適用</div>
+                        <div class="coupon-item__btn"><a class="btn-basic" href="#">立即領取</a></div>
+                    </div>
+                </div>
+
+                <div class="coupon-item">
+                    <div class="coupon-item__price">
+                        <div class="coupon-item__tag">組合價</div>
+                        NT$<b>1200</b>
+                    </div>
+                    <div class="coupon-item__content">
+                        <div class="coupon-item__title">滿3件 $1200</div>
+                        <div class="coupon-item__detail">
+                            序號: 9hbd-860<br>
+                            生效日: 2023-09-01<br>
+                            到期日: 2023-09-30
+                        </div>
+                        <div class="coupon-item__state">指定商品適用</div>
+                        <div class="coupon-item__btn"><a class="btn-basic" href="#">立即領取</a></div>
+                    </div>
+                </div>
+
+                <div class="coupon-item">
+                    <div class="coupon-item__price">
+                        <div class="coupon-item__tag">組合價</div>
+                        <b>9</b>折
+                    </div>
+                    <div class="coupon-item__content">
+                        <div class="coupon-item__title">2件 9折</div>
+                        <div class="coupon-item__detail">
+                            序號: 9hbd-860<br>
+                            生效日: 2023-09-01<br>
+                            到期日: 2023-09-30
+                        </div>
+                        <div class="coupon-item__state">指定商品適用</div>
+                        <div class="coupon-item__btn"><a class="btn-basic" href="#">立即領取</a></div>
+                    </div>
+                </div>
+
+                <div class="coupon-item">
+                    <div class="coupon-item__price">
+                        <div class="coupon-item__tag">組合價</div>
+                        <b>8</b>折
+                    </div>
+                    <div class="coupon-item__content">
+                        <div class="coupon-item__title">3件 8折</div>
+                        <div class="coupon-item__detail">
+                            序號: 9hbd-860<br>
+                            生效日: 2023-09-01<br>
+                            到期日: 2023-09-30
+                        </div>
+                        <div class="coupon-item__state">指定商品適用</div>
+                        <div class="coupon-item__btn"><a class="btn-basic" href="#">立即領取</a></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
