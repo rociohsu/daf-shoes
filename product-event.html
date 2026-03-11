@@ -436,8 +436,14 @@
             .mainkv { width: 100%; }
             .main-desc { padding: 25px 15px; }
             .deliver-btn { display: flex !important; flex-flow: nowrap; justify-content: center; align-items: center; gap: 5px;
-                width: 90%; max-width: 375px; margin: 0 auto; }
+                width: 90%; max-width: 375px; margin: 0 auto; padding: 10px 15px; 
+                border: 2px solid #000000; }
+            .deliver-btn > i { display: inline-flex; justify-content: center; align-items: center; 
+                width: 24px; height: 24px; color: #FFFFFF; font-size: 18px; font-style: normal;
+                background: #000000; border-radius: 99em; overflow: hidden; }
             .deliver-btn > span { width: fit-content; }
+            .deliver-btn:hover { color: #FFFFFF; text-decoration: none; background: #000000;}
+            .deliver-btn:hover > i { border: 2px solid #FFFFFF; }
             .bn-list { width: 100%; margin: 0 auto 30px auto; overflow: hidden;
                 display: flex; flex-flow: nowrap; justify-content: center; align-items: center; gap: 20px; }
 
