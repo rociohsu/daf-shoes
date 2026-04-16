@@ -68,10 +68,10 @@ textarea:hover, textarea:focus { border: 1px solid @color-border; }
 .container { position: relative; width: 100%; min-height: 60dvh; margin: 0 auto; padding: 30px 30px 60px 30px; 
     display: flex; flex-flow: nowrap; justify-content: space-between; z-index: 0;
     .container__title { font-size: @font-XL; font-weight: normal; text-align: center; }
-    .container__left { width: 320px; margin-right: 40px; 
+    .container__left { width: 320px; margin-right: 40px; flex-shrink: 0;
         /*.container__left__wrap { position: sticky; top: 80px; }*/
     }
-    .container__main { width: 100%;
+    .container__main { width: 100%; flex: 1; min-width: 0;
         .container__main__wrap { position: sticky; top: 80px; }
     }
 }
