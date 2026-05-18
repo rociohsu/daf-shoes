@@ -171,7 +171,6 @@
         .pre-order-time { margin: 15px auto; color: @color-cis; text-align: center; }
         .pt-btns { margin: 20px auto;
             > * { width: 100%; height: 60px; }
-            .add-to-cart { background: @color-black; border-color: @color-black; }
             .preparing { color: @color-default; background: @color-bg; border-color: @color-bg; cursor: text; }
         }
 
@@ -250,7 +249,11 @@
         .container__main { width: 100%; padding: 25px 15px; 
             .size-select__option { width: 100%; }
             .size-select__suggestion { width: 100%; text-align: left !important; }
-            .pt-btns { position: fixed; right: 0; bottom: 0; left: 0; margin: 0; }
+            .pt-btns { position: fixed; right: 0; bottom: 0; left: 0; margin: 0; padding: 10px; 
+                background: rgba(255, 255, 255, 0.7); 
+                backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); /* Safari */
+                .btn-basic { height: 45px !important; }
+            }
             .pt-info { padding-top: 0; }
             .pt-content { margin-top: 20px; padding-top: 20px; border-top: 1px solid @color-border; 
                 .pt-content__pane .pt-content__pane__content {
