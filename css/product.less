@@ -172,6 +172,7 @@
         .pt-btns { margin: 20px auto;
             > * { width: 100%; height: 60px; }
             .preparing { color: @color-default; background: @color-bg; border-color: @color-bg; cursor: text; }
+            .add-to-cart { background: @color-cis; border-color: @color-cis; }
         }
 
         /* 新增適用折價券領取區 */
@@ -185,7 +186,7 @@
             }
             .coupon-get__applicable { width: calc(100% - 120px); display: flex; flex-flow: wrap; gap: 5px;
                 > span { display: inline-block; padding: 3px 8px;
-                    color: @color-white; background: @color-red; border-radius: 5px; }
+                    color: @color-red; background: @color-white; border-radius: 5px; }
             }
         }
     }
@@ -249,9 +250,9 @@
         .container__main { width: 100%; padding: 25px 15px; 
             .size-select__option { width: 100%; }
             .size-select__suggestion { width: 100%; text-align: left !important; }
-            .pt-btns { position: fixed; right: 0; bottom: 0; left: 0; margin: 0; padding: 10px; 
-                background: rgba(255, 255, 255, 0.7); 
-                backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); /* Safari */
+            .pt-btns { position: fixed; right: 0; bottom: 0; left: 0; margin: 0; 
+                /*padding: 10px; background: rgba(255, 255, 255, 0.7); 
+                backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);*/ /* Safari */
                 .btn-basic { height: 45px !important; }
             }
             .pt-info { padding-top: 0; }
